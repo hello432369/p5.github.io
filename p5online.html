@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="processing网页编辑器">
+    <title>processing网页编辑器</title>
+    <link rel="stylesheet" href="http://www.p5.xn--fiqs8s/css/zui.css">
+    <link rel="stylesheet" href="http://www.p5.xn--fiqs8s/css/jquery.atwho.css">
+    <script src="http://www.p5.xn--fiqs8s/js/processing.min.js"></script>
+</head>
+
+<body onload="savecontent()">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="alert">processing网页编辑器</div>
+                <textarea id="t1" name="t1" style="width:100%" rows="15" cols="50" placeholder=""></textarea>
+                <div class="btn-group">
+                    <button type="button" class="btn" onclick="run(0)">运行</button>
+                    <button type="button" class="btn" onclick="stop(0)">停止</button>
+                    <button type="button" class="btn" onclick="copy()">复制 </button>
+                    <button type="button" class="btn" id="p52h5" data-toggle="modal" data-target="#myModal"
+                                            onclick="p52h5()">转html5</button>
+                </div>
+                <button type="button" class="btn" style="float:right;" id="clear">清空
+                </button>
+                <div>
+                    </br>
+                    <canvas id="canvas0" width="100px" height="100px"></canvas>
+                    </br></br>
+                </div>
+
+                <!-- processing 转 p5.js-->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                        class="sr-only">关闭</span></button>
+                                <h4 class="modal-title">processing转换p5js完成！！！</h4>
+                            </div>
+                            <div class="modal-body">
+                                <textarea id="t2" style="width:100%" rows="15" cols="30" placeholder="这里有转换代码"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" data-placement="top" data-toggle="tooltip" title="void → function 
+    size → createCanvas
+    float →  var
+    int → var
+    boolean → var
+    char →  var
+    String →  var
+    PImage → var
+    PFont →  var
+    PShape →  var
+    pushMatrix() →  push()
+    popMatrix() →  pop()
+    mousePressed →  mouseIsPressed
+    ">【一键转换内容】</a>
+                                <a href="#" data-placement="top" data-toggle="tooltip" title="class 自定义名称{ 
+        constructor(x, y, w, h) { 
+            //初始参数
+        }
+    
+        display() { 
+            //无需填写void
+            //内容区域
+        }
+    
+    }
+    ">【手动转换内容】</a>
+                                <button type="button" class="btn" onclick="copyp5js()">复制 <i class="icon icon-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- processing 转 p5.js-->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="http://www.p5.xn--fiqs8s/js/jquery.js"></script>
+    <script src="http://www.p5.xn--fiqs8s/js/zui.js"></script>
+    <script src="http://www.p5.xn--fiqs8s/js/jquery.atwho.js"></script>
+    <script src="http://www.p5.xn--fiqs8s/js/jquery.caret.js"></script>
+    <script src="http://www.p5.xn--fiqs8s/js/p5tool.js"></script>
+
+</body>
+
+</html>
