@@ -1,0 +1,131 @@
+<!-- 前端框架采用element -->
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>processing中文助手丨算法艺术数据可视化</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdn.bootcss.com/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdn.bootcss.com/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script language="javascript" type="text/javascript" src="home.js"></script>
+    <style>
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #contenu {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- 顶部菜单（不要删） -->
+                <div class="grid-content bg-purple">
+                    <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal"
+                        @select="handleSelect" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+                        <el-submenu index="2">
+                            <template slot="title">新建</template>
+                            <el-menu-item index="2-1">平面</el-menu-item>
+                            <el-menu-item index="2-2">立体</el-menu-item>
+                            <el-menu-item index="2-3">字形</el-menu-item>
+                            <el-menu-item index="2-10">界面</el-menu-item>
+                            <el-submenu index="2-4">
+                                <template slot="title">图片</template>
+                                <el-menu-item index="2-4-1">.png</el-menu-item>
+                                <el-menu-item index="2-4-2">.jpg</el-menu-item>
+                                <el-menu-item index="2-4-3">.gif</el-menu-item>
+                                <el-menu-item index="2-4-4">.tif</el-menu-item>
+                                <el-menu-item index="2-4-5">.tga</el-menu-item>
+                            </el-submenu>
+                            <el-submenu index="2-5">
+                                <template slot="title">文件</template>
+                                <el-menu-item index="2-5-1">.svg</el-menu-item>
+                                <el-menu-item index="2-5-2">.obj</el-menu-item>
+                                <el-menu-item index="2-5-3">.pdf</el-menu-item>
+                                <el-menu-item index="2-5-5">.dxf</el-menu-item>
+                            </el-submenu>
+                            <el-submenu index="2-6">
+                                <template slot="title">音频</template>
+                                <el-menu-item index="2-6-1">.mp3</el-menu-item>
+                            </el-submenu>
+                            <el-submenu index="2-7">
+                                <template slot="title">视频</template>
+                                <el-menu-item index="2-7-1">.mp4</el-menu-item>
+                            </el-submenu>
+                            <el-submenu index="2-8">
+                                <template slot="title">数据</template>
+                                <el-menu-item index="2-8-1">.txt</el-menu-item>
+                                <el-menu-item index="2-8-2">.xml</el-menu-item>
+                                <el-menu-item index="2-8-3">.csv</el-menu-item>
+                                <el-menu-item index="2-8-4">MySQL</el-menu-item>
+                            </el-submenu>
+                            <el-submenu index="2-9">
+                                <template slot="title">硬件</template>
+                                <el-menu-item index="2-9-1">鼠标</el-menu-item>
+                                <el-menu-item index="2-9-2">键盘</el-menu-item>
+                                <el-menu-item index="2-9-3">麦克风</el-menu-item>
+                                <el-menu-item index="2-9-4">摄像头</el-menu-item>
+                                <el-menu-item index="2-9-5">GPU</el-menu-item>
+                                <el-menu-item index="2-9-6">Arduino</el-menu-item>
+                                <el-menu-item index="2-9-7">Raspberry Pi</el-menu-item>
+                                <el-menu-item index="2-9-8">kinect</el-menu-item>
+                                <el-menu-item index="2-9-9">Leap Motion</el-menu-item>
+                                <el-menu-item index="2-9-10">Android</el-menu-item>
+                                <el-menu-item index="2-9-11">电子乐器</el-menu-item>
+                                <el-menu-item index="2-9-12">所有电子硬件</el-menu-item>
+                            </el-submenu>
+                            <el-submenu index="2-10">
+                                <template slot="title">智能</template>
+                                <el-menu-item index="2-10-1">OpenCV</el-menu-item>
+                                <el-menu-item index="2-10-2">tensorflow</el-menu-item>
+                            </el-submenu>
+                        </el-submenu>
+                        <el-submenu index="3">
+                            <template slot="title">建模</template>
+                            <el-menu-item index="3-1">2D几何</el-menu-item>
+                            <el-menu-item index="3-1">3D几何</el-menu-item>
+                        </el-submenu>
+                    </el-menu>
+                </div>>
+
+
+    </div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                visible: false,
+                activeIndex: '1',
+               activeIndex2: '1'
+            };
+        },
+        methods: {
+            handleSelect(key, keyPath) {
+              console.log(key, keyPath);
+            }
+          }
+    })
+</script>
+</html>
