@@ -1,0 +1,2908 @@
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>processing青铜教程</title>
+		<meta name="description" content="processing是一门编程语言，数据可视化，编程艺术">
+
+		<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+		<link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.min.css" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+
+	</head>
+
+	<body>
+</br>
+		<!-- 内容区-->
+		<div class="grid-demo">
+			<div class="sui-row-fluid">
+
+				<div class="span1"></div>
+
+				<div class="span10">
+
+					<!-- 直达楼层-->
+					<ul class="sui-breadcrumb">
+						<li>教程导航：</li>
+						<li>
+							<a href="#mao1">形状</a>
+						</li>
+						<li>
+							<a href="#mao2">界面</a>
+						</li>
+						<li>
+							<a href="#mao3">事件</a>
+						</li>
+						<li>
+							<a href="#mao4">变量</a>
+						</li>
+						<li>
+							<a href="#mao5">条件</a>
+						</li>
+						<li>
+							<a href="#mao6">循环</a>
+						</li>
+						<li>
+							<a href="#mao7">功能</a>
+						</li>
+						<li>
+							<a href="#mao8">对象</a>
+						</li>
+						<li>
+							<a href="#mao9">数组</a>
+						</li>
+						<li>
+							<a href="#mao10">算法</a>
+						</li>
+						<li>
+							<a href="#mao11">调试</a>
+						</li>
+						<li>
+							<a href="#mao12">数学</a>
+						</li>
+						<li>
+							<a href="#mao13">三维</a>
+						</li>
+						<li>
+							<a href="#mao14">图片</a>
+						</li>
+						<li>
+							<a href="#mao15">视频</a>
+						</li>
+						<li>
+							<a href="#mao16">文字</a>
+						</li>
+						<li>
+							<a href="#mao17">数据</a>
+						</li>
+						<li>
+							<a href="#mao18">声音</a>
+						</li>
+						<li>
+							<a href="#mao19">输出</a>
+						</li>
+
+					</ul>
+
+					<!-- 标签  图形1-->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">形状</label>
+									<span class="pull-right"><a name="mao1">1</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#1" data-toggle="tab">点</a>
+										</li>
+										<li>
+											<a href="#2" data-toggle="tab">线</a>
+										</li>
+										<li>
+											<a href="#3" data-toggle="tab">面</a>
+										</li>
+										<li>
+											<a href="#4" data-toggle="tab">圆</a>
+										</li>
+										<li>
+											<a href="#5" data-toggle="tab">三角</a>
+										</li>
+										<li>
+											<a href="#6" data-toggle="tab">弧线</a>
+										</li>
+										<li>
+											<a href="#7" data-toggle="tab">棱形</a>
+										</li>
+										<li>
+											<a href="#8" data-toggle="tab">曲线</a>
+										</li>
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="1" class="tab-pane active">
+<pre class="prettyprint linenums">
+point(x, y);	//2D 点
+point(x, y, z);	//3D 点
+</pre>
+										</div>
+
+										<div id="2" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形 </li>
+												<li>
+													<a href="	#" target="_blank"> line(30, 20 &nbsp;&nbsp;,50,70);</a>
+												</li>
+												<li> 注释：线( 点1(x轴，y轴)&nbsp;&nbsp;，点2（x轴，y轴 )）;</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">3D图形 </li>
+												<li>
+													<a href="	#" target="_blank"> line(30, 20,0 &nbsp;&nbsp;,50,70,10);</a>
+												</li>
+												<li> 注释：线( 点1( x轴，y轴，z轴 )&nbsp;&nbsp;，点2( x轴，y轴，z轴 )）;</li>
+											</ul>
+										</div>
+
+										<div id="3" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形，直角 </li>
+												<li>
+													<a href="	#" target="_blank"> rect(30, 20 &nbsp;&nbsp;,50&nbsp;&nbsp;,70);</a>
+												</li>
+												<li> 注释：矩形( 点(x轴，y轴)&nbsp;&nbsp;，宽&nbsp;&nbsp;&nbsp;&nbsp;,高）;</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形，圆角 </li>
+												<li>
+													<a href="	#" target="_blank"> rect(30, 20 &nbsp;&nbsp;,50&nbsp;&nbsp;,70&nbsp;&nbsp;,10);</a>
+												</li>
+												<li> 注释：矩形( 点(x轴，y轴)&nbsp;&nbsp;，宽&nbsp;&nbsp;&nbsp;&nbsp;,高&nbsp;&nbsp;&nbsp;&nbsp;,四边角半径）;</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形，曲角 </li>
+												<li>
+													<a href="	#" target="_blank"> rect(30, 20 &nbsp;&nbsp;,50&nbsp;&nbsp;,70&nbsp;&nbsp;,10,20,30,40);</a>
+												</li>
+												<li> 注释：矩形( 点(x轴，y轴)&nbsp;&nbsp;，宽&nbsp;&nbsp;&nbsp;&nbsp;,高&nbsp;&nbsp;&nbsp;&nbsp;,左上角,右上角,右下角,左下角）;</li>
+											</ul>
+										</div>
+										<div id="4" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形 </li>
+												<li>
+													<a href="	#" target="_blank"> ellipse(30, 20 &nbsp;&nbsp;,50&nbsp;&nbsp;,70);</a>
+												</li>
+												<li> 注释：圆( 点(x轴，y轴)&nbsp;&nbsp;，宽&nbsp;&nbsp;&nbsp;&nbsp;,高）;</li>
+											</ul>
+										</div>
+										<div id="5" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形 </li>
+												<li>
+													<a href="	#" target="_blank"> triangle(30, 20 &nbsp;&nbsp;,50,70&nbsp;&nbsp;,80,110);</a>
+												</li>
+												<li> 注释：三角( 点1(x轴，y轴)&nbsp;&nbsp;，点2(x轴，y轴)&nbsp;&nbsp;，点3(x轴，y轴)）;</li>
+											</ul>
+										</div>
+										<div id="6" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形 </li>
+												<li>
+													<a href="	#" target="_blank"> arc(30, 20 &nbsp;&nbsp;,50&nbsp;&nbsp;,70&nbsp;&nbsp;,0, HALF_PI&nbsp;&nbsp;, OPEN);</a>
+												</li>
+												<li> 注释：弧形( 点(x轴，y轴)&nbsp;&nbsp;，宽&nbsp;&nbsp;&nbsp;&nbsp;,高&nbsp;&nbsp;&nbsp;&nbsp;,开始角度,结束角度&nbsp;&nbsp;&nbsp;&nbsp;,闭合）;</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">角度术语 </li>
+												<li>
+													<a href="	#" target="_blank"> 0</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> HALF_PI</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> PI</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> PI+QUARTER_PI</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> TWO_PI</a>
+												</li>
+
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">闭合术语 </li>
+												<li>
+													<a href="	#" target="_blank"> OPEN</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> CHORD</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> PIE</a>
+												</li>
+
+											</ul>
+										</div>
+										<div id="7" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">2D图形 </li>
+												<li>
+													<a href="	#" target="_blank"> quad(30, 20 &nbsp;&nbsp;,50,70&nbsp;&nbsp;,80,110&nbsp;&nbsp;,100,150);</a>
+												</li>
+												<li> 注释：棱形( 点1(x轴，y轴)&nbsp;&nbsp;，点2(x轴，y轴)&nbsp;&nbsp;，点3(x轴，y轴)&nbsp;&nbsp;，点4(x轴，y轴)）;</li>
+											</ul>
+										</div>
+										<div id="8" class="tab-pane">
+											<p>曲线绘制复杂，在软件 》 帮助 》参考文档 》查看createShape()功能</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+
+										<li>
+											<a href="https://www.bilibili.com/video/av22445790/" target="_blank">中文教程：坐标知识_第1章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 标签  界面2-->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">
+									          	界面
+									        </label>
+
+									<span class="pull-right"><a name="mao2">2</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0021" data-toggle="tab">案例</a>
+										</li>
+										<li>
+											<a href="#0022" data-toggle="tab">错误</a>
+										</li>
+										<li>
+											<a href="#0023" data-toggle="tab">手册</a>
+										</li>
+										<li>
+											<a href="#0024" data-toggle="tab">发布</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="0021" class="tab-pane active">
+											<ul class="sui-breadcrumb">
+												<li class="active">软件案例 </li>
+												<li>
+													<a href="	#" target="_blank">文件 》 范例程序 </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">文件 》 范例程序 》 add examples</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">网站案例 </li>
+												<li>
+													<a href="	https://processing.org/" target="_blank"> P5官网</a>
+												</li>
+												<li>
+													<a href="	http://natureofcode.com/" target="_blank"> 代码本色</a>
+												</li>
+												<li>
+													<a href="	https://www.openprocessing.org/" target="_blank"> openP5</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> Generative Art</a>
+												</li>
+
+											</ul>
+										</div>
+
+										<div id="0022" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">代码错误 </li>
+												<li>
+													<a href="	#" target="_blank"> 标点符号</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 大小写</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 文件丢失</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 算法错误</a>
+												</li>
+
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">系统错误 </li>
+												<li>
+													<a href="	#" target="_blank"> java安装</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 系统问题</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 未解之谜</a>
+												</li>
+
+											</ul>
+										</div>
+
+										<div id="0023" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">离线手册 </li>
+												<li>
+													<a href="	#" target="_blank"> 帮助 》参考文档 </a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0024" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">发布平台 </li>
+												<li>
+													<a href="	#" target="_blank"> windows</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> mac</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> linux</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> web</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> tif</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> tga</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> png</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 视频</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> android</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> python</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> zip</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462434/" target="_blank">中文教程：界面知识_第2章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 标签  事件3 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">
+									          	事件
+									        </label>
+
+									<span class="pull-right"><a name="mao3">3</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0031" data-toggle="tab">代码格式</a>
+										</li>
+										<li>
+											<a href="#0032" data-toggle="tab">常用渲染</a>
+										</li>
+										<li>
+											<a href="#0033" data-toggle="tab">交互事件</a>
+										</li>
+										<li>
+											<a href="#0034" data-toggle="tab">数字替换</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="0031" class="tab-pane active">
+											<ul class="sui-breadcrumb">
+												<li class="active">void setup(){} </li>
+												<li>
+													<a href="	#" target="_blank">播放一次 </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">void draw(){} </li>
+												<li>
+													<a href="	#" target="_blank"> 循环播放</a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0032" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">背景 </li>
+												<li>
+													<a href="	#" target="_blank"> background(0,0,0, 0);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 背景(红色,绿色,蓝色, 透明度);</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">窗口 </li>
+												<li>
+													<a href="	#" target="_blank"> size(800,600, P2D);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 窗口尺寸(宽,高, 模式P2D / P3D);</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">锯齿 </li>
+												<li>
+													<a href="	#" target="_blank"> smooth(5);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 抗锯齿( 光滑数值);</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">填充 </li>
+												<li>
+													<a href="	#" target="_blank"> fill(0,0,0, 0);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 填充(红色,绿色,蓝色, 透明度);</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">轮廓 </li>
+												<li>
+													<a href="	#" target="_blank"> stroke(0,0,0, 0);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 轮廓(红色,绿色,蓝色, 透明度);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> strokeWeight(0);</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">帧数 </li>
+												<li>
+													<a href="	#" target="_blank"> frameRate(30);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 帧数(每秒渲染图片数量默认为60张);</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">打印 </li>
+												<li>
+													<a href="	#" target="_blank"> printIn("你好 世界！");</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 打印(" 输入字符串 ");</a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0033" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">鼠标 </li>
+												<li>
+													<a href="	#" target="_blank"> mouseX，mouseY </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> pmouseX，pmouseY </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> mousePressed(){} </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">键盘 </li>
+												<li>
+													<a href="	#" target="_blank"> keyPressed(){} </a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0034" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">数字 </li>
+												<li>
+													<a href="	#" target="_blank"> 整数</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 正数</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 负数</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 小数</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">绝对值 </li>
+												<li>
+													<a href="	#" target="_blank"> abs()</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">数字公式 </li>
+												<li>
+													<a href="	#" target="_blank"> 加法:a+b</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 减法:a-b</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 乘法:a*b</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 除法:a/b</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">功能公式 </li>
+												<li>
+													<a href="	#" target="_blank"> 加法:mouseX + 3</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 减法:mouseX - pmouseX</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 乘法:width * 3</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 除法:height / 2</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462471/" target="_blank">中文教程：代码知识_第3章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 标签  数据4 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">
+									          	变量
+									        </label>
+
+									<span class="pull-right"><a name="mao4">4</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0041" data-toggle="tab">变量类型</a>
+										</li>
+										<li>
+											<a href="#0042" data-toggle="tab">变量特性</a>
+										</li>
+										<li>
+											<a href="#0043" data-toggle="tab">动画功能</a>
+										</li>
+										<li>
+											<a href="#0044" data-toggle="tab">变量算法</a>
+										</li>
+										<li>
+											<a href="#0045" data-toggle="tab">随机功能</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="0041" class="tab-pane active">
+											<ul class="sui-breadcrumb">
+												<li class="active">常用变量 </li>
+												<li>
+													<a href="	#" target="_blank">char（字符串） </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">int（整数后有效32位） </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">float（小数后有效7位） </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">boolean（真假） </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">其他变量 </li>
+												<li>
+													<a href="	#" target="_blank">byte（字节） </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">color（颜色） </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">double（小数后有效16位） </a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">long（整数后有效64位） </a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0042" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">全局 </li>
+												<li>
+													<a href="	#" target="_blank">写在最顶部</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">写在功能外部</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">所有功能内使用</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">局部 </li>
+												<li>
+													<a href="	#" target="_blank">写在功能内部</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">仅限该功能使用</a>
+												</li>
+											</ul>
+
+										</div>
+
+										<div id="0043" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">动画 </li>
+												<li>
+													<a href="	#" target="_blank"> x = x +1（x++） </a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0044" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">算法符号 </li>
+												<li>
+													<a href="	#" target="_blank"> + （加）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> - （减）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> * （乘）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> / （除）</a>
+												</li>
+											</ul>
+
+										</div>
+
+										<div id="0045" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">随机从0开始 </li>
+												<li>
+													<a href="	#" target="_blank"> random(255);</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">随机指定范围 </li>
+												<li>
+													<a href="	#" target="_blank"> random(20，255);</a>
+												</li>
+											</ul>
+
+										</div>
+
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462506/" target="_blank">中文教程：变量知识_第4章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 标签  条件5 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">
+									          	条件
+									        </label>
+
+									<span class="pull-right"><a name="mao5">5</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0051" data-toggle="tab">条件功能</a>
+										</li>
+										<li>
+											<a href="#0052" data-toggle="tab">对比数字</a>
+										</li>
+										<li>
+											<a href="#0053" data-toggle="tab">检测功能</a>
+										</li>
+										<li>
+											<a href="#0054" data-toggle="tab">多个条件</a>
+										</li>
+										<li>
+											<a href="#0055" data-toggle="tab">if嵌套</a>
+										</li>
+										<li>
+											<a href="#0056" data-toggle="tab">输出变量</a>
+										</li>
+										<li>
+											<a href="#0057" data-toggle="tab">限制功能</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="0051" class="tab-pane active">
+											<ul class="sui-breadcrumb">
+												<li class="active">条件类型</li>
+												<li>
+													<a href="	#" target="_blank">对比数字</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">检测功能</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">写法1</li>
+												<li>
+													<a href="	#" target="_blank">if(满足条件1){触发事件1} </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">写法2</li>
+												<li>
+													<a href="	#" target="_blank">if(满足条件1){触发事件1} else{否则触发事件2} </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">写法3</li>
+												<li>
+													<a href="	#" target="_blank">if(满足条件1){触发事件1} else if(否则满足条件2){触发事件2} </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">写法4</li>
+												<li>
+													<a href="	#" target="_blank">if(满足条件1){触发事件1} else if(否则满足条件2){触发事件2} else{否则触发事件3} </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">温馨提示</li>
+												<li>
+													<a href="	#" target="_blank">中间添加else if(){}设置更多的条件和事件 </a>
+												</li>
+											</ul>
+
+										</div>
+
+										<div id="0052" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">对比符号 </li>
+												<li>
+													<a href="	#" target="_blank">>（大于）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">>=（大于等于）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">
+														<（小于）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">
+														<=（小于等于）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">==（等于）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">!=（不等于）</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">数字范围 </li>
+												<li>
+													<a href="	#" target="_blank">数字</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">mouseX</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">mouseY</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">pmouseX</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">pmouseY</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">width</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">height</a>
+												</li>
+											</ul>
+
+										</div>
+
+										<div id="0053" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">鼠标事件 </li>
+												<li>
+													<a href="	#" target="_blank"> mousePressed </a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">键盘事件 </li>
+												<li>
+													<a href="	#" target="_blank"> keyPressed </a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0054" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">连接符号 </li>
+												<li>
+													<a href="	#" target="_blank"> && （和）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> || （或）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> ! （不）</a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0055" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">隐藏关卡 </li>
+												<li class="active">if (满足条件1) {触发事件1 if (触发事件1如果满足条件2) {触发事件2}} </li>
+											</ul>
+										</div>
+
+										<div id="0056" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">动态变量 </li>
+												<li>
+													<a href="	#" target="_blank"> printIn("得分：" + x);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 输出("静态文字" + 动态变量);</a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0057" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">限制范围 </li>
+												<li>
+													<a href="	#" target="_blank"> Constrain( mouseX ，min，max);</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank"> 限制 (受到限制的变量，最小值，最大值);</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462552/" target="_blank">中文教程：事件知识_第5章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 标签  循环6 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">
+									          	循环
+									        </label>
+
+									<span class="pull-right"><a name="mao6">6</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0061" data-toggle="tab">循环功能</a>
+										</li>
+										<li>
+											<a href="#0062" data-toggle="tab">递增缩写</a>
+										</li>
+										<li>
+											<a href="#0063" data-toggle="tab">分析作品</a>
+										</li>
+										<li>
+											<a href="#0064" data-toggle="tab">循环嵌套</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="0061" class="tab-pane active">
+											<ul class="sui-breadcrumb">
+												<li class="active">while循环</li>
+												<li>
+													<a href="	#" target="_blank">int x = 50;</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">while(x
+														<=1 50)</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">{纹理+建模; x=x+1;}</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">while流程</li>
+												<li>
+													<a href="	#" target="_blank">x=50</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">检测是否小于等于150</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">带入到纹理+建模</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">带入到递增算法中</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">检测是否小于等于150</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">for循环</li>
+												<li>
+													<a href="	#" target="_blank">for( int x = 50; x
+														<=1 50; x=x+1)</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">{纹理+建模}</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">for流程</li>
+												<li>
+													<a href="	#" target="_blank">x=50</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">检测是否小于等于150</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">带入到纹理+建模</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">带入到递增算法中</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">检测是否小于等于150</a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0062" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">加法 </li>
+												<li>
+													<a href="	#" target="_blank">x = x + 23（原来）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">x += 23（缩写）</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">加法 </li>
+												<li>
+													<a href="	#" target="_blank">x = x + 1（原来）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">x++ （缩写）</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">减法 </li>
+												<li>
+													<a href="	#" target="_blank">x = x - 23（原来）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">x -= 23（缩写）</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">减法 </li>
+												<li>
+													<a href="	#" target="_blank">x = x - 1（原来）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">x--（缩写）</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">乘法 </li>
+												<li>
+													<a href="	#" target="_blank">x = x * 23（原来）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">x *= 23（缩写）</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">除法 </li>
+												<li>
+													<a href="	#" target="_blank">x = x / 23（原来）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">x /= 23（缩写）</a>
+												</li>
+											</ul>
+
+										</div>
+
+										<div id="0063" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">图片类型</li>
+												<li>
+													<a href="	#" target="_blank">去掉颜色</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">去掉重复形状</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">分析最基本形状</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">绘制重复形状</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">绘制颜色</a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0064" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">内层：x轴方向循环</li>
+												<li>
+													<a href="	#" target="_blank">for( int x = 50; x
+														<=1 50; x=x+1)</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">{纹理+建模}</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">外层：y轴方向循环</li>
+												<li>
+													<a href="	#" target="_blank">for( int y = 50; y
+														<=1 50; y=y+1)</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">{for( int x = 50; x
+														<=1 50; x=x+1){纹理+建模}}</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462587/" target="_blank">中文教程：循环知识_第6章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 标签  功能7 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">
+									          	功能
+									        </label>
+
+									<span class="pull-right"><a name="mao7">7</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0071" data-toggle="tab">自定义功能</a>
+										</li>
+										<li>
+											<a href="#0072" data-toggle="tab">返回数值</a>
+										</li>
+										<li>
+											<a href="#0073" data-toggle="tab">数学公式</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="0071" class="tab-pane active">
+											<ul class="sui-breadcrumb">
+												<li class="active">自定义顺序</li>
+												<li>
+													<a href="	#" target="_blank">声明类型</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">功能名称</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">(参数)</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">{算法步骤}</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">声明类型</li>
+												<li>
+													<a href="	#" target="_blank">void</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">功能名称</li>
+												<li>
+													<a href="	#" target="_blank">newLine(第二个单词字母大写，便于观看)</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">参数</li>
+												<li>
+													<a href="	#" target="_blank">int x（可以写一个）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">int x,int y,int z（可以写多个）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">color c(颜色变量前面添加color)</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">算法步骤</li>
+												<li>
+													<a href="	#" target="_blank">参数带入算法步骤中</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">实际应用</li>
+												<li>
+													<a href="	#" target="_blank">功能名称写入draw()内部即可</a>
+												</li>
+											</ul>
+										</div>
+
+										<div id="0072" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">自定义顺序</li>
+												<li>
+													<a href="	#" target="_blank">声明类型</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">功能名称</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">(参数)</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">{算法步骤;返回数值}</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">声明类型</li>
+												<li>
+													<a href="	#" target="_blank">int</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">float</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">功能名称</li>
+												<li>
+													<a href="	#" target="_blank">newLine(第二个单词字母大写，便于观看)</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">参数</li>
+												<li>
+													<a href="	#" target="_blank">int x（可以写一个）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">int x,int y,int z（可以写多个）</a>
+												</li>
+												<li>
+													<a href="	#" target="_blank">color c(颜色变量前面添加color)</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">算法步骤</li>
+												<li>
+													<a href="	#" target="_blank">数学公式（举例：int all=a+b+c;）</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">返回数值</li>
+												<li>
+													<a href="	#" target="_blank">return 数学公式变量值</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">实际应用</li>
+												<li>
+													<a href="	#" target="_blank">功能名称写入draw()内部即可</a>
+												</li>
+											</ul>
+
+										</div>
+
+										<div id="0073" class="tab-pane">
+											<ul class="sui-breadcrumb">
+												<li class="active">绝对值</li>
+												<li>
+													<a href="	#" target="_blank">abs()</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">两点距离</li>
+												<li>
+													<a href="	#" target="_blank">dist(x1,y1, x2,y2)</a>
+												</li>
+											</ul>
+											<ul class="sui-breadcrumb">
+												<li class="active">更多公式</li>
+												<li>
+													<a href="	#" target="_blank">软件》帮助》参考文档</a>
+												</li>
+											</ul>
+										</div>
+
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462613/" target="_blank">中文教程：功能知识_第7章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 8 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">
+									          	对象
+									        </label>
+
+									<span class="pull-right"><a name="mao8">8</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0081" data-toggle="tab">创建对象</a>
+										</li>
+										<li>
+											<a href="#0082" data-toggle="tab">声明对象</a>
+										</li>
+										<li>
+											<a href="#0083" data-toggle="tab">多个对象</a>
+										</li>
+
+									</ul>
+
+									<div class="tab-content tab-wraped ">
+
+										<div id="0081" class="tab-pane active">
+											<p>
+												<a>class car{</a>
+											</p>
+											<p>int x;</p>
+											<p>cars(变量初始化){设置变量}</p>
+											<p>void display(){}</p>
+											<p>
+												<a>}</a>
+											</p>
+										</div>
+
+										<div id="0082" class="tab-pane">
+											<p>
+												<a>car car1;</a>
+											</p>
+											<p>void setup{</p>
+											<p>
+												<a>car1 = new car(变量初始化); </a>
+											</p>
+											<p>}</p>
+											<p>void draw{</p>
+											<p>
+												<a>car1.dispaly();</a>
+											</p>
+											<p>}</p>
+										</div>
+
+										<div id="0083" class="tab-pane">
+											<p>
+												<a>car car1;</a>
+											</p>
+											<p>
+												<a>car car2;</a>
+											</p>
+											<p>void setup{</p>
+											<p>
+												<a>car1 = new car(变量初始化); </a>
+											</p>
+											<p>
+												<a>car2 = new car(变量初始化); </a>
+											</p>
+											<p>}</p>
+											<p>void draw{</p>
+											<p>
+												<a>car1.dispaly();</a>
+											</p>
+											<p>
+												<a>car2.dispaly();</a>
+											</p>
+											<p>}</p>
+										</div>
+
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462653/" target="_blank">中文教程：对象知识_第8章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 9 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">数组</label>
+									<span class="pull-right"><a name="mao9">9</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#0091" data-toggle="tab">声明数组</a>
+										</li>
+										<li>
+											<a href="#0092" data-toggle="tab">使用数组</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="0091" class="tab-pane active">
+											<p>
+												<a>int[] x = new int[30];</a>&nbsp;&nbsp;整数数组，有30个整数，编号0~29</p>
+											</br>
+											<p>
+												<a>float&nbsp;y30&nbsp;=&nbsp;100;</a>
+											</p>
+											<p>
+												<a>float[&nbsp;] y&nbsp;=&nbsp;new&nbsp;float[y30];</a>&nbsp;&nbsp;小数数组，有100个小数，编号0~99</p>
+											</br>
+											<p>
+												<a>float&nbsp;car30&nbsp;=&nbsp;30;</a>
+											</p>
+											<p>
+												<a>car[&nbsp;] mycars&nbsp;=&nbsp;new&nbsp;car[car30*2+3];</a>&nbsp;&nbsp;对象数组，有63个对象，编号0~62</p>
+										</div>
+										<div id="0092" class="tab-pane">
+											<p>car car1; →
+												<a>car[ ] cars = new car[1000];</a>
+											</p>
+											<p>void setup{</p>
+											<p>car1 = new car(变量初始化); →
+												<a>for (int i = 0; i
+													< cars.length; i++){ cars[i]=n ew car(变量初始化); } </a>
+											</p>
+											<p>}</p>
+											<p>void draw{</p>
+											<p>car1.dispaly(); →
+												<a>for (int i = 0; i
+													< cars.length; i++) { cars[i].display(); } </a>
+											</p>
+											<p>}</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462688/" target="_blank">中文教程：数组知识_第9章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 10 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">算法</label>
+									<span class="pull-right"><a name="mao10">10</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00100" data-toggle="tab">使用算法</a>
+										</li>
+										<li>
+											<a href="#00101" data-toggle="tab">时间功能</a>
+										</li>
+										<li>
+											<a href="#00102" data-toggle="tab">算法提示</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00100" class="tab-pane active">
+											<p>将我们之前学的知识混合应用</p>
+										</div>
+										<div id="00101" class="tab-pane">
+											<p>
+												<a>millis()；</a>毫秒计时器:1000等于1秒 </p>
+											<p>
+												<a>second()；</a>秒计时器 ：范围1~60</p>
+											<p>
+												<a>minute()；</a>分钟计时器：范围1~60</p>
+											<p>
+												<a>hour()；</a>小时计时器：范围1~12</p>
+											<p>
+												<a>day()；</a>天计时器：范围1~31</p>
+											<p>
+												<a>month()；</a>月计时器：范围1~12</p>
+											<p>
+												<a>year()；</a>年计时器：具体1987 </p>
+											<p> 使用方法
+												<a>if (millis() > 5000){background(255,0,0);}</a>
+											</p>
+										</div>
+										<div id="00102" class="tab-pane">
+											<p> 先用文字写出来自己想要的功能（俗称写剧本，剧本分镜） </p>
+											<p> 然后再把文字转化成代码（俗称拍电影，把文字转化为视觉效果）</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462724/" target="_blank">中文教程：算法知识_第10章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 11 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">调试</label>
+									<span class="pull-right"><a name="mao11">11</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00110" data-toggle="tab">注释解说</a>
+										</li>
+										<li>
+											<a href="#00111" data-toggle="tab">控制台调试</a>
+										</li>
+										<li>
+											<a href="#00112" data-toggle="tab">调用第三方库</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00110" class="tab-pane active">
+											<p>
+												<a>// </a>单行注释</p>
+											<p>
+												<a>/* */ </a>多行注释</p>
+										</div>
+										<div id="00111" class="tab-pane">
+											<p>
+												<a>print()</a>调试功能是否运行 </p>
+											<p>
+												<a>printIn()</a>调试功能是否运行 </p>
+											<p>
+												<a>printArray()</a>调试数组是否运行 </p>
+
+										</div>
+										<div id="00112" class="tab-pane">
+											<p>import processing.video.*;</p>
+											<p>import processing.serial.*;</p>
+											<p>import processing.opengl.*;</p>
+											<p>import processing.net.*;</p>
+											<p>import processing.pdf.*;</p>
+											<p>import processing.xml.*;</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462763/" target="_blank">中文教程：调试知识_第11章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 12 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">数学</label>
+									<span class="pull-right"><a name="mao12">12</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00120" data-toggle="tab">算术公式</a>
+										</li>
+										<li>
+											<a href="#00121" data-toggle="tab">随机功能</a>
+										</li>
+										<li>
+											<a href="#00122" data-toggle="tab">佩林噪音</a>
+										</li>
+										<li>
+											<a href="#00123" data-toggle="tab">角度弧度</a>
+										</li>
+										<li>
+											<a href="#00124" data-toggle="tab">三角函数</a>
+										</li>
+										<li>
+											<a href="#00125" data-toggle="tab">二维数组</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00120" class="tab-pane active">
+											<p>
+												<a>x = x+1</a>直线运动</p>
+											<p>
+												<a>dist(x1,x2,y1,y2); </a>两点之间距离</p>
+											<p>
+												<a>0 % 3=0</a>(0除以3 余数是0，%表示系数，也就是余数)</p>
+											<p>
+												<a>1 % 3=1</a>
+											</p>
+											<p>
+												<a>2 % 3=2</a>
+											</p>
+											<p>
+												<a>3 % 3=0</a>
+											</p>
+											<p>
+												<a>4 % 3=1</a>
+											</p>
+										</div>
+										<div id="00121" class="tab-pane">
+											<p>
+												<a>random(下限，上限)；</a>从下限到上限范围内选区一个随机数字</p>
+											<p>
+												<a>randomGaussian()；</a>随机高斯从均值为0和标准偏差为1的随机序列返回一个正态分布的浮点数</p>
+											<p>
+												<a>randomSeed()；</a>将种子参数设置为常数，以在每次运行软件时返回相同的伪随机数 </p>
+										</div>
+										<div id="00122" class="tab-pane">
+											<p>
+												<a>noise(x,y,z);</a>
+											</p>
+											<p>
+												<a>noiseDetail(lod, falloff);</a>
+											</p>
+											<p>
+												<a>noiseSeed(seed);</a>
+											</p>
+										</div>
+										<div id="00123" class="tab-pane">
+											<p>
+												<a>rotate(PI);</a>旋转180度</p>
+											<p>
+												<a>rotateX(PI * 2);</a>围绕x轴旋转360度</p>
+											<p>
+												<a>rotateY(PI / 2);</a>围绕y轴旋转90度</p>
+											<p>
+												<a>rotateZ(PI / 4);</a>围绕z轴旋转45度</p>
+											<p>
+												<a>radians(45);</a>弧度值</p>
+										</div>
+										<div id="00124" class="tab-pane">
+											<p>
+												<a>x = cos(theta) * r ;</a>
+											</p>
+											<p>
+												<a>y = sin( theta) * r ;</a>
+											</p>
+											<p>
+												<a>x = cos(theta);</a>x轴为中心，上下震荡</p>
+											<p>
+												<a>y = sin( theta);</a>y轴为中心，左右震荡</p>
+										</div>
+										<div id="00125" class="tab-pane">
+											<p>int cols = 10; </p>
+											<p>int rows = 10; </p>
+											<p>int[ ][ ] myArray = new int[cols][rows];</p>
+											<p>for (int i = 0; i
+												< cols; i + + ) </p>
+													<p>{</p>
+													<p> for (int j = 0; j
+														< rows; j + + ) </p>
+															<p> { </p>
+															<p> myArray[i][j] = 0;</p>
+															<p> }</p>
+															<p>}</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462791/" target="_blank">中文教程：数学知识_第12章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 13 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">三维</label>
+									<span class="pull-right"><a name="mao13">13</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00130" data-toggle="tab">更改原点</a>
+										</li>
+										<li>
+											<a href="#00131" data-toggle="tab">三维模式</a>
+										</li>
+										<li>
+											<a href="#00132" data-toggle="tab">顶点绘制</a>
+										</li>
+										<li>
+											<a href="#00133" data-toggle="tab">旋转图形</a>
+										</li>
+										<li>
+											<a href="#00134" data-toggle="tab">等比缩放</a>
+										</li>
+										<li>
+											<a href="#00135" data-toggle="tab">原点存取</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00130" class="tab-pane active">
+											<p>
+												<a>translate(x,y,z);</a> //将原点（0，0）坐标变更到指定位置，原点不再是（0，0）</p>
+										</div>
+										<div id="00131" class="tab-pane">
+											<p>
+												<a>size(200,200); </a>// 二维模式</p>
+											<p>
+												<a>size(200,200,P3D); </a>// 三维模式</p>
+											</br>
+											<p>
+												<a>import processing.opengl.*; </br>size(200,200,OPENGL); </a>// 下载第三方库，选择OPENGL模式 </p>
+										</div>
+										<div id="00132" class="tab-pane">
+											<p>
+												<a>beginShape(); </br>
+													&nbsp;&nbsp;vertex(50,50); </br>
+													&nbsp;&nbsp;vertex(150,50); </br>
+													&nbsp;&nbsp;vertex(150,150); </br>
+													&nbsp;&nbsp;vertex(50,150); </br>
+													endShape(CLOSE);</br>
+												</a>//需要使用顶点坐标来绘制复杂的图形</p>
+											</br>
+
+											<p>
+												<a>beginShape(LINES) ;</br>
+													for(int i = 10; i
+													< width; i +=20){</br>
+														vertex(i,10);</br>
+														vertex(i,height - 10);</br>
+														}</br>
+														endShape();</br>
+												</a>beginShape模式:POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE</p>
+										</div>
+										<div id="00133" class="tab-pane">
+											<p>
+												<a>rotate(radians(45));</a>//使用弧度值旋转</p>
+											<p>
+												<a>rotateX(PI * mouseX/width);</a>//跟随（鼠标除以宽度）而旋转</p>
+											<p>
+												<a>rotateY(PI / 2);rotateZ(PI / 4);</a>//同时使用两个轴旋转</p>
+										</div>
+										<div id="00134" class="tab-pane">
+											<p>
+												<a>scale( )</a>//可以让图形按比例放大</p>
+										</div>
+										<div id="00135" class="tab-pane">
+											<p>
+												<a>pushMatrix( )</a> //保存当前原点坐标 </p>
+											<p>
+												<a>popMatrix( ) </a> //还原原点坐标为保存时的坐标</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22462829/" target="_blank">中文教程：三维知识_第13章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 14 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">图片</label>
+									<span class="pull-right"><a name="mao14">14</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00140" data-toggle="tab">显示图片</a>
+										</li>
+										<li>
+											<a href="#00141" data-toggle="tab">图像对象</a>
+										</li>
+										<li>
+											<a href="#00142" data-toggle="tab">图像着色</a>
+										</li>
+										<li>
+											<a href="#00143" data-toggle="tab">图片数组</a>
+										</li>
+										<li>
+											<a href="#00144" data-toggle="tab">加载像素</a>
+										</li>
+										<li>
+											<a href="#00145" data-toggle="tab">二维矩阵</a>
+										</li>
+										<li>
+											<a href="#00146" data-toggle="tab">滤镜特效</a>
+										</li>
+										<li>
+											<a href="#00147" data-toggle="tab">矩阵算法</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00140" class="tab-pane active">
+											<p>
+												<a>PImage img;</a>//声明图片</p>
+											<p>
+												<a>img = LoadImage("pic.jpg"); </a>//加载图片</p>
+											<p>
+												<a>image(img,0,0);</a>//显示图片，并设置图片左上角坐标</p>
+											</br>
+											<p>
+												<a>创建data文件夹</a>//图片必须放入data文件夹内，否则无法读取图片</p>
+											<p>
+												<a>支持格式GIF, JPG, TGA, PNG</a>
+											</p>
+										</div>
+										<div id="00141" class="tab-pane">
+											<p>
+												<a>class imgs{}；</a>//创建图片对象</p>
+											<p>
+												<a>PImage img；</a>//声明图片</p>
+											<p>
+												<a>imgs(String imgname){ img = LoadImage(imgname)}；</a>//设置图片字符串变量 </p>
+										</div>
+										<div id="00142" class="tab-pane">
+											<p>
+												<a>tint(255); </a>//影响亮度,在fill影响灰度值</p>
+											<p>
+												<a>tint(255,127); </a>//影响亮度，透明度</p>
+											<p>
+												<a>tint(0,200,255) ; </a>//影响红，绿，蓝</p>
+											<p>
+												<a>tint(255,0,0,100); </a>//影响红，绿，蓝，透明度</p>
+										</div>
+										<div id="00143" class="tab-pane">
+											<p>
+												<a>
+													PImage[] imgs = new PImage[5];</br>
+													imgsIndex = 0;</br>
+													void setup(){</br>
+													size(800,600)</br>
+													for(int i= 0;i
+													< imgs.length; i++){</br>
+														imgs[i] = LoadImage("图片序列" + i + ".jpg")</br>
+														}</br>
+														}</br>
+														void draw(){</br>
+														image(imgs[imgsIndex],0,0); </br>
+														imgsIndex = (imgsIndex + 1) % imgs.length;</br>
+														}</br>
+												</a>//需要加载上千张图片，那么图片名称统一并添加从0开始的序号，使用for循环语句加载即可</p>
+										</div>
+										<div id="00144" class="tab-pane">
+											<p>
+												<a>LoadPixels() ;</a>//加载窗口像素</p>
+											<p>
+												<a>pixels[0] = color(255);</a>//选择变更第一个像素颜色参数</p>
+											<p>
+												<a>updatePixels</a>//确认更新窗口像素颜色</p>
+											</br>
+
+											<p>
+												<a>
+													for(int x = 0 ; x
+													< width; x++){</br>
+														for(int y = 0 ; y
+														< height; y++){</br>
+															int loc = width * y + x;</br>
+															}</br>
+															}</br>
+															float c = dist(x,y,width/2,height/2);</br>
+															pixels[loc] = color(c);</br>
+												</a>//计算每个像素序号,并更新每个像素颜色参数值,使用dist可以实现渐变色</p>
+											</br>
+
+										</div>
+										<div id="00145" class="tab-pane">
+											<p>
+												<a>float[][] xy = { </br>
+													{-1，-1，-1},</br>
+													{-1， 9，-1},</br>
+													{-1，-1，-1}</br>
+													}</br>
+												</a> // 声明二维数组矩阵，高通滤波器：矩阵中的9个数字有正数，有负数；产生锐化效果</p>
+											</br>
+
+											<p>
+												<a>
+													{-1，0，1}</br>
+													{-2，0，2}</br>
+													{-1，0，1}</br>
+												</a>//高通滤波器：（特殊）矩阵中的9个数字一边为正数，另一边为负数，中间为零；检测图形边缘</p>
+											</br>
+
+											<p>
+												<a>
+													{1/9，1/9，1/9}</br>
+													{1/9，1/9，1/9-1}</br>
+													{1/9，1/9，1/9}</br>
+												</a>//低通滤波器：矩阵中的9个数字都是正数；产生模糊效果</p>
+											</br>
+
+											<p>9个数字和是1的时候图像亮度保持不变，如果9个 数字大于1变亮，小于1变暗</p>
+
+										</div>
+										<div id="00146" class="tab-pane">
+											<p>
+												<a>filter(THRESHOLD);</a>//临界值效果</p>
+											<p>
+												<a>filter(GRAY);</a>//灰度值效果</p>
+											<p>
+												<a>filter(INVERT);</a>//颠倒值效果 </p>
+											<p>
+												<a>filter(POSTERIZE, 4);</a>//分色值效果 </p>
+											<p>
+												<a>filter(BLUR, 6);</a>//模糊值效果 </p>
+											<p>
+												<a>filter(ERODE);</a>//削弱值效果 </p>
+											<p>
+												<a>filter(DILATE);</a>//膨胀值效果 </p>
+											</br>
+											<p>
+												<a>
+													PImage img;</br>
+													img = loadImage("apples.jpg");</br>
+													image(img, 0, 0);</br>
+													filter(THRESHOLD);</br>
+												</a>//filter使用方法写在image下面
+										</div>
+
+										<div id="00147" class="tab-pane">
+											<p>矩阵算法代码在
+												<a>learning processing</a>，第290页，太长了就不贴出来</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av22942034/" target="_blank">中文教程：图片知识_第14章上篇</a>
+										</li>
+										<li>
+											<a href="https://www.bilibili.com/video/av23348573/" target="_blank">中文教程：图片知识_第14章中篇</a>
+										</li>
+										<li>
+											<a href="https://www.bilibili.com/video/av23344897/" target="_blank">中文教程：图片知识_第14章下篇</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 15 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">视频</label>
+									<span class="pull-right"><a name="mao15">15</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00150" data-toggle="tab">显示摄像头</a>
+										</li>
+										<li>
+											<a href="#00151" data-toggle="tab">摄像头案例</a>
+										</li>
+										<li>
+											<a href="#00152" data-toggle="tab">播放视频</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00150" class="tab-pane active">
+											<p>
+												<a>第1步：下载quicktime;</a>//https://www.apple.com/cn/quicktime/home/home.html</p>
+											<p>
+												<a>第2步：下载video库 </a>//点击软件菜单栏》工具》添加工具》Librarise》搜video》下载带P图标的》需要科学上网</p>
+											<p>
+												<a>import processing.video.*</a>//第3步：导入第三方库</p>
+											<p>
+												<a>Capture video;</a>//第4步：声明视频</p>
+											<p>
+												<a>video = new Capture(this,320,240,30);</a>//第5步：创建视频宽高，每秒频率</p>
+											<p>
+												<a>video.start();</a>//第6步：开始准备视频，以前没有这个</p>
+											<p>
+												<a>if(video.available()){video.read();}</a>//第7步：如果，视频获取了，那么视频就读取</p>
+											<p>
+												<a>image(video,0,0);</a>//第8步：使用image功能，将图片显示出来</p>
+											<p>一但是使用image功能读取出来，那么我们就可以当作图片一样玩耍了</p>
+										</div>
+										<div id="00151" class="tab-pane">
+											<p>
+												<a>案例1：image(video,0,0，mouseX,mouseY);</a>//控制摄像头右下角坐标，从而控制视频宽高</p>
+											<p>
+												<a>案例2：100 - dist(x,y,mouseX,mouseY)/100</a>//以鼠标为中心制作局部显示区域功能</p>
+											<p>
+												<a>案例3：for(int x=0;x
+													< width; x+=8)</a>//8x8的像素作为一个单位，显示图像像素 </p>
+											<p>
+												<a>案例4：dist(r1,g1,b1,r2,g2,b2)</a>//摄像头跟踪红色，如果摄像头区域内像素与红色颜色值差不多那么显示提示符号 </p>
+											<p>
+												<a>案例5：bgimg.copy(video,0,0,width,height,0,0,width,height);bgimg.updatePixels();</a>//保存当前视频界面，如果有其他颜色乱入监控区域，那么只显示乱入颜色 </p>
+										</div>
+										<div id="00152" class="tab-pane">
+											<p>
+												<a>import processing.video.*</a>//第1步：导入第三方库</p>
+											<p>
+												<a>Movie video;</a>//第2步：声明视频</p>
+											<p>
+												<a>video = new Movie(this,"1.avi");</a>//第3步：创建视频,读取视频名称</p>
+											<p>
+												<a>video.play();</a>//第4步：准备播放视频</p>
+											<p>
+												<a>if(video.available()){video.read();}</a>//第7步：如果，视频获取了，那么视频就读取</p>
+											<p>
+												<a>image(video,0,0);</a>//第8步：使用image功能，将图片显示出来</p>
+											<p>一但是使用image功能读取出来，那么我们就可以当作图片一样玩耍了</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av23524208/" target="_blank">中文教程：视频知识_第15章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 16 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">文字</label>
+									<span class="pull-right"><a name="mao16">16</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00160" data-toggle="tab">常见字符串</a>
+										</li>
+										<li>
+											<a href="#00161" data-toggle="tab">字符串应用</a>
+										</li>
+										<li>
+											<a href="#00162" data-toggle="tab">创建字体</a>
+										</li>
+										<li>
+											<a href="#00163" data-toggle="tab">字符串结构</a>
+										</li>
+										<li>
+											<a href="#00164" data-toggle="tab">字符串设置</a>
+										</li>
+										<li>
+											<a href="#00165" data-toggle="tab">字符串案例</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00160" class="tab-pane active">
+											<p>
+												<a>println("hello world!");</a>//双引号内是字符串，空格也一个字符串</p>
+											<p>
+												<a>PImage img =loadImage("filename.jpg");</a>//文件名字也是字符串</p>
+											<p>
+												<a>String sometext = "hello world!" ; </a>//字符串声明使用String</p>
+										</div>
+										<div id="00161" class="tab-pane">
+											<p>
+												<a>String message ="hello world" ;</a>//声明字符串</p>
+											<p>
+												<a>message.length();</a>//计算字符串个数</p>
+											<p>
+												<a>message.charAt(3);</a>//计算字符串对应位置的字符，第三个位置是l </p>
+											<p>
+												<a>message.toUpperCase() ; </a>//大写功能，小写变大写英文字符 </p>
+											<p>
+												<a>int x= 10;String message = "x is" + x; </a>//变量与字符串混合应用 </p>
+										</div>
+										<div id="00162" class="tab-pane">
+											<p>
+												<a>软件 》 工具 》 创建字体 》 设定字体参数 </a>//记得复制字体名称</p>
+											<p>
+												<a>PFont.list(); </a>//可以查看本地所有字体</p>
+											<p>
+												<a>createFont( "Georgia" , 24, true); </a>//创建字体，字体名称，字体大小，字体抗锯齿</p>
+										</div>
+										<div id="00163" class="tab-pane">
+											<p>
+												<a>PFont f; </br>
+													f = loadFont( " AgencyFB-Reg-48.vlw " ); </br>
+													textFont(f,36); </br>
+													fill(0); </br>
+													text( “hello world" ,10,100); </br>
+												</a>
+											</p>
+										</div>
+										<div id="00164" class="tab-pane">
+											<p>
+												<a>textAlign(CENTER);</a>//字符串相对于坐标，居中，居左，居右</p>
+											<p>
+												<a>textWidth( ); </a>//计算出字符或字符串宽度</p>
+											<p>
+												<a>textLeading( ); </a>//字符串上下间距</p>
+											<p>
+												<a>textMode(MODEL); </a>//字符串渲染模式MODEL 或者SHAPE</p>
+											<p>
+												<a>textSize( ); </a>//字符串大小</p>
+										</div>
+										<div id="00165" class="tab-pane">
+											<p>
+												<a>字符串与摄像头 </a>
+											</p>
+											<p>
+												<a>字符串旋转动画 </a>
+											</p>
+											<p>
+												<a>字符串大小间距 </a>
+											</p>
+											<p>
+												<a>字符串跳动动画 </a>
+											</p>
+											<p>
+												<a>字符串曲线展示 </a>
+											</p>
+										</div>
+									</div>
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av23692262/?p=1" target="_blank">中文教程：文字知识_第16章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 17 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">数据</label>
+									<span class="pull-right"><a name="mao17">17</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00170" data-toggle="tab">字符串控制</a>
+										</li>
+										<li>
+											<a href="#00171" data-toggle="tab">字符连接拆分</a>
+										</li>
+										<li>
+											<a href="#00172" data-toggle="tab">本地数据</a>
+										</li>
+										<li>
+											<a href="#00173" data-toggle="tab">网页数据</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00170" class="tab-pane active">
+											<p>
+												<a>join(字符变量，连接符号) ;</a>//连接单个字符</p>
+											<p>
+												<a>split(字符变量，拆分符号) ;</a>//拆分整句</p>
+											<p>
+												<a>splitTokens(字符变量，多个拆分符号) ; </a>//使用不同符号拆分整句</p>
+										</div>
+										<div id="00171" class="tab-pane">
+											<p>
+												<a>String message ="hello world" ;</a>//声明字符串</p>
+											<p>
+												<a>message.length();</a>//计算字符串个数</p>
+											<p>
+												<a>message.charAt(3);</a>//计算字符串对应位置的字符，第三个位置是l </p>
+											<p>
+												<a>message.toUpperCase() ; </a>//大写功能，小写变大写英文字符 </p>
+											<p>
+												<a>int x= 10;String message = "x is" + x; </a>//变量与字符串混合应用 </p>
+										</div>
+										<div id="00172" class="tab-pane">
+											<p>
+												<a>String[] chars = loadStrings("xxx.txt"); </a>//读取data文件夹中的txt数据</p>
+											<p>
+												<a>关于txt文件注意事项; </a>//txt中每行就是一个length值</p>
+										</div>
+										<div id="00173" class="tab-pane">
+											<p>
+												<a>simpleML; </a>//第三方库，读取html</p>
+											<p>
+												<a>xml; </a>//第三方库，读取xml</p>
+											<p>
+												<a>proXML; </a>//第三方库，跟高级的库</p>
+											<p>
+												<a>API; </a>//读取网页api技术</p>
+											<p>
+												<a>sandbox; </a>//网络访问数据涉及安全问题，所以不是简单的读取数据就完事了</p>
+
+										</div>
+
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av24001488/" target="_blank">中文教程：数据知识_第17章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 18 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">声音</label>
+									<span class="pull-right"><a name="mao18">18</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00180" data-toggle="tab">声音引用</a>
+										</li>
+										<li>
+											<a href="#00181" data-toggle="tab">声音结构</a>
+										</li>
+										<li>
+											<a href="#00182" data-toggle="tab">声音控制</a>
+										</li>
+										<li>
+											<a href="#00183" data-toggle="tab">混音效果</a>
+										</li>
+										<li>
+											<a href="#00184" data-toggle="tab">声音合成</a>
+										</li>
+										<li>
+											<a href="#00185" data-toggle="tab">声音封包</a>
+										</li>
+										<li>
+											<a href="#00186" data-toggle="tab">声音振幅</a>
+										</li>
+										<li>
+											<a href="#00187" data-toggle="tab">麦克风振幅</a>
+										</li>
+										<li>
+											<a href="#00188" data-toggle="tab">振幅控制</a>
+										</li>
+										<li>
+											<a href="#00189" data-toggle="tab">频谱分析</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00180" class="tab-pane active">
+											<p>
+												<a>软件》速写本》引用库文件》添加库文件》librarise》搜索sound》下载</a>//必须下载安装</p>
+											<p>
+												<a>软件》速写本》引用库文件》选择sound</a>//自动插入引用代码</p>
+										</div>
+										<div id="00181" class="tab-pane">
+											<p>
+												<a>
+													import processing.sound.*;</br>
+													</br>
+													SoundFile s;</br>
+													</br>
+													void setup(){</br>
+													size(618,618);</br>
+													</br>
+													s = new SoundFile(this,"xxxx.mp3");</br>
+													s.play();</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													</br>
+													}</br>
+													</br>
+
+												</a>//声音代码基本结构</p>
+
+										</div>
+										<div id="00182" class="tab-pane">
+											<p>
+												<a>play(); </a>//播放</p>
+											<p>
+												<a>amp(0~1); </a>//声音音量变小为0，变大为1</p>
+											<p>
+												<a>pan(-1~1) ; </a>//-1~0 是左声道， 0~1是右声道，需要电脑支持立体声</p>
+											<p>
+												<a>rate(0~4) ; </a>//0~1是减速，1正常，2~4是加速</p>
+											<p>
+												<a>float v = map(mouseX,0,width,0,1);</br>s.amp(v); </a>
+												</br>//基本使用方法</p>
+										</div>
+										<div id="00183" class="tab-pane">
+											<p>
+												<a>
+													import processing.sound.*;</br>
+													</br>
+													SoundFile s;</br>
+													</br>
+													Reverb rb;//声明混音</br>
+													</br>
+													void setup(){</br>
+													size(618,618);</br>
+													</br>
+													s = new SoundFile(this,"xxxx.mp3");</br>
+													s.play();</br>
+													</br>
+													rb = new Reverb(this);//加载混音</br>
+													rb.process(s);//处理声音</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													float v = map(mouseX,0,width,0,1);</br>
+													rb.room(v);//房间混音</br>
+													} </br>
+												</a>//混音效果有音响会好一些</p>
+
+										</div>
+										<div id="00184" class="tab-pane">
+											<p>
+												<a>
+													import processing.sound.*;</br>
+													</br>
+													SinOsc s;//除了SinOsc 正弦波振荡， SawOsc 锯齿波振荡， SqrOsc 矩形波振荡， TriOsc 三角波振荡， Pulse 脉冲波振荡
+													</br>
+													</br>
+													void setup(){</br>
+													size(618,618);</br>
+													</br>
+													s = new SinOsc(this);</br>
+													s.play();</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250);</br>
+													float v = map(mouseX,0,width,150,880);//频率范围150到880</br>
+													s.freq(v);</br>
+													}</br>
+												</a>
+											</p>
+
+										</div>
+										<div id="00185" class="tab-pane">
+											<p>
+												<a>
+													import processing.sound.*;</br>
+													</br>
+													SinOsc s;</br>
+													</br>
+													Env env;//声音封包</br>
+													</br>
+													void setup(){</br>
+													size(618,618);</br>
+													</br>
+													s = new SinOsc(this);</br>
+													</br>
+													env = new Env(this);</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250);</br>
+													</br>
+													s.play(150,1);// play(频率，音量)</br>
+													env.play(s,0.01,0.5,1,0.5);//play(声音，从0.01秒处开始，淡入至50%，持续1秒，0.5秒后淡出)</br>
+													}</br>
+												</a>
+											</p>
+
+										</div>
+										<div id="00186" class="tab-pane">
+											<p>
+												<a>
+													import processing.sound.*;</br>
+													</br>
+													SoundFile s;</br>
+													</br>
+													Amplitude ampl;//振幅声明</br>
+													</br>
+													void setup(){</br>
+													size(618,618);</br>
+													</br>
+													s = new SoundFile(this,"xxx.mp3");</br>
+													s.loop();</br>
+													</br>
+													ampl = new Amplitude(this); //加载振幅</br>
+													ampl.input(s);//输入音频</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250);</br>
+													</br>
+													float v = ampl.analyze(); // 分析音频振幅</br>
+													float er = 10 + 200* v; // 带入变量</br>
+													</br>
+													ellipse(width,height,er,er);</br>
+													}</br>
+												</a>
+											</p>
+
+										</div>
+										<div id="00187" class="tab-pane">
+											<p>
+												<a>
+													import processing.sound.*;</br>
+													</br>
+													AudioIn ai;//麦克风声明</br>
+													</br>
+													Amplitude ampl;</br>
+													</br>
+													void setup(){</br>
+													size(618,618);</br>
+													</br>
+													ai = new AudioIn(this,0);//加载麦克风</br>
+													ai.play();//麦克风播放</br>
+													</br>
+													ampl = new Amplitude(this); </br>
+													ampl.input(ai);</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250);</br>
+													</br>
+													float v = ampl.analyze(); </br>
+													float er = 10 + 200* v; </br>
+													</br>
+													ellipse(width,height,er,er);</br>
+													}</br>
+												</a>
+											</p>
+
+										</div>
+										<div id="00188" class="tab-pane">
+											<p>
+												<a>
+
+													void draw(){</br>
+													background(250);</br>
+													</br>
+													float v = ampl.analyze(); </br>
+													if( v > 0.3){</br>
+													y++;</br>
+													}</br>
+													}</br>
+												</a>//控制一个振幅</p>
+											</br>
+											</br>
+											<p>
+												<a>
+
+													void draw(){</br>
+													background(250);</br>
+													</br>
+													float v = ampl.analyze(); </br>
+													if( v > 0.3 && !true){</br>
+													y++;</br>
+													}else if(v
+													< 0.25 && true){</br>
+														y+=0;</br>
+														}</br>
+														}</br>
+												</a>//控制多个振幅</p>
+
+										</div>
+										<div id="00189" class="tab-pane">
+											<p>
+												<a>
+
+													import processing.sound.*;</br>
+													</br>
+													SoundFile s;</br>
+													</br>
+													FFT fft;//频谱声明</br>
+													</br>
+													void setup(){</br>
+													size(618,618);</br>
+													</br>
+													s = new SoundFile(this,"xxx.mp3");</br>
+													s.loop();</br>
+													</br>
+													fft = new FFT(this,512);//频谱长度512，可以自定义其他数字</br>
+													fft.input(s);//声音带入fft</br>
+													</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250);</br>
+													</br>
+													fft.analyze(); //分析音乐</br>
+													</br>
+													for(int i = 0; i
+													< fft.size();i++){ //上面写了512所以循环512次</br>
+														stroke(0);</br>
+														float y = map(fft.spectrum[i],0,1,height *0.75,0);//spectrum功能可以读取512中的每个序号对应的音量值</br>
+														line(i,height * 0.75,i,y);</br>
+														}</br>
+														</br>
+														}</br>
+												</a>//可以做成随着声音震动的动画</p>
+
+										</div>
+
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av24235916/" target="_blank">中文教程：声音知识_第18章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<!-- 19 -->
+					<table class="sui-table table-bordered">
+						<thead>
+							<tr>
+								<th colspan="5">
+									<label class="checkbox pull-left">输出</label>
+									<span class="pull-right"><a name="mao19">19</a></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="2" width="70%">
+									<ul class="sui-nav nav-tabs tab-navbar tab-light">
+										<li class="active">
+											<a href="#00190" data-toggle="tab">p5输出</a>
+										</li>
+										<li>
+											<a href="#00191" data-toggle="tab">导出PDF</a>
+										</li>
+										<li>
+											<a href="#00192" data-toggle="tab">导出PNG单张图</a>
+										</li>
+										<li>
+											<a href="#00193" data-toggle="tab">导出PNG序列图</a>
+										</li>
+									</ul>
+									<div class="tab-content tab-wraped ">
+										<div id="00190" class="tab-pane active">
+											<p>
+												<a>html5网页</a>|
+												<a>window应用</a>|
+												<a>ios应用</a>|
+												<a>linux应用</a>|
+												<a>android应用</a>|
+												<a>unity应用</a>|
+												<a>python应用</a>|
+												<a>pdf</a>|
+												<a>tif</a>|
+												<a>tga</a>|
+												<a>png</a>|
+												<a>视频</a>|
+												<a>ppt动画</a>|
+												<a>auduino硬件结合</a>|
+												<a>kineck动作捕捉</a>
+											</p>
+
+										</div>
+										<div id="00191" class="tab-pane">
+											<p>
+												<a>
+													import processing.pdf.*; //必须插入</br>
+													</br>
+													void setup(){</br>
+													size(618,618,PDF,"xxx.pdf");//pdf，“生成文件名字”</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250);</br>
+													</br>
+													ellipse(width/2,height/2,66,66);</br>
+													</br>
+													exit();//这个必须要有，否则无法导出pdf</br>
+													}</br>
+													</br>
+
+												</a>//pdf导出基本格式</p>
+
+										</div>
+										<div id="00192" class="tab-pane">
+											<p>
+												<a>
+													void setup(){</br>
+													size(618,618); </br>
+													save("img/xxx.png");//如果在“生成文件名字”前面添加【img/】那么自动创建img文件夹</br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250); </br>
+													ellipse(width/2,height/2,66,66);</br>
+													} </br>
+												</a>
+											</p>
+										</div>
+										<div id="00193" class="tab-pane">
+											<p>
+												<a>
+													void setup(){</br>
+													size(618,618); </br>
+													}</br>
+													</br>
+													void draw(){</br>
+													background(250); </br>
+													ellipse(width/2,height/2,66,66);</br>
+													</br>
+													saveFrame("img/xxx-####.png");</br>
+													//如果在“生成文件名字”前面添加【img/】那么自动创建img文件夹</br>
+													//四个####是图片序号从0001~9999生成9999张图片</br>
+													} </br>
+												</a>
+											</p>
+
+										</div>
+
+								</td>
+								<td rowspan="2" width="30%" class="center">
+									<ul class="unstyled">
+										</br>
+										<li>
+											<a href="https://www.bilibili.com/video/av24236018/" target="_blank">中文教程：输出知识_第19章</a>
+										</li>
+										<ul class="sui-breadcrumb">
+											<li class="active">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</li>
+											<li class="active">安全链接，无广告，高清1080P</li>
+										</ul>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					</br>
+					</br>
+
+					</div>
+
+					<div class="span1"></div>
+
+					</div>
+					</div>
+
+					<script src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+					<script src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+
+	</body>
+
+</html>

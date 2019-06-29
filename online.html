@@ -1,0 +1,749 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="processing是一门编程语言，数据可视化，编程艺术">
+    <title>processing中文入门教程</title>
+    <link rel="Bookmark" href="/favicon.ico">
+    <link rel="Shortcut Icon" href="/favicon.ico">
+    <link href="https://cdn.bootcss.com/zui/1.9.1/css/zui.css" rel="stylesheet">
+    <link rel="stylesheet" href="jquery.atwho.css">
+    <script src="https://cdn.bootcss.com/processing.js/1.6.6/processing.min.js"></script>
+    <style>
+        iframe {
+                width: 100%;
+                height: 500px;
+            }
+        </style>
+</head>
+
+<body onload="savecontent()">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="alert">流程</div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <ul class="nav nav-tabs nav-stacked">
+                            <li class="active"><a href="###" data-target="#tab3Content1" data-toggle="tab">1.结构 <i
+                                        class="icon icon-align-justify"></i></a></li>
+                            <li><a href="###" data-target="#tab3Content2" data-toggle="tab">2.建模 <i class="icon icon-cube-alt"></i></a></li>
+                            <li><a href="###" data-target="#tab3Content3" data-toggle="tab">3.着色 <i class="icon icon-paint-brush"></i></a></li>
+                            <li><a href="###" data-target="#tab3Content4" data-toggle="tab">4.功能 <i class="icon icon-sliders"></i></a></li>
+                            <li><a href="###" data-target="#tab3Content5" data-toggle="tab">5.动画 <i class="icon icon-spin icon-spinner"></i></a></li>
+                            <li><a href="###" data-target="#tab3Content6" data-toggle="tab">6.交互 <i class="icon icon-toggle-on"></i></a></li>
+                            <li><a href="###" data-target="#tab3Content7" data-toggle="tab">7.输出 <i class="icon icon-node"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="tab3Content1">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="class=" btn-group>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+void setup()   //播放一次
+{
+
+}
+                            
+void draw()     //播放循环
+{
+
+}
+`)">1.基本
+                                            Void</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+void setup()    //播放一次
+{
+    size(233,233,P2D);      //窗口大小，二维模式
+    smooth(5); 	    //抗锯齿( 光滑数值)
+    frameRate(30);      //帧数(每秒渲染图片数量默认为60张)
+}
+                            
+void draw()     //循环播放
+{
+
+}
+`)">2.二维
+                                            2D</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+void setup()    //播放一次
+{
+    size(233,233,P3D);      //窗口大小，三维模式
+    smooth(5); 	    //抗锯齿( 光滑数值)
+    frameRate(30);      //帧数(每秒渲染图片数量默认为60张)
+}
+                                   
+void draw()     //循环播放
+{
+         
+}
+`)">3.三维
+                                            3D</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+PFont f;    //声明字体
+
+void setup()    //播放一次
+{
+    size(233,233);     //窗口大小，二维模式  
+    f = createFont( 字体名称 , 24, true);       //创建字体，字体，字体大小，是否光滑
+}
+                                                    
+void draw()     //循环播放
+{
+    textFont(f,36);     //字体设置，字体大小
+    fill(0);    //字体颜色
+    text( 填写内容 ,10,100);    //字体内容，x,y坐标           
+}
+`)">4.字体
+                                            Font</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+PImage img;     //声明图片
+
+void setup()    //播放一次
+{
+    size(233,233);
+    img = loadImage(图片名称);      //加载图片，图片名称
+}
+                                            
+void draw()     //循环播放
+{
+    image(img,0,0);     //图片，x,y坐标     
+}
+`)">5.图片
+                                            Image</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+import processing.video.*;      //插入视频库
+                            
+Capture video;  //声明摄像头
+                            
+void setup()       //播放一次
+{
+    size(233,233);  //窗口大小
+    video = new Capture(this,320,240,30);   //摄像头 x,y坐标，帧数
+    video.start();      //摄像头开始
+}
+                            
+void draw()     //循环播放
+{
+    if(video.available())       //摄像头获取
+    {
+        video.read();       //摄像头读取
+    }
+                            
+    image(video,0,0);   //现时摄像头，x,y坐标
+}  
+`)">6.直播
+                                            Video</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+import processing.video.*;      //插入视频库
+
+Movie video;    //声明视频
+                            
+void setup()    //播放一次
+{
+    size(233,233);  //窗口大小
+    video = new Movie(this, 视频名称);  //设置视频，视频文件名称
+    video.play();   //视频播放
+}
+                            
+void draw()     //循环播放
+{
+    if(video.available())   //视频获取
+    {
+        video.read();   //视频读取
+    }
+                            
+    image(video,0,0);    //显示视频，x,y坐标
+}  
+`)">7.视频
+                                            Movie</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+import processing.sound.*;      //插入声音库
+                            
+AudioIn ai;     //声明麦克风输入                           
+Amplitude ampl;     //声明振幅
+                            
+void setup()    //播放一次
+{
+    size(233,233);      //窗口大小
+                            
+    ai = new AudioIn(this,0);   //设置麦克风输入
+    ai.play();      //麦克风播放
+                            
+    ampl = new Amplitude(this);     //设置振幅
+    ampl.input(ai);     //振幅输入
+}
+                            
+void draw()     //循环播放
+{
+    float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）                         
+}         
+`)">8.录音
+                                            AudioIn</button>
+                                        <button class="btn btn-block " type="button" onclick="AddContent(`
+import processing.sound.*;      //插入声音库
+                            
+SoundFile s;    //声明音频文件
+                                    
+void setup()    //播放一次
+{
+    size(233,233);      //窗口大小
+    s = new SoundFile(this,音频名称);   //设置音频，音频文件名称
+    s.play();     //音频播放
+}
+                                    
+void draw()     //循环播放（内容空着即可，删除无声音）
+{
+            
+}         
+`)">9.音频
+                                            Sound</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content2">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="class=" btn-group>
+                                        <button class="btn btn-block " onclick="AddContent(`    point(width/2,height/2);   
+    //x,y坐标
+`)">1.标点
+                                            Point</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    line(width/2,height/2, 66,66);
+    //x1,y1坐标;    x2,y2坐标
+`)">2.直线
+                                            Line</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    rect(width/2,height/2, 66,66, 10);
+    //x，y坐标;   w,h长度;   a,b,c,d边角半径
+`)">3.矩形
+                                            Rect</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    ellipse(width/2,height/2, 66,66);
+    //x，y坐标;    w,h长度
+`)">4.圆形
+                                            Ellipse</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    triangle(width/2,height/2, 66,66,178,178);        
+    //x1，y1坐标;    x2，y2坐标;，   x3，y3坐标
+`)">5.三角
+                                            Triangle</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    arc(width/2,height/2, 66,66, 0,HALF_PI,OPEN);
+    //x，y坐标;    w,h长度;   起始角度，结束角度，闭合
+`)">6.弧线
+                                            Arc</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    quad(width/2,height/2, 66,66, 178,178,520,520);
+    //x1，y1坐标;  x2，y2坐标;  x3，y3坐标; x4，y4坐标
+`)">7.棱形
+                                            Quad</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    beginshape();
+        vertex(width/2,height/2);    //x，y坐标
+        vertex(66,66);   
+        vertex(233,233);    
+        vertex(520,520);    
+    endshape(CLOSE);
+`)">8.顶点
+                                            Shape</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content3">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="class=" btn-group>
+                                        <button class="btn btn-block " onclick="AddContent(`    background(233);
+    //灰度0~255，   红0~255，绿0~255，蓝0~255，     透明度0~255
+`)">1.背景色
+                                            Background</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    fill(233);
+    //灰度0~255，   红0~255，绿0~255，蓝0~255，     透明度0~255
+`)">2.填充色
+                                            Fill</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    noFill(); 
+    //填充色为:无
+`)">3.填充空
+                                            NoFill</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    stroke(233);
+    //灰度0~255，   红0~255，绿0~255，蓝0~255，    透明度0~255
+`)">4.轮廓色
+                                            Stroke</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    noStroke();
+    //轮廓色为:无
+`)">5.轮廓空
+                                            NoStroke</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    color(233,233,233，233);
+    //红0~255，绿0~255，蓝0~255，    透明度0~255
+`)">6.颜色
+                                            Color</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    colorMode(HSB,360,100,100);
+    //色调0~360度，饱和0~100%，亮度0~100%
+`)">7.颜色模式
+                                            ColorMode</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content4">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="class=" btn-group>
+                                        <button class="btn btn-block " onclick="AddContent(`    println(测试内容);
+    //每行显示测试结果
+`)">1.打印
+                                            Prinln</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    for(int i = 0;i < xxx; i++)
+    {
+                                            
+    }
+`)">2.循环
+                                            For</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    if()
+    {
+                                                                            
+    }
+    else if()
+    {
+                            
+    }
+    else
+    {
+                            
+    }
+`)">3.判断
+                                            If</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    char DIYname = 'N';
+                                                                     
+    switch(DIYname) 
+    {
+        case 'A':                        
+        break;
+                            
+        case 'B': 
+        break;
+                            
+        default:
+        break;
+    }
+`)">4.开关
+                                            Switch</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    random(0,233);
+    //随机选择一个数字，范围是0~自定义
+`)">5.随机
+                                            Random</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    Constrain( 变量 ，min，max);
+    //限制 (受到限制的变量，最小值，最大值);
+`)">6.限制
+                                            Constrain</button>
+                                        <button class="btn btn-block " onclick="AddContent(`    map( 变量 ，oldmin，oldmax, newmin，newmax);
+    //调整范围 (调整变量，原最小值，原最大值，新最小值，新最大值);
+`)">7.调整
+                                            Map</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content5">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="class=" btn-group>
+                                        <button class="btn btn-block ">1.坐标改变 x,y</button>
+                                        <button class="btn btn-block ">2.大小改变 w,h</button>
+                                        <button class="btn btn-block ">3.旋转改变 rotate</button>
+                                        <button class="btn btn-block ">4.匀速运动 x++,y++</button>
+                                        <button class="btn btn-block ">5.加速运动 xx+=x,x++</button>
+                                        <button class="btn btn-block ">6.随机运动 x+=random() </button>
+                                        <button class="btn btn-block ">7.往复运动 x+=sin(), y+=cos() </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content6">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="class=" btn-group>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/mouseButton.html')">1.鼠标</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/key.html')">2.键盘</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/video/index.html')">3.摄像头</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/sound/index.html')">4.麦克风</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://yuedu.163.com/source/376cadc2c5c449e0bf14fe82d3050347_4')">5.arduino</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('https://channel9.msdn.com/coding4fun/kinect/Processing-for-Kinect-for-Windows-v2')">6.Kinect</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content7">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="class=" btn-group>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/save_.html')">1.png</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/pdf/index.html')">2.pdf</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/save_.html')">3.tif</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/save_.html')">4.tga</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/saveFrame_.html')">5.gif</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/dxf/index.html')">6.dxf</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/net/index.html')">7.network</button>
+                                        <button class="btn btn-block" id="p52h5" data-toggle="modal" data-target="#myModal"
+                                            onclick="p52h5()">8.html</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">9.exe</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">10.ios</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">11.linux</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://android.processing.org/')">12.android</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://dev.eyln.com/unicessing/doc/en/')">13.unity</button>
+                                        <button class="btn btn-block" onclick="javascript:window.open('http://py.processing.org/')">14.python</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-4">
+                <div class="alert">编辑</div>
+                <textarea id="t1" name="t1" style="width:100%" rows="15" cols="50" placeholder="在这儿编写processing代码... ...
+    shift 和 : 同时按下补全代码"></textarea>
+                <div class="btn-group">
+                    <button type="button" class="btn" onclick="run(0)">运行 <i class="icon icon-play"></i> </button>
+                    <button type="button" class="btn" onclick="stop(0)">停止 <i class="icon icon-stop"></i> </button>
+                    <button type="button" class="btn" onclick="copy()">复制 <i class="icon icon-copy"></i> </button>
+                </div>
+                <button type="button" class="btn" style="float:right;" id="clear">清空 <i class="icon icon-trash"></i>
+                </button>
+                <div>
+                    </br>
+                    <canvas id="canvas0" width="100px" height="100px"></canvas>
+                </div>
+
+                <!-- processing 转 p5.js-->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                        class="sr-only">关闭</span></button>
+                                <h4 class="modal-title">processing转换p5js完成！！！</h4>
+                            </div>
+                            <div class="modal-body">
+                                <textarea id="t2" style="width:100%" rows="15" cols="30" placeholder="这里有转换代码"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" data-placement="top" data-toggle="tooltip" title="void → function 
+    size → createCanvas
+    float →  var
+    int → var
+    boolean → var
+    char →  var
+    String →  var
+    PImage → var
+    PFont →  var
+    PShape →  var
+    pushMatrix() →  push()
+    popMatrix() →  pop()
+    mousePressed →  mouseIsPressed
+    ">【一键转换内容】</a>
+                                <a href="#" data-placement="top" data-toggle="tooltip" title="class 自定义名称{ 
+        constructor(x, y, w, h) { 
+            //初始参数
+        }
+    
+        display() { 
+            //无需填写void
+            //内容区域
+        }
+    
+    }
+    ">【手动转换内容】</a>
+                                <button type="button" class="btn" onclick="copyp5js()">复制 <i class="icon icon-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- processing 转 p5.js-->
+            </div>
+
+            <div class="col-xs-4">
+                <div class="alert">案例</div>
+                <form role="search" onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+                    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+                    <input name="word" type="text" onfocus="checkHttps" class="form-control search-input" placeholder="QQ群:422856731                      [京ICP备15008119号-2]">
+                </form>
+                </br>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <ul class="nav nav-tabs nav-stacked">
+                            <li class="active"><a href="###" data-target="#tab3Content100" data-toggle="tab">入门教程</a></li>
+                            <li><a href="###" data-target="#tab3Content101" data-toggle="tab">学习网站</a></li>
+                            <li><a href="###" data-target="#tab3Content102" data-toggle="tab">形式科学</a></li>
+                            <li><a href="###" data-target="#tab3Content103" data-toggle="tab">自然科学</a></li>
+                            <li><a href="###" data-target="#tab3Content104" data-toggle="tab">社会科学</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="tab3Content100">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <div class="alert alert-success-inverse">步入数字艺术世界 ( •̀ .̫ •́ )✧</div>
+                                    <button class="btn btn-block" onclick="javascript:window.open('qingtong.html')">1.青铜教程</button>
+                                    <button class="btn btn-block" onclick="javascript:window.open('https://www.leangoo.com/kanban/board/go/2419758')">2.白银教程</button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content101">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-tab href="#tabContent1101">资料 <span class="label label-badge label-danger"></span></a></a></li>
+                                        <li><a data-tab href="#tabContent1102">开源 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent1103">动漫 <span class="label label-badge label-danger"></span></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active in" id="tabContent1101">
+                                            <div class="alert alert-success-inverse">站在巨人肩膀，走的更远</div>
+                                            <li class="list-group-item">
+                                                常用
+                                                | <a href="https://www.google.cn/chrome/" target="blank">谷歌浏览器</a>
+                                                | <a href="http://fanyi.baidu.com/" target="blank">百度翻译</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                官网
+                                                | <a href="https://processing.org/tutorials/" target="blank">官方教程</a>
+                                                | <a href="https://processing.org/reference/" target="blank">官方手册</a>
+                                                | <a href="https://processing.org/examples/" target="blank">官方案例</a>
+                                                | <a href="https://discourse.processing.org/" target="blank">官方论坛</a>
+                                                | <a href="https://processing.org/reference/libraries/" target="blank">官方插件</a>
+                                                | <a href="https://processing.org/shop/" target="blank">官方书籍</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                其他
+                                                | <a href="http://learningprocessing.com/" target="blank">learning
+                                                    processing</a>
+                                                | <a href="https://natureofcode.com/" target="blank">the nature of code</a>
+                                                | <a href="https://www.openprocessing.org/" target="blank">open
+                                                    processing</a>
+                                                | <a href="http://www.generative-gestaltung.de/" target="blank">genertive</a>
+                                                | <a href="https://p5js.org/" target="blank">p5.js</a>
+                                                | <a href="http://processingjs.org/" target="blank">processing.js</a>
+                                                | <a href="https://assetstore.unity.com/packages/tools/integration/unicessing-75728"
+                                                    target="blank">unicessing</a>
+                                            </li>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent1102">
+                                            <div class="alert alert-success-inverse">除了正版付费,盗版破解，还有开源免费！</div>
+                                            <li class="list-group-item">
+                                                DIY
+                                                | <a href="#">狂草手写</a>
+                                                | <a href="#">灵魂绘画</a>
+                                                | <a href="#">原声录音</a>
+                                                | <a href="#">自导自演</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                符号
+                                                | <a href="http://www.fuhao123.com/" target="blank">素材:123</a>
+                                                | <a href="https://jingyan.baidu.com/article/4f34706e36f96de387b56dc9.html"
+                                                    target="blank">制作:win</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                字体
+                                                | <a href="https://site.douban.com/135242/widget/notes/16955314/note/614828775/"
+                                                    target="blank">素材:思源</a>
+                                                | <a href="http://www.flexifont.com/flexifont-chn/login/" target="blank">制作:中文</a>
+                                                | <a href="http://glyphrstudio.com/" target="blank">制作:英文</a>
+                                                | <a href="http://www.myfont.me/" target="blank">制作:手迹</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                图标
+                                                | <a href="https://material.io/tools/icons/?style=baseline" target="blank">素材:material</a>
+                                                | <a href="https://ephtracy.github.io/" target="blank">制作:magicaVoxel</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                表情
+                                                | <a href="https://emojipedia.org/" target="blank">素材:pedia</a>
+                                                | <a href="https://inkscape.org/zh/" target="blank">制作:inkscape</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                抠图
+                                                | <a href="http://pngimg.com/" target="blank">素材:pngimg</a>
+                                                | <a href="https://www.gaoding.com/koutu" target="blank">制作:gaoding</a>
+                                                | <a href="http://bigjpg.com/" target="blank">制作:bigjpg</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                矢量
+                                                | <a href="https://www.freepik.com/" target="blank">素材:freepik</a>
+                                                | <a href="https://inkscape.org/zh/" target="blank">制作:inkscape</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                图片
+                                                | <a href="https://unsplash.com/" target="blank">素材:unsplash</a>
+                                                | <a href="https://www.gimp.org/" target="blank">制作:gimp</a>
+                                                | <a href="https://krita.org/zh/" target="blank">制作:krita</a>
+                                                | <a href="https://medibangpaint.com/zh_CN/" target="blank">制作:medibangpaint</a>
+                                                | <a href="https://inkscape.org/zh/" target="blank">制作:inkscape</a>
+                                                | <a href="http://mypaint.org/" target="blank">制作:mypaint</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                三维
+                                                | <a href="https://sketchfab.com/" target="blank">素材:sketchfab</a>
+                                                | <a href="https://www.blender.org/" target="blank">制作:blender</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                音频
+                                                | <a href="http://dust-sounds.com/" target="blank">素材:音效</a>
+                                                | <a href="https://freesound.org/" target="blank">素材:配音</a>
+                                                | <a href="https://www.youtube.com/channel/UCorqI2EE1avwlTCekjfi0LQ"
+                                                    target="blank">素材:音乐</a>
+                                                | <a href="https://sourceforge.net/projects/audacity/" target="blank">制作:sourceforge</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                视频
+                                                | <a href="http://www.coverr.co/" target="blank">素材:coverr</a>
+                                                | <a href="http://www.faststone.org/FSCapturerDownload.htm" target="blank">制作:faststone</a>
+                                                | <a href="https://shotcut.org/" target="blank">制作:shotcut</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                游戏
+                                                | <a href="https://store.steampowered.com/" target="blank">素材:steam</a>
+                                                | <a href="https://unity3d.com/cn" target="blank">制作:unity3d</a>
+                                                | <a href="https://www.leangoo.com/kanban/board/go/2499072" target="blank">制作:unity3d(开发)</a>
+                                                | <a href="https://www.unrealengine.com/zh-CN/" target="blank">制作:虚幻4</a>
+                                            </li>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent1103">
+                                            <div class="alert alert-success-inverse">全球动漫欣赏</div>
+                                            <li class="list-group-item">
+                                                中国_陆漫
+                                                | <a href="http://www.u17.com/" target="blank">妖气</a>
+                                                | <a href="http://ac.qq.com/" target="blank">腾漫</a>
+                                                | <a href="https://manhua.163.com/" target="blank">易漫</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                中国_港漫
+                                                | <a href="https://tw.manhuagui.com/list/hongkong/" target="blank">柜子</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                中国_台漫
+                                                | <a href="http://www.comicstar.com.tw/" target="blank">漫星</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                日本漫
+                                                | <a href="https://www.comico.jp/" target="blank">comico</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                韩国漫
+                                                | <a href="https://comic.naver.com/" target="blank">naver</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                美国漫
+                                                | <a href="https://www.disneyanimation.com/studio/our-films" target="blank">迪士尼</a>
+                                                | <a href="https://www.dreamworksanimation.com/" target="blank">梦工厂</a>
+                                                | <a href="https://manhua.dmzj.com/tags/marvel.shtml" target="blank">漫威</a>
+                                                | <a href="https://manhua.dmzj.com/tags/dccomics.shtml" target="blank">dccomics</a>
+                                                | <a href="https://manhua.dmzj.com/tags/dark%20horse%20comics%20.shtml"
+                                                    target="blank">dark</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                英国漫
+                                                | <a href="https://www.aardman.com/" target="blank">阿德曼</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                印度漫
+                                                | <a href="http://www.sohu.com/a/202494964_99965858" target="blank">个人</a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content102">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-tab href="#tabContent2101">数学 <span class="label label-badge label-danger"></span></a></a></li>
+                                        <li><a data-tab href="#tabContent2102">哲学 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent2103">艺术 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent2104">科技 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent2105">思维 <span class="label label-badge label-danger"></span></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active in" id="tabContent2101">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent2102">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent2103">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent2104">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent2105">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content103">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-tab href="#tabContent3101">物理 <span class="label label-badge label-danger"></span></a></a></li>
+                                        <li><a data-tab href="#tabContent3102">化学 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent3103">生物 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent3104">地理 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent3105">生态 <span class="label label-badge label-danger"></span></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active in" id="tabContent3101">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent3102">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent3103">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent3104">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent3105">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3Content104">
+                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-tab href="#tabContent4101">历史 <span class="label label-badge label-danger"></span></a></a></li>
+                                        <li><a data-tab href="#tabContent4102">政治 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent4103">经济 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent4104">文化 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab href="#tabContent4105">军事 <span class="label label-badge label-danger"></span></a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active in" id="tabContent4101">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent4102">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent4103">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent4104">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                        <div class="tab-pane" id="tabContent4105">
+                                            <div class="alert alert-success-inverse">内容正在制作中... ...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/zui/1.9.1/js/zui.js"></script>
+    <script src="jquery.atwho.js"></script>
+    <script src="https://cdn.bootcss.com/Caret.js/0.3.1/jquery.caret.js"></script>
+    <script src="p5tool.js"></script>
+
+</body>
+
+</html>
