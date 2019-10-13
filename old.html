@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>processing中文助手丨算法艺术数据可视化</title>
+    <link href="https://cdn.bootcss.com/zui/1.9.1/css/zui.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/p5.js/0.8.0/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="home.js"></script>
+    <style>
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        #contenu {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">P5</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-collapse-example">
+                <ul class="nav navbar-nav">
+                    <!-- 0 -->
+                    <li class="dropdown">
+                        <a href="###" class="dropdown dropdown-hover" data-toggle="dropdown">0深渊灯塔0 <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.yuque.com/processing.hub/store/soft" target="_blank">官方软件</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/libraries" target="_blank">第三方库</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/book" target="_blank">参考书籍</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="###">便捷工具</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://www.yuque.com/processing.hub/store/easy"
+                                            target="_blank">补全代码</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/web" target="_blank">常用网站</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/talk" target="_blank">社交圈子</a></li>
+                        </ul>
+                    </li>
+                    <!-- 1 -->
+                    <li><a href="https://www.yuque.com/processing.hub/store/thinkdifferent" target="_blank">1勿忘初心1</a>
+                    </li>
+                    <!-- 2 -->
+                    <li class="dropdown">
+                        <a href="###" class="dropdown dropdown-hover" data-toggle="dropdown">2物以类聚2 <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.yuque.com/processing.hub/store/2d" target="_blank">平面</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/3d" target="_blank">立体</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/font" target="_blank">字形</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/gui" target="_blank">界面</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/image" target="_blank">图片</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/sound" target="_blank">音频</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/video" target="_blank">视频</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/data" target="_blank">数据</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/hardware" target="_blank">硬件</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/ai" target="_blank">智能</a></li>
+                        </ul>
+                    </li>
+                    <!-- 3 -->
+                    <li><a href="https://www.yuque.com/processing.hub/store/modelss" target="_blank">3万物生长3</a></i>
+                        <!-- 4 -->
+                    <li><a href="https://www.yuque.com/processing.hub/store/light" target="_blank">4光影魔幻4</a></i>
+                        <!-- 5 -->
+                    <li class="dropdown">
+                        <a href="###" class="dropdown dropdown-hover" data-toggle="dropdown">5宇宙守则5 <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.yuque.com/processing.hub/store/kindergarten"
+                                    target="_blank">学前黑铁</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/primary_school"
+                                    target="_blank">小学青铜</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/junior_middle_school"
+                                    target="_blank">初中白银</a></li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/high_school"
+                                    target="_blank">高中黄金</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/university" target="_blank">大学铂金</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/master" target="_blank">硕士钻石</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/doctor" target="_blank">博士大师</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/post-doctoral"
+                                    target="_blank">博后宗师</a>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/store/scientist" target="_blank">科学家王者</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 6 -->
+                    <li><a href="https://www.yuque.com/processing.hub/store/output" target="_blank">6散播远方6</a></i>
+                    <!-- 7 -->
+                    <li class="dropdown">
+                        <a href="###" class="dropdown dropdown-hover" data-toggle="dropdown">7学海无边7 <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.yuque.com/processing.hub/news" target="_blank">主城</a>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="###">新手村</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://space.bilibili.com/9004724/channel/detail?cid=68891"
+                                            target="_blank">官方教程</a>
+                                    </li>
+                                    <li><a href="https://www.yuque.com/processing.hub/learn/ad" target="_blank">黑铁教程</a>
+                                    </li>
+                                    <li><a href="https://p5.xn--fiqs8s/qingtong.html" target="_blank">青铜教程（文字）</a>
+                                    </li>
+                                    <li><a href="https://space.bilibili.com/9004724/channel/detail?cid=39462"
+                                            target="_blank">青铜教程（视频）</a>
+                                    </li>
+                                    <li><a href="https://www.leangoo.com/kanban/board/go/2419758"
+                                            target="_blank">白银教程（文字）</a>
+                                    </li>
+                                    <li><a href="https://space.bilibili.com/9004724/channel/detail?cid=42889"
+                                            target="_blank">白银教程（视频）</a>
+                                    </li>
+                                    <li><a href="https://space.bilibili.com/9004724/channel/detail?cid=56039"
+                                            target="_blank">杂谈交流</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.yuque.com/processing.hub/words/font" target="_blank">字艺村</a></li>
+                            <li class="disabled"><a href="https://p5.xn--fiqs8s/online.html" target="_blank">遗迹</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/zui/1.9.1/js/zui.min.js"></script>
+
+</html>
