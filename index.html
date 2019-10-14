@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-
-<head>
+<html lang="zh-cn" class="os-mac screen-desktop-wide device-desktop"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,7 +8,9 @@
     <link rel="Shortcut Icon" href="/favicon.ico">
     <link href="https://cdn.bootcss.com/zui/1.9.1/css/zui.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/at.js/1.5.4/css/jquery.atwho.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
     <script src="https://cdn.bootcss.com/processing.js/1.6.6/processing.min.js"></script>
+    
     <style>
         iframe {
                 width: 100%;
@@ -25,32 +24,33 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4">
-                <div class="alert">流程</div>
+                <div class="alert alert-danger-inverse">流程</div>
                 <div class="row">
                     <div class="col-xs-3">
                         <ul class="nav nav-tabs nav-stacked">
-                            <li class="active"><a href="###" data-target="#tab3Content1" data-toggle="tab">1.结构 <i
-                                        class="icon icon-align-justify"></i></a></li>
-                            <li><a href="###" data-target="#tab3Content2" data-toggle="tab">2.建模 <i class="icon icon-cube-alt"></i></a></li>
-                            <li><a href="###" data-target="#tab3Content3" data-toggle="tab">3.着色 <i class="icon icon-paint-brush"></i></a></li>
-                            <li><a href="###" data-target="#tab3Content4" data-toggle="tab">4.功能 <i class="icon icon-sliders"></i></a></li>
-                            <li><a href="###" data-target="#tab3Content5" data-toggle="tab">5.动画 <i class="icon icon-spin icon-spinner"></i></a></li>
-                            <li><a href="###" data-target="#tab3Content6" data-toggle="tab">6.交互 <i class="icon icon-toggle-on"></i></a></li>
-                            <li><a href="###" data-target="#tab3Content7" data-toggle="tab">7.输出 <i class="icon icon-node"></i></a></li>
+                            <li class="active"><a href="###" data-target="#tab3Content1" data-toggle="tab">1.结构 </a></li>
+                            <li><a href="###" data-target="#tab3Content2" data-toggle="tab">2.建模 </a></li>
+                            <li><a href="###" data-target="#tab3Content3" data-toggle="tab">3.着色 </a></li>
+                            <li><a href="###" data-target="#tab3Content4" data-toggle="tab">4.功能 </a></li>
+                            <li><a href="###" data-target="#tab3Content5" data-toggle="tab">5.动画 </a></li>
+                            <li><a href="###" data-target="#tab3Content6" data-toggle="tab">6.交互 </a></li>
+                            <li><a href="###" data-target="#tab3Content7" data-toggle="tab">7.输出 </a></li>
                         </ul>
                     </div>
                     <div class="col-xs-9">
                         <div class="tab-content">
                             <div class="tab-pane fade active in" id="tab3Content1">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
-                                    <div class="class=" btn-group>
+                                <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
+                                    <div class="class=" btn-group="">
                                         <button class="btn btn-block " type="button" onclick="AddContent(`
 void setup()   //播放一次
 {
+
 }
                             
 void draw()     //播放循环
 {
+
 }
 `)">1.基本
                                             Void</button>
@@ -64,9 +64,10 @@ void setup()    //播放一次
                             
 void draw()     //循环播放
 {
+
 }
 `)">2.二维
-                                            2D</button>
+                                            P2D</button>
                                         <button class="btn btn-block " type="button" onclick="AddContent(`
 void setup()    //播放一次
 {
@@ -80,9 +81,10 @@ void draw()     //循环播放
          
 }
 `)">3.三维
-                                            3D</button>
+                                            P3D</button>
                                         <button class="btn btn-block " type="button" onclick="AddContent(`
 PFont f;    //声明字体
+
 void setup()    //播放一次
 {
     size(233,233);     //窗口大小，二维模式  
@@ -99,6 +101,7 @@ void draw()     //循环播放
                                             Font</button>
                                         <button class="btn btn-block " type="button" onclick="AddContent(`
 PImage img;     //声明图片
+
 void setup()    //播放一次
 {
     size(233,233);
@@ -136,6 +139,7 @@ void draw()     //循环播放
                                             Video</button>
                                         <button class="btn btn-block " type="button" onclick="AddContent(`
 import processing.video.*;      //插入视频库
+
 Movie video;    //声明视频
                             
 void setup()    //播放一次
@@ -201,8 +205,8 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content2">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
-                                    <div class="class=" btn-group>
+                                <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
+                                    <div class="class=" btn-group="">
                                         <button class="btn btn-block " onclick="AddContent(`    point(width/2,height/2);   
     //x,y坐标
 `)">1.标点
@@ -243,8 +247,8 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content3">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
-                                    <div class="class=" btn-group>
+                                <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
+                                    <div class="class=" btn-group="">
                                         <button class="btn btn-block " onclick="AddContent(`    background(233);
     //灰度0~255，   红0~255，绿0~255，蓝0~255，     透明度0~255
 `)">1.背景色
@@ -277,8 +281,8 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content4">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
-                                    <div class="class=" btn-group>
+                                <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
+                                    <div class="class=" btn-group="">
                                         <button class="btn btn-block " onclick="AddContent(`    println(测试内容);
     //每行显示测试结果
 `)">1.打印
@@ -335,8 +339,8 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content5">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
-                                    <div class="class=" btn-group>
+                                <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
+                                    <div class="class=" btn-group="">
                                         <button class="btn btn-block ">1.坐标改变 x,y</button>
                                         <button class="btn btn-block ">2.大小改变 w,h</button>
                                         <button class="btn btn-block ">3.旋转改变 rotate</button>
@@ -348,8 +352,8 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content6">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
-                                    <div class="class=" btn-group>
+                                <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
+                                    <div class="class=" btn-group="">
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/mouseButton.html')">1.鼠标</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/key.html')">2.键盘</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/video/index.html')">3.摄像头</button>
@@ -360,8 +364,8 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content7">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
-                                    <div class="class=" btn-group>
+                                <div class="scrollbar-hover" style="max-height: 600px; overflow: scroll;">
+                                    <div class="class=" btn-group="">
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/save_.html')">1.png</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/pdf/index.html')">2.pdf</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/save_.html')">3.tif</button>
@@ -369,8 +373,7 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/saveFrame_.html')">5.gif</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/dxf/index.html')">6.dxf</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('http://p5.xn--fiqs8s/p5/p5help/libraries/net/index.html')">7.network</button>
-                                        <button class="btn btn-block" id="p52h5" data-toggle="modal" data-target="#myModal"
-                                            onclick="p52h5()">8.html</button>
+                                        <button class="btn btn-block" id="p52h5" data-toggle="modal" data-target="#myModal" onclick="p52h5()">8.html</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">9.exe</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">10.ios</button>
                                         <button class="btn btn-block" onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">11.linux</button>
@@ -383,21 +386,34 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                         </div>
                     </div>
                 </div>
+
+            </br></br>
+                
             </div>
 
             <div class="col-xs-4">
-                <div class="alert">编辑</div>
+                <div class="alert alert-primary-inverse">编辑</div>
                 <textarea id="t1" name="t1" style="width:100%" rows="15" cols="50" placeholder="在这儿编写processing代码... ...
     shift 和 : 同时按下补全代码"></textarea>
+            
                 <div class="btn-group">
-                    <button type="button" class="btn" onclick="run(0)">运行 <i class="icon icon-play"></i> </button>
-                    <button type="button" class="btn" onclick="stop(0)">停止 <i class="icon icon-stop"></i> </button>
-                    <button type="button" class="btn" onclick="copy()">复制 <i class="icon icon-copy"></i> </button>
-                </div>
-                <button type="button" class="btn" style="float:right;" id="clear">清空 <i class="icon icon-trash"></i>
-                </button>
-                <div>
                     </br>
+                    <button class="btn btn-primary" type="button" class="btn" onclick="run(0)">运行  </button>
+                </div>
+                <div class="btn-group">
+                    </br>
+                    <button class="btn btn-primary" type="button" class="btn" onclick="stop(0)">停止 </button>
+                </div>
+                <div class="btn-group">
+                    </br>
+                    <button class="btn btn-primary" type="button" class="btn" onclick="copy()">复制  </button>
+                </div>
+                <div class="btn-group">
+                    </br>
+                    <button class="btn btn-primary" type="button" class="btn" style="float:right;" id="clear">清空 </button>
+                </div>
+                <div>
+                    <br>
                     <canvas id="canvas0" width="100px" height="100px"></canvas>
                 </div>
 
@@ -406,8 +422,7 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                                        class="sr-only">关闭</span></button>
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
                                 <h4 class="modal-title">processing转换p5js完成！！！</h4>
                             </div>
                             <div class="modal-body">
@@ -450,20 +465,20 @@ void draw()     //循环播放（内容空着即可，删除无声音）
             </div>
 
             <div class="col-xs-4">
-                <div class="alert">案例</div>
+                    <div class="alert alert-success-inverse">案例</div>
                 <form role="search" onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
                     <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
                     <input name="word" type="text" onfocus="checkHttps" class="form-control search-input" placeholder="QQ群:422856731                      [京ICP备15008119号-2]">
                 </form>
-                </br>
+                <br>
                 <div class="row">
                     <div class="col-xs-3">
                         <ul class="nav nav-tabs nav-stacked">
                             <li class="active"><a href="###" data-target="#tab3Content100" data-toggle="tab">入门教程</a></li>
                             <li><a href="###" data-target="#tab3Content101" data-toggle="tab">学习网站</a></li>
-                            <li><a href="###" data-target="#tab3Content102" data-toggle="tab">形式科学</a></li>
+                            <!-- <li><a href="###" data-target="#tab3Content102" data-toggle="tab">形式科学</a></li>
                             <li><a href="###" data-target="#tab3Content103" data-toggle="tab">自然科学</a></li>
-                            <li><a href="###" data-target="#tab3Content104" data-toggle="tab">社会科学</a></li>
+                            <li><a href="###" data-target="#tab3Content104" data-toggle="tab">社会科学</a></li> -->
                         </ul>
                     </div>
                     <div class="col-xs-9">
@@ -472,22 +487,20 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
                                     <div class="alert alert-success-inverse">步入数字艺术世界 ( •̀ .̫ •́ )✧</div>
                                     <button class="btn btn-block" onclick="javascript:window.open('https://space.bilibili.com/9004724/channel/detail?cid=68891')">官宣</button>
-                                    <button class="btn btn-block" onclick="javascript:window.open('qingtong.html')">基础</button>
+                                    <button class="btn btn-block" onclick="javascript:window.open('https://p5.xn--fiqs8s/qingtong.html')" >基础</button>
                                     <button class="btn btn-block" onclick="javascript:window.open('https://www.leangoo.com/kanban/board/go/2419758')">物理</button>
                                     <button class="btn btn-block" onclick="javascript:window.open('https://space.bilibili.com/9004724/channel/detail?cid=90562')">音乐</button>
                                     <button class="btn btn-block" onclick="javascript:window.open('https://www.yuque.com/processing.hub/store')">藏经</button>
                                     <button class="btn btn-block" onclick="javascript:window.open('https://www.yuque.com/processing.hub/open')">聊斋</button>
                                     <button class="btn btn-block" onclick="javascript:window.open('https://space.bilibili.com/9004724/channel/detail?cid=56039')">杂谈</button>
-
-                                    
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content101">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                <div class="scrollbar-hover" style="max-height: 800px; overflow: scroll;">
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a data-tab href="#tabContent1101">资料 <span class="label label-badge label-danger"></span></a></a></li>
-                                        <li><a data-tab href="#tabContent1102">开源 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent1103">动漫 <span class="label label-badge label-danger"></span></a></li>
+                                        <li class="active"><a data-tab="" href="#tabContent1101">资料 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent1102">开源 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent1103">动漫 <span class="label label-badge label-danger"></span></a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane active in" id="tabContent1101">
@@ -516,8 +529,7 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                                 | <a href="http://www.generative-gestaltung.de/" target="blank">genertive</a>
                                                 | <a href="https://p5js.org/" target="blank">p5.js</a>
                                                 | <a href="http://processingjs.org/" target="blank">processing.js</a>
-                                                | <a href="https://assetstore.unity.com/packages/tools/integration/unicessing-75728"
-                                                    target="blank">unicessing</a>
+                                                | <a href="https://assetstore.unity.com/packages/tools/integration/unicessing-75728" target="blank">unicessing</a>
                                             </li>
                                         </div>
                                         <div class="tab-pane" id="tabContent1102">
@@ -532,13 +544,11 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                             <li class="list-group-item">
                                                 符号
                                                 | <a href="http://www.fuhao123.com/" target="blank">素材:123</a>
-                                                | <a href="https://jingyan.baidu.com/article/4f34706e36f96de387b56dc9.html"
-                                                    target="blank">制作:win</a>
+                                                | <a href="https://jingyan.baidu.com/article/4f34706e36f96de387b56dc9.html" target="blank">制作:win</a>
                                             </li>
                                             <li class="list-group-item">
                                                 字体
-                                                | <a href="https://site.douban.com/135242/widget/notes/16955314/note/614828775/"
-                                                    target="blank">素材:思源</a>
+                                                | <a href="https://site.douban.com/135242/widget/notes/16955314/note/614828775/" target="blank">素材:思源</a>
                                                 | <a href="http://www.flexifont.com/flexifont-chn/login/" target="blank">制作:中文</a>
                                                 | <a href="http://glyphrstudio.com/" target="blank">制作:英文</a>
                                                 | <a href="http://www.myfont.me/" target="blank">制作:手迹</a>
@@ -582,8 +592,7 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                                 音频
                                                 | <a href="http://dust-sounds.com/" target="blank">素材:音效</a>
                                                 | <a href="https://freesound.org/" target="blank">素材:配音</a>
-                                                | <a href="https://www.youtube.com/channel/UCorqI2EE1avwlTCekjfi0LQ"
-                                                    target="blank">素材:音乐</a>
+                                                | <a href="https://www.youtube.com/channel/UCorqI2EE1avwlTCekjfi0LQ" target="blank">素材:音乐</a>
                                                 | <a href="https://sourceforge.net/projects/audacity/" target="blank">制作:sourceforge</a>
                                             </li>
                                             <li class="list-group-item">
@@ -603,42 +612,36 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                         <div class="tab-pane" id="tabContent1103">
                                             <div class="alert alert-success-inverse">全球动漫欣赏</div>
                                             <li class="list-group-item">
-                                                中国_陆漫
+                                                中漫
                                                 | <a href="http://www.u17.com/" target="blank">妖气</a>
                                                 | <a href="http://ac.qq.com/" target="blank">腾漫</a>
                                                 | <a href="https://manhua.163.com/" target="blank">易漫</a>
+                                                | <a href="https://tw.manhuagui.com/list/hongkong/" target="blank">港漫</a>
+                                                | <a href="http://www.comicstar.com.tw/" target="blank">台漫</a>
                                             </li>
                                             <li class="list-group-item">
-                                                中国_港漫
-                                                | <a href="https://tw.manhuagui.com/list/hongkong/" target="blank">柜子</a>
-                                            </li>
-                                            <li class="list-group-item">
-                                                中国_台漫
-                                                | <a href="http://www.comicstar.com.tw/" target="blank">漫星</a>
-                                            </li>
-                                            <li class="list-group-item">
-                                                日本漫
+                                                日漫
                                                 | <a href="https://www.comico.jp/" target="blank">comico</a>
                                             </li>
                                             <li class="list-group-item">
-                                                韩国漫
+                                                韩漫
                                                 | <a href="https://comic.naver.com/" target="blank">naver</a>
                                             </li>
                                             <li class="list-group-item">
-                                                美国漫
+                                                美漫
+                                                | <a href="https://yz.lol.qq.com/zh_CN/" target="blank">英雄联盟</a>
                                                 | <a href="https://www.disneyanimation.com/studio/our-films" target="blank">迪士尼</a>
                                                 | <a href="https://www.dreamworksanimation.com/" target="blank">梦工厂</a>
                                                 | <a href="https://manhua.dmzj.com/tags/marvel.shtml" target="blank">漫威</a>
                                                 | <a href="https://manhua.dmzj.com/tags/dccomics.shtml" target="blank">dccomics</a>
-                                                | <a href="https://manhua.dmzj.com/tags/dark%20horse%20comics%20.shtml"
-                                                    target="blank">dark</a>
+                                                | <a href="https://manhua.dmzj.com/tags/dark%20horse%20comics%20.shtml" target="blank">dark</a>
                                             </li>
                                             <li class="list-group-item">
-                                                英国漫
+                                                英漫
                                                 | <a href="https://www.aardman.com/" target="blank">阿德曼</a>
                                             </li>
                                             <li class="list-group-item">
-                                                印度漫
+                                                印漫
                                                 | <a href="http://www.sohu.com/a/202494964_99965858" target="blank">个人</a>
                                             </li>
                                         </div>
@@ -646,13 +649,13 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content102">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                <div class="scrollbar-hover" style="max-height: 800px; overflow: scroll;">
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a data-tab href="#tabContent2101">数学 <span class="label label-badge label-danger"></span></a></a></li>
-                                        <li><a data-tab href="#tabContent2102">哲学 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent2103">艺术 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent2104">科技 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent2105">思维 <span class="label label-badge label-danger"></span></a></li>
+                                        <li class="active"><a data-tab="" href="#tabContent2101">数学 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent2102">哲学 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent2103">艺术 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent2104">科技 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent2105">思维 <span class="label label-badge label-danger"></span></a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane active in" id="tabContent2101">
@@ -674,13 +677,13 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content103">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                <div class="scrollbar-hover" style="max-height: 800px; overflow: scroll;">
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a data-tab href="#tabContent3101">物理 <span class="label label-badge label-danger"></span></a></a></li>
-                                        <li><a data-tab href="#tabContent3102">化学 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent3103">生物 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent3104">地理 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent3105">生态 <span class="label label-badge label-danger"></span></a></li>
+                                        <li class="active"><a data-tab="" href="#tabContent3101">物理 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent3102">化学 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent3103">生物 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent3104">地理 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent3105">生态 <span class="label label-badge label-danger"></span></a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane active in" id="tabContent3101">
@@ -702,13 +705,13 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tab3Content104">
-                                <div class="scrollbar-hover" style="max-height: 350px; overflow: scroll;">
+                                <div class="scrollbar-hover" style="max-height: 800px; overflow: scroll;">
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a data-tab href="#tabContent4101">历史 <span class="label label-badge label-danger"></span></a></a></li>
-                                        <li><a data-tab href="#tabContent4102">政治 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent4103">经济 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent4104">文化 <span class="label label-badge label-danger"></span></a></li>
-                                        <li><a data-tab href="#tabContent4105">军事 <span class="label label-badge label-danger"></span></a></li>
+                                        <li class="active"><a data-tab="" href="#tabContent4101">历史 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent4102">政治 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent4103">经济 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent4104">文化 <span class="label label-badge label-danger"></span></a></li>
+                                        <li><a data-tab="" href="#tabContent4105">军事 <span class="label label-badge label-danger"></span></a></li>
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane active in" id="tabContent4101">
@@ -732,7 +735,7 @@ void draw()     //循环播放（内容空着即可，删除无声音）
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> <!-- 第三排-->
         </div>
     </div>
 
@@ -741,7 +744,7 @@ void draw()     //循环播放（内容空着即可，删除无声音）
     <script src="https://cdn.bootcss.com/at.js/1.5.4/js/jquery.atwho.js"></script>
     <script src="https://cdn.bootcss.com/Caret.js/0.3.1/jquery.caret.js"></script>
     <script src="p5tool.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
 
-</body>
-
-</html>
+</body></html>
