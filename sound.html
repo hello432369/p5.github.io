@@ -1,0 +1,91 @@
+<html lang="zh-cn" class="os-mac screen-desktop-wide device-desktop"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="processing是一门编程语言，数据可视化，编程艺术">
+    <title>processing音频转换工具</title>
+    <link rel="Bookmark" href="/favicon.ico">
+    <link rel="Shortcut Icon" href="/favicon.ico">
+    <link href="https://cdn.bootcss.com/zui/1.9.1/css/zui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+
+</head>
+
+<body onload="savecontent()">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="alert alert-danger-inverse">使用教程</div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- 文章 -->
+                        <article class="article">
+                                <!-- 文章头部 -->
+                                <header>
+                                  <h1>一键将简谱（数字/字母）转换为频率</h1>
+                                  <!-- 文章属性列表 -->
+                                  
+                                </header>
+                                <!-- 文章正文部分 -->
+                                <section class="content">
+                                  <p>在右侧框内直接输入数字或者字母</p>
+                                  <p>数字范围：0（低音xi），1（中音do），2（中音re），3（中音mi），4（中音fa），5（中音so），6（中音la），7（中音xi），8（高音do），9（高音re）</p>
+                                  <p>字母范围(不分大小写)：a/A（中音do）,b/B（中音re）,c/C（中音mi）,d/D（中音fa）,e/E（中音so）,f/F（中音la）,g/G7（中音xi）</p>
+                                  <p>可以数字和字母混合</p>
+                                </section>
+                                <!-- 文章底部 -->
+                                <footer>
+                                    </br>
+                                    <blockquote>
+                                        <p>温馨提示：数字之间要用空格！字母之间要用空格！否则转换无效！！！</p>   
+                                    </blockquote>
+                                    <p>举例：3 3 4 5 5 4 3 2 1 1 2 3 3 2 2</p>
+                                    <p>数字或字母的灵感来源：身份证号，电话号，名字，英文单词，中文拼音，车牌号，生日，账号，大数据等等......</p>
+                                </footer>
+                              </article>
+                        <!-- 文章 -->
+                    </div>          
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="alert alert-primary-inverse">音频转换</div>
+                <textarea id="t1" name="t1" style="width:100%" rows="15" cols="50" placeholder="温馨提示：数字之间要用空格！字母之间要用空格！否则转换无效！！！"></textarea>
+                <div class="btn-group">
+                    </br>
+                    <button class="btn btn-primary" id="p52h5" data-toggle="modal" data-target="#myModal" onclick="p52h5()">转换</button>
+                </div>
+                <div class="btn-group">
+                    </br>
+                    <button class="btn btn-primary" type="button" class="btn" style="float:right;" id="clear">清空 </button>
+                </div>
+                <!-- 转换-->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                                <h4 class="modal-title">转换完成(￣▽￣)"</h4>
+                            </div>
+                            <div class="modal-body">
+                                <textarea id="t2" style="width:100%" rows="15" cols="30" placeholder="在这里输入"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="copyp5js()">复制</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 转换-->
+            </div>  
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/zui/1.9.1/js/zui.js"></script>
+    <script src="https://p5.xn--fiqs8s/soundp5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+
+</body></html>
