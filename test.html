@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/zui/1.9.1/css/zui.css" rel="stylesheet">
+    <title>processing 中文助手</title>
+
+</head>
+
+<body style="margin:0; padding:0; background-color: rgb(246,246,246)">
+    <!-- 1 -->
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- 1.1 -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">processing.hub</a>
+        </div>
+        <!-- 1.2 -->
+        <div class="navbar-collapse">
+            <!-- 1.2.1 -->
+            <!-- <ul class="nav navbar-nav">
+                <li class="active"><a href="">首页</a></li>
+            </ul> -->
+            <!-- 1.2.2 -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="">QQ群：422856731</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 2 -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 2.1 -->
+            <div class="col-xs-1">
+                <div class="list-group">
+                    <a class="list-group-item active" target="myiframe" href="p5home.html">
+                        <h4 class="list-group-item-heading">首页</h4>
+                        <!-- <p class="list-group-item-text text-muted">测试1</p> -->
+                    </a>
+                    <a class="list-group-item" target="myiframe" href="p5tool.html">
+                        <h4 class="list-group-item-heading">p5工具</h4>
+                        <p class="list-group-item-text text-muted">在线使用</p>
+                    </a>
+                    <a class="list-group-item" target="myiframe" href="p5sound.html">
+                        <h4 class="list-group-item-heading">p5音频</h4>
+                        <p class="list-group-item-text text-muted">音频转换</p>
+                    </a>
+                </div>
+            </div>
+            <!-- 2.2 -->
+            <div class="col-xs-9">
+                <iframe src="p5home.html" id="myiframe" name="myiframe" scrolling="no" frameborder="0"
+                    style="width: 100%;"></iframe>
+            </div>
+            <!-- 2.3 -->
+            <div class="col-xs-2">
+                
+                <a class="card" target="blank" href="https://p5.中国/qingtong.html">
+                    <div class="card-heading"><strong>入门教程</strong>&nbsp;&nbsp;&nbsp;<span
+                            class="label label-danger">荐</span></div>
+                    <div class="card-content text-muted">官网无法访问，看此教程</div>
+                </a>
+                <a class="card" target="blank" href="https://www.leangoo.com/kanban/board/go/2419758">
+                    <div class="card-heading"><strong>模拟物理</strong>&nbsp;&nbsp;&nbsp;<span
+                            class="label label-danger">荐</span></div>
+                    <div class="card-content text-muted">入门毕业后，可看此教程</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/zui/1.9.1/js/zui.js"></script>
+<script>
+    var ifm = document.getElementById("myiframe");
+    ifm.height = document.documentElement.clientHeight;
+</script>
+
+</html>
