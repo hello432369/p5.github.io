@@ -35,7 +35,7 @@ function copy() {
     var text = document.getElementById("t1");
     text.select();
     document.execCommand("copy");
-    alert("澶嶅埗鎴愬姛");
+    alert("复制成功");
 }
 
 //鐐瑰嚮鎸夐挳锛氬鍔犲唴瀹�-----------------------------------------------------start
@@ -89,7 +89,7 @@ function copyp5js() {
     var text = document.getElementById("t2");
     text.select();
     document.execCommand("copy");
-    alert("澶嶅埗p5js鎴愬姛");
+    alert("复制成功");
 }
 
 //杩愯,鍋滄鎸夐挳-----------------------------------------------------start
