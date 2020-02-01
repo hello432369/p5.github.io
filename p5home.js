@@ -33,8 +33,8 @@ function windowResized()
 function ani1()
 {
     colorMode(HSB,360,100,100);
-    a1x = map(mouseX, 0, width, 0, 360)
-    a1s = map(mouseY, 0, height, 54, 45)
+    a1x = map(mouseX, 0, width, 0, 360);
+    a1s = map(mouseY, 0, height, 54, 45);
     background(a1x, a1s, 90);
 }
 
@@ -44,16 +44,16 @@ function ani2()
     colorMode(HSB,360,100,100);
     background(360,0,96);
 
-    fill(0,0,0)
-    ellipse(mouseX, mouseY, a2w, a2h)
+    fill(0,0,0);
+    ellipse(mouseX, mouseY, a2w, a2h);
 
     textSize(12);
-    textAlign(CENTER)
+    textAlign(CENTER);
     fill(0,0,100);   
     text(a2t ,mouseX,mouseY+1);  
 
-    fill(360,99,99)
-    ellipse(a2x2, a2y2, 10, 10)
+    fill(360,99,99);
+    ellipse(a2x2, a2y2, 10, 10);
 
     if (dist(mouseX,mouseY, a2x2,a2y2) < a2w +10) 
     {
@@ -78,10 +78,10 @@ function ani3()
     background(360,0,96);
   
     a3x = map(mouseX, 0, width, 0, 6); 
-    a3c = map(mouseY, 0, height, 0, 360)
-    a3s = map(mouseY, 0, height, 54, 45)
-    a3b = map(mouseY, 0, height, 91, 81)
-    a3t = int(map(mouseY, 0, height, 0, 9))
+    a3c = map(mouseY, 0, height, 0, 360);
+    a3s = map(mouseY, 0, height, 54, 45);
+    a3b = map(mouseY, 0, height, 91, 81);
+    a3t = int(map(mouseY, 0, height, 0, 9));
 
     translate(mouseX,mouseY);
     for (var i = 0; i < 2*a3x; i++) 
