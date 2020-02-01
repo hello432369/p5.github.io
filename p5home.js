@@ -112,9 +112,9 @@ function ani3()
 function ani4()
 {
     colorMode(HSB,360,100,100,100);
-    background(360,0,mouseY/6);
+    background(360,0,mouseY/3);
  
-    fill(60, 100 -mouseY/6, 100)
+    fill(60, 100 -mouseY/3, 100)
     ellipse(width/2, 0, 520, 520) 
 
     //point(width/2 +cos(TAU/360 *frameCount) *60, height/2 +sin(TAU/360  *frameCount) *60);
