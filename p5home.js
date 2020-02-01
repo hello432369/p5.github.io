@@ -114,16 +114,6 @@ function ani4()
     colorMode(HSB,360,100,100,100);
     background(360,0,mouseY/3);
 
-    for (let w = 0; w <60; w++) 
-    {   
-        stroke(60, 100 -mouseY, 100,100-w*1.5)
-        strokeWeight(w)   
-        fill(60, 100 -mouseY, 100)
-        ellipse(width/2, 0, 300, 300)          
-    }
-    
-    
-
     //point(width/2 +cos(TAU/360 *frameCount) *60, height/2 +sin(TAU/360  *frameCount) *60);
     //point(width/2 +cos(radians(frameCount)) *60, height/2 +sin(radians(frameCount)) *60);
     // for(var x = 0; x<width; x+=20){
