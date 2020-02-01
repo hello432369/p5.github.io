@@ -12,7 +12,7 @@ function setup()
     r = int(random(3));
 
     //a2变量
-    a2w = 15; a2h = 15; a2x2 = random(width); a2y2 = random(100, height); a2t = 0;
+    a2w = 18; a2h = 18; a2x2 = random(width); a2y2 = random(100, height); a2t = 0;
 }
 
 //画图动画
@@ -44,13 +44,13 @@ function ani2()
     colorMode(HSB,360,100,100);
     background(360,0,96);
 
-    textSize(21);
-    textAlign(CENTER)
-    fill(0,51,96);   
-    text(a2t ,mouseX,mouseY);  
-
     fill(0,0,0)
     ellipse(mouseX, mouseY, a2w, a2h)
+
+    textSize(12);
+    textAlign(CENTER)
+    fill(0,0,100);   
+    text(a2t ,mouseX,mouseY+1);  
 
     fill(360,99,99)
     ellipse(a2x2, a2y2, 10, 10)
@@ -63,7 +63,7 @@ function ani2()
         a2w+=2;
         a2h+=2;
     }
-    if (a2t == 12) {
+    if (a2t == 9) {
         textSize(81);
         textAlign(CENTER);
         fill(0,0,0);   
