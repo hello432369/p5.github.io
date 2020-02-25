@@ -2,127 +2,140 @@
 <html lang="zh-cn">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="description" content="processing是一门编程语言，数据可视化，编程艺术">
-<title>processing中文助手 | 数据可视化（文字，图形，图片，音频，视频，硬件，交互）</title>
-<link href="https://s1.pstatp.com/cdn/expire-1-M/zui/1.9.0/css/zui.css" rel="stylesheet">
-<link href="css/jquery.atwho.css" rel="stylesheet">
-<link href="css/index.css" rel="stylesheet">
-<script src="js/processing.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="processing在线编辑器">
+    <title>processing在线编辑器</title>
+    <link href="https://s1.pstatp.com/cdn/expire-1-M/zui/1.9.0/css/zui.css" rel="stylesheet">
+    <link href="css/jquery.atwho.css" rel="stylesheet">
+    <script src="js/processing.min.js"></script>
 
-<style>
-iframe {
-    width: 100%;
-    height: 500px;
-}
-</style>
+    <style>
+        iframe {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 </head>
 
-<body onload="savecontent()" style="background-color: rgb(246,246,246)">
+<body onload="savecontent()" style="background-color: rgb(234,234,234)">
 
-<div class="container-fluid">
-<div class="row">
-    <div class="col-xs-6">
-        <div class="alert alert-danger-inverse">流程</div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-3">
-                <ul class="nav nav-tabs nav-stacked">
-                    <li class="active"><a href="###" data-target="#tab3Content1" data-toggle="tab">1.结构 </a></li>
-                    <li><a href="###" data-target="#tab3Content2" data-toggle="tab">2.建模 </a></li>
-                    <li><a href="###" data-target="#tab3Content3" data-toggle="tab">3.着色 </a></li>
-                    <li><a href="###" data-target="#tab3Content4" data-toggle="tab">4.功能 </a></li>
-                    <li><a href="###" data-target="#tab3Content5" data-toggle="tab">5.动画 </a></li>
-                    <li><a href="###" data-target="#tab3Content6" data-toggle="tab">6.交互 </a></li>
-                    <li><a href="###" data-target="#tab3Content7" data-toggle="tab">7.输出 </a></li>
+            <div class="col-xs-12">
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-tab href="#tabContent1">1.结构</a></li>
+                    <li><a data-tab href="#tabContent2">2.建模</a></li>
+                    <li><a data-tab href="#tabContent3">3.着色</a></li>
+                    <li><a data-tab href="#tabContent4">4.功能</a></li>
+                    <li><a data-tab href="#tabContent5">5.动画</a></li>
+                    <li><a data-tab href="#tabContent6">6.交互</a></li>
+                    <li><a data-tab href="#tabContent7">7.输出</a></li>
                 </ul>
-            </div>
-            <div class="col-xs-9">
                 <div class="tab-content">
-                    <div class="tab-pane fade active in" id="tab3Content1">
-                        <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
-                            <div class="class=" btn-group="">
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
-void setup()   //播放一次
+                    <div class="tab-pane active" id="tabContent1">
+
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+void setup()   //一次循环
 {
+    size(369,369);      //窗口宽高
 }
                         
-void draw()     //播放循环
+void draw()     //无限循环
 {
+
 }
-`)">1.基本
-                                    Void</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
-void setup()    //播放一次
+`)">
+<h4 class="list-group-item-heading">默认</h4>
+<p class="list-group-item-text text-muted">void</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+void setup()    
 {
-size(233,233,P2D);      //窗口大小，二维模式
-smooth(5); 	    //抗锯齿( 光滑数值)
-frameRate(30);      //帧数(每秒渲染图片数量默认为60张)
+size(369,369,P2D);      //窗口宽高，二维模式
+frameRate(30);          //调整帧数(默认每秒执行60次)
 }
-                        
-void draw()     //循环播放
+
+void draw()     
 {
+
 }
-`)">2.二维
-                                    P2D</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
-void setup()    //播放一次
+`)">
+<h4 class="list-group-item-heading">二维</h4>
+<p class="list-group-item-text text-muted">P2D</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+void setup()    
 {
-size(233,233,P3D);      //窗口大小，三维模式
-smooth(5); 	    //抗锯齿( 光滑数值)
-frameRate(30);      //帧数(每秒渲染图片数量默认为60张)
+size(369,369,P3D);      //窗口宽高，三维模式
+frameRate(30);          
+smooth(3); 	            //抗锯齿（光滑数值)   
 }
                                 
-void draw()     //循环播放
+void draw()   
 {
         
 }
-`)">3.三维
-                                    P3D</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
+`)">
+<h4 class="list-group-item-heading">三维</h4>
+<p class="list-group-item-text text-muted">P3D</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
 PFont f;    //声明字体
-void setup()    //播放一次
+void setup()   
 {
-size(233,233);     //窗口大小，二维模式  
-f = createFont( 字体名称 , 24, true);       //创建字体，字体，字体大小，是否光滑
+size(369,369);      
+f = createFont( '宋体' , 24, true);       //字体名称，字体大小，是否光滑
 }
                                                 
-void draw()     //循环播放
+void draw()    
 {
-textFont(f,36);     //字体设置，字体大小
-fill(0);    //字体颜色
-text( 填写内容 ,10,100);    //字体内容，x,y坐标           
+textFont(f,36);             //字体设置，字体大小
+fill(0);                    //字体颜色
+text( '大家好，hello world' ,10,100);    //字体内容，x,y坐标           
 }
-`)">4.字体
-                                    Font</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
+`)">
+<h4 class="list-group-item-heading">字体</h4>
+<p class="list-group-item-text text-muted">PFont</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
 PImage img;     //声明图片
-void setup()    //播放一次
+void setup()    
 {
-size(233,233);
-img = loadImage(图片名称);      //加载图片，图片名称
+size(369,369);
+img = loadImage('图片名称.jpg');      //加载图片，图片名称
 }
                                         
-void draw()     //循环播放
+void draw()     
 {
 image(img,0,0);     //图片，x,y坐标     
 }
-`)">5.图片
-                                    Image</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
+`)">
+<h4 class="list-group-item-heading">图片</h4>
+<p class="list-group-item-text text-muted">PImage</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
 import processing.video.*;      //插入视频库
                         
 Capture video;  //声明摄像头
                         
-void setup()       //播放一次
+void setup()       
 {
-size(233,233);  //窗口大小
+size(369,369);  
 video = new Capture(this,320,240,30);   //摄像头 x,y坐标，帧数
 video.start();      //摄像头开始
 }
                         
-void draw()     //循环播放
+void draw()     
 {
 if(video.available())       //摄像头获取
 {
@@ -131,20 +144,23 @@ if(video.available())       //摄像头获取
                         
 image(video,0,0);   //现时摄像头，x,y坐标
 }  
-`)">6.直播
-                                    Video</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
+`)">
+<h4 class="list-group-item-heading">直播</h4>
+<p class="list-group-item-text text-muted">Video</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
 import processing.video.*;      //插入视频库
 Movie video;    //声明视频
                         
-void setup()    //播放一次
+void setup()    
 {
-size(233,233);  //窗口大小
-video = new Movie(this, 视频名称);  //设置视频，视频文件名称
+size(369,369);  
+video = new Movie(this, '视频名称.mp4');  //设置视频，视频文件名称
 video.play();   //视频播放
 }
                         
-void draw()     //循环播放
+void draw()     
 {
 if(video.available())   //视频获取
 {
@@ -153,17 +169,20 @@ if(video.available())   //视频获取
                         
 image(video,0,0);    //显示视频，x,y坐标
 }  
-`)">7.视频
-                                    Movie</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
+`)">
+<h4 class="list-group-item-heading">视频</h4>
+<p class="list-group-item-text text-muted">Movie</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
 import processing.sound.*;      //插入声音库
                         
 AudioIn ai;     //声明麦克风输入                           
 Amplitude ampl;     //声明振幅
                         
-void setup()    //播放一次
+void setup()    
 {
-size(233,233);      //窗口大小
+size(369,369);      
                         
 ai = new AudioIn(this,0);   //设置麦克风输入
 ai.play();      //麦克风播放
@@ -172,306 +191,424 @@ ampl = new Amplitude(this);     //设置振幅
 ampl.input(ai);     //振幅输入
 }
                         
-void draw()     //循环播放
+void draw()     
 {
 float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）                         
 }         
-`)">8.录音
-                                    AudioIn</button>
-                                <button class="btn btn-block " type="button" onclick="AddContent(`
+`)">
+<h4 class="list-group-item-heading">录音</h4>
+<p class="list-group-item-text text-muted">AudioIn</p>
+</a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
 import processing.sound.*;      //插入声音库
                         
 SoundFile s;    //声明音频文件
                                 
-void setup()    //播放一次
+void setup()    
 {
-size(233,233);      //窗口大小
-s = new SoundFile(this,音频名称);   //设置音频，音频文件名称
+size(369,369);      
+s = new SoundFile(this,'音频名称.mp3');   //设置音频，音频文件名称
 s.play();     //音频播放
 }
                                 
-void draw()     //循环播放（内容空着即可，删除无声音）
+void draw()     
 {
-        
+    //内容空着即可，删除无声音   
 }         
-`)">9.音频
-                                    Sound</button>
-                            </div>
-                        </div>
+`)">
+<h4 class="list-group-item-heading">音频</h4>
+<p class="list-group-item-text text-muted">Sound</p>
+</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                     </div>
-                    <div class="tab-pane fade" id="tab3Content2">
-                        <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
-                            <div class="class=" btn-group="">
-                                <button class="btn btn-block " onclick="AddContent(`    point(width/2,height/2);   
-//x,y坐标
-`)">1.标点
-                                    Point</button>
-                                <button class="btn btn-block " onclick="AddContent(`    line(width/2,height/2, 66,66);
-//x1,y1坐标;    x2,y2坐标
-`)">2.直线
-                                    Line</button>
-                                <button class="btn btn-block " onclick="AddContent(`    rect(width/2,height/2, 66,66, 10);
-//x，y坐标;   w,h长度;   a,b,c,d边角半径
-`)">3.矩形
-                                    Rect</button>
-                                <button class="btn btn-block " onclick="AddContent(`    ellipse(width/2,height/2, 66,66);
-//x，y坐标;    w,h长度
-`)">4.圆形
-                                    Ellipse</button>
-                                <button class="btn btn-block " onclick="AddContent(`    triangle(width/2,height/2, 66,66,178,178);        
-//x1，y1坐标;    x2，y2坐标;，   x3，y3坐标
-`)">5.三角
-                                    Triangle</button>
-                                <button class="btn btn-block " onclick="AddContent(`    arc(width/2,height/2, 66,66, 0,HALF_PI,OPEN);
-//x，y坐标;    w,h长度;   起始角度，结束角度，闭合
-`)">6.弧线
-                                    Arc</button>
-                                <button class="btn btn-block " onclick="AddContent(`    quad(width/2,height/2, 66,66, 178,178,520,520);
-//x1，y1坐标;  x2，y2坐标;  x3，y3坐标; x4，y4坐标
-`)">7.棱形
-                                    Quad</button>
-                                <button class="btn btn-block " onclick="AddContent(`    beginshape();
-    vertex(width/2,height/2);    //x，y坐标
-    vertex(66,66);   
-    vertex(233,233);    
-    vertex(520,520);    
-endshape(CLOSE);
-`)">8.顶点
-                                    Shape</button>
-                            </div>
-                        </div>
+
+                    <div class="tab-pane" id="tabContent2">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`point( , );   //x,y坐标 
+`)">
+                                    <h4 class="list-group-item-heading">标点</h4>
+                                    <p class="list-group-item-text text-muted">point()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`line( ,  ,  ,  );   //x,y坐标;  x,y坐标 
+`)">
+                                    <h4 class="list-group-item-heading">直线</h4>
+                                    <p class="list-group-item-text text-muted">line()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`triangle( , ,  , , , );   //x,y坐标;  x,y坐标;  x,y坐标 
+`)">
+                                    <h4 class="list-group-item-heading">三角</h4>
+                                    <p class="list-group-item-text text-muted">triangle()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`rect( , ,  , , );   //x，y坐标;  w,h宽高;  4个边角半径 
+`)">
+                                    <h4 class="list-group-item-heading">矩形</h4>
+                                    <p class="list-group-item-text text-muted">rect()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`quad( , ,  , ,  , , , );   //x,y坐标;  x,y坐标;  x,y坐; x,y坐标 
+`)">
+                                    <h4 class="list-group-item-heading">棱形</h4>
+                                    <p class="list-group-item-text text-muted">quad()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`ellipse( , ,  , );   //x，y坐标;  w,h宽高; 
+`)">
+                                    <h4 class="list-group-item-heading">圆形</h4>
+                                    <p class="list-group-item-text text-muted">ellipse()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`arc( , ,  , ,  , , );   //x，y坐标;  w,h宽高; 起始角度，结束角度，闭合模式 
+`)">
+                                    <h4 class="list-group-item-heading">弧线</h4>
+                                    <p class="list-group-item-text text-muted">arc()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(` 
+beginshape();       //开始绘图
+vertex( , );    //x，y坐标
+vertex( , );    //x，y坐标
+vertex( , );    //x，y坐标 
+endshape(CLOSE);    //结束绘图（关闭模式）
+`)">
+                                    <h4 class="list-group-item-heading">顶点绘图</h4>
+                                    <p class="list-group-item-text text-muted">Pshape</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="tab-pane fade" id="tab3Content3">
-                        <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
-                            <div class="class=" btn-group="">
-                                <button class="btn btn-block " onclick="AddContent(`    background(233);
-//灰度0~255，   红0~255，绿0~255，蓝0~255，     透明度0~255
-`)">1.背景色
-                                    Background</button>
-                                <button class="btn btn-block " onclick="AddContent(`    fill(233);
-//灰度0~255，   红0~255，绿0~255，蓝0~255，     透明度0~255
-`)">2.填充色
-                                    Fill</button>
-                                <button class="btn btn-block " onclick="AddContent(`    noFill(); 
-//填充色为:无
-`)">3.填充空
-                                    NoFill</button>
-                                <button class="btn btn-block " onclick="AddContent(`    stroke(233);
-//灰度0~255，   红0~255，绿0~255，蓝0~255，    透明度0~255
-`)">4.轮廓色
-                                    Stroke</button>
-                                <button class="btn btn-block " onclick="AddContent(`    noStroke();
-//轮廓色为:无
-`)">5.轮廓空
-                                    NoStroke</button>
-                                <button class="btn btn-block " onclick="AddContent(`    color(233,233,233，233);
-//红0~255，绿0~255，蓝0~255，    透明度0~255
-`)">6.颜色
-                                    Color</button>
-                                <button class="btn btn-block " onclick="AddContent(`    colorMode(HSB,360,100,100);
-//色调0~360度，饱和0~100%，亮度0~100%
-`)">7.颜色模式
-                                    ColorMode</button>
-                            </div>
-                        </div>
+
+                    <div class="tab-pane" id="tabContent3">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`background( , , , );   //红色，绿色，蓝色,透明度 （范围0~255） 
+`)">
+                                    <h4 class="list-group-item-heading">背景色</h4>
+                                    <p class="list-group-item-text text-muted">background()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`fill( , , , );   //红色，绿色，蓝色,透明度 （范围0~255） 
+`)">
+                                    <h4 class="list-group-item-heading">填充色</h4>
+                                    <p class="list-group-item-text text-muted">fill()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`noFill();   //填充色看不见
+`)">
+                                    <h4 class="list-group-item-heading">无填充色</h4>
+                                    <p class="list-group-item-text text-muted">noFill()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`stroke( , , , );   //红色，绿色，蓝色,透明度 （范围0~255） 
+`)">
+                                    <h4 class="list-group-item-heading">边框色</h4>
+                                    <p class="list-group-item-text text-muted">stroke()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`noStroke();   //边框色看不见
+`)">
+                                    <h4 class="list-group-item-heading">无边框色</h4>
+                                    <p class="list-group-item-text text-muted">noStroke()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`colorMode(RGB, 100，100，100，100);   //采用RGB颜色模式，颜色范围改成0~100 
+`)">
+                                    <h4 class="list-group-item-heading">RGB颜色</h4>
+                                    <p class="list-group-item-text text-muted">colorMode(RGB)</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`colorMode(HSB, 100，100，100，100);   //采用RGB颜色模式，颜色范围改成0~100
+`)">
+                                    <h4 class="list-group-item-heading">HSB颜色</h4>
+                                    <p class="list-group-item-text text-muted">colorMode(HSB)</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="tab-pane fade" id="tab3Content4">
-                        <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
-                            <div class="class=" btn-group="">
-                                <button class="btn btn-block " onclick="AddContent(`    println(测试内容);
-//每行显示测试结果
-`)">1.打印
-                                    Prinln</button>
-                                <button class="btn btn-block " onclick="AddContent(`    for(int i = 0;i < xxx; i++)
+
+                    <div class="tab-pane" id="tabContent4">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`println( );   //隔行显示结果 
+`)">
+                                    <h4 class="list-group-item-heading">隔行打印</h4>
+                                    <p class="list-group-item-text text-muted">println()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`print( );   //连续显示结果 
+`)">
+                                    <h4 class="list-group-item-heading">连续打印</h4>
+                                    <p class="list-group-item-text text-muted">print()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+for(int i =0; i <  ; i += )     //每次递增/减并与另一个值比较，直到超出范围为止
 {
                                         
 }
-`)">2.循环
-                                    For</button>
-                                <button class="btn btn-block " onclick="AddContent(`    if()
+`)">
+                                    <h4 class="list-group-item-heading">循环</h4>
+                                    <p class="list-group-item-text text-muted">for()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+if( == )    //判断两个值之间的关系 == >= <= > <
 {
                                                                         
 }
-else if()
+else if( $$ )    //再判断两个值之间的关系 || && ! 
 {
                         
 }
-else
+else    //不符合上面的特殊判断情况，那么默认执行这里内容
 {
                         
-}
-`)">3.判断
-                                    If</button>
-                                <button class="btn btn-block " onclick="AddContent(`    char DIYname = 'N';
-                                                                    
-switch(DIYname) 
-{
-    case 'A':                        
-    break;
-                        
-    case 'B': 
-    break;
-                        
-    default:
-    break;
-}
-`)">4.开关
-                                    Switch</button>
-                                <button class="btn btn-block " onclick="AddContent(`    random(0,233);
-//随机选择一个数字，范围是0~自定义
-`)">5.随机
-                                    Random</button>
-                                <button class="btn btn-block " onclick="AddContent(`    Constrain( 变量 ，min，max);
-//限制 (受到限制的变量，最小值，最大值);
-`)">6.限制
-                                    Constrain</button>
-                                <button class="btn btn-block " onclick="AddContent(`    map( 变量 ，oldmin，oldmax, newmin，newmax);
-//调整范围 (调整变量，原最小值，原最大值，新最小值，新最大值);
-`)">7.调整
-                                    Map</button>
+}                               
+`)">
+                                    <h4 class="list-group-item-heading">判断</h4>
+                                    <p class="list-group-item-text text-muted">if()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+push();   //保存当前风格
 
-                            </div>
-                        </div>
+pop();    //恢复当前风格                             
+`)">
+                                    <h4 class="list-group-item-heading">定格</h4>
+                                    <p class="list-group-item-text text-muted">push()pop()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`random( , );   //无规律的选择随机数（最小值，最大值）
+`)">
+                                    <h4 class="list-group-item-heading">随机</h4>
+                                    <p class="list-group-item-text text-muted">random()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`noise( );   //有规律的选择随机数（一维，二维，三维）
+`)">
+                                    <h4 class="list-group-item-heading">噪音</h4>
+                                    <p class="list-group-item-text text-muted">noise()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`constrain(  ， ， );   //限制范围（变量，最小值，最大值）
+`)">
+                                    <h4 class="list-group-item-heading">限制</h4>
+                                    <p class="list-group-item-text text-muted">constrain()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`map( ，，, ，);   //投影范围（变量，投影前最小值，投影前最大值，投影后最小值，投影后最大值）
+`)">
+                                    <h4 class="list-group-item-heading">投影</h4>
+                                    <p class="list-group-item-text text-muted">map()</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="tab-pane fade" id="tab3Content5">
-                        <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
-                            <div class="class=" btn-group="">
-                                <button class="btn btn-block ">1.坐标改变 x,y</button>
-                                <button class="btn btn-block ">2.大小改变 w,h</button>
-                                <button class="btn btn-block ">3.旋转改变 rotate</button>
-                                <button class="btn btn-block ">4.匀速运动 x++,y++</button>
-                                <button class="btn btn-block ">5.加速运动 xx+=x,x++</button>
-                                <button class="btn btn-block ">6.随机运动 x+=random() </button>
-                                <button class="btn btn-block ">7.往复运动 x+=sin(), y+=cos() </button>
-                            </div>
-                        </div>
+
+                    <div class="tab-pane" id="tabContent5">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`x +=1;    
+`)">
+                                    <h4 class="list-group-item-heading">匀速运动</h4>
+                                    <p class="list-group-item-text text-muted">x +=1</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=s;     
+`)">
+                                    <h4 class="list-group-item-heading">加速运动</h4>
+                                    <p class="list-group-item-text text-muted">x +=s;</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`x +=random( , );
+`)">
+                                    <h4 class="list-group-item-heading">随机运动</h4>
+                                    <p class="list-group-item-text text-muted">x +=random()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=noise(s); 
+`)">
+                                    <h4 class="list-group-item-heading">噪音运动</h4>
+                                    <p class="list-group-item-text text-muted">x +=noise()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=sin(TAU /360 *s);  
+`)">
+                                    <h4 class="list-group-item-heading">往复运动1</h4>
+                                    <p class="list-group-item-text text-muted">x +=sin()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=cos(TAU /360 *s);  
+`)">
+                                    <h4 class="list-group-item-heading">往复运动2</h4>
+                                    <p class="list-group-item-text text-muted">x +=cos()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=sin(TAU /360 *s); y +=cos(TAU /360 *s); 
+`)">
+                                    <h4 class="list-group-item-heading">圆周运动</h4>
+                                    <p class="list-group-item-text text-muted">sin()+cos()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; rotate(TAU /360 *s);   
+`)">
+                                    <h4 class="list-group-item-heading">旋转运动</h4>
+                                    <p class="list-group-item-text text-muted">rotate()</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="tab-pane fade" id="tab3Content6">
-                        <div class="scrollbar-hover" style="max-height: 400px; overflow: scroll;">
-                            <div class="class=" btn-group="">
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/mouseButton.html')">1.鼠标</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/key.html')">2.键盘</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/libraries/video/index.html')">3.摄像头</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/libraries/sound/index.html')">4.麦克风</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://yuedu.163.com/source/376cadc2c5c449e0bf14fe82d3050347_4')">5.arduino</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://channel9.msdn.com/coding4fun/kinect/Processing-for-Kinect-for-Windows-v2')">6.Kinect</button>
-                            </div>
-                        </div>
+
+                    <div class="tab-pane" id="tabContent6">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/hardware')">
+                                    <h4 class="list-group-item-heading">更多</h4>
+                                    <p class="list-group-item-text text-muted"><i class="icon icon-list-ul"></i></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="tab-pane fade" id="tab3Content7">
-                        <div class="scrollbar-hover" style="max-height: 600px; overflow: scroll;">
-                            <div class="class=" btn-group="">
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/save_.html')">1.png</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/libraries/pdf/index.html')">2.pdf</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/save_.html')">3.tif</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/save_.html')">4.tga</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/saveFrame_.html')">5.gif</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/libraries/dxf/index.html')">6.dxf</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5/p5help/libraries/net/index.html')">7.network</button>
-                                <button class="btn btn-block" id="p52h5" data-toggle="modal"
-                                    data-target="#myModal" onclick="p52h5()">8.html</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">9.exe</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">10.ios</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://www.bilibili.com/video/av24236018/')">11.linux</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://android.processing.org/')">12.android</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://dev.eyln.com/unicessing/doc/en/')">13.unity</button>
-                                <button class="btn btn-block"
-                                    onclick="javascript:window.open('https://py.processing.org/')">14.python</button>
-                            </div>
-                        </div>
+
+                    <div class="tab-pane" id="tabContent7">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`save('####.png');   
+`)">
+                                    <h4 class="list-group-item-heading">png</h4>
+                                    <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`save('####.jpg');   
+`)">
+                                    <h4 class="list-group-item-heading">jpg</h4>
+                                    <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`save('####.tif');   
+`)">
+                                    <h4 class="list-group-item-heading">tif</h4>
+                                    <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`saveFrame('####.tga');   
+`)">
+                                    <h4 class="list-group-item-heading">tga</h4>
+                                    <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/output#c7Yz0')">
+                                    <h4 class="list-group-item-heading">更多</h4>
+                                    <p class="list-group-item-text text-muted"><i class="icon icon-list-ul"></i></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
 
-        </br></br>
+        <div class="row">
+            
+            <div class="col-xs-6">
+                <div class="alert alert-primary-inverse">编辑内容</div>
+                <nav class="navbar navbar-default" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="text-align:center" onclick="run(0)">
+                            <h4 class="list-group-item-heading">运行</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-play"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" style="text-align:center" onclick="stop(0)">
+                            <h4 class="list-group-item-heading">停止</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-off"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" style="text-align:center" onclick="copy()">
+                            <h4 class="list-group-item-heading">复制</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-copy"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" id="clear" style="text-align:center" onclick="run(0)">
+                            <h4 class="list-group-item-heading">清空</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-trash"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" style="text-align:center" data-toggle="modal" data-target="#myModal" onclick="p52h5()">
+                            <h4 class="list-group-item-heading">转p5.js</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-spin icon-refresh"></i></p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-    </div>
+                <textarea id="t1" name="t1" style="width:100%"  rows="24" cols="50" placeholder="温馨提示：
+1.  在本区域内编辑processing代码
+2. 【shift + :】 两个键同时按下出现补全代码">
+                </textarea>
 
-    <div class="col-xs-6">
-        <div class="alert alert-primary-inverse">编辑</div>
-        <textarea id="t1" name="t1" style="width:100%" rows="15" cols="50" placeholder="在这儿编写processing代码... ...
-shift 和 : 同时按下补全代码"></textarea>
+                <!-- processing 转 p5.js-->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><i class="icon icon-times"></i></button>
+                                <h4 class="modal-title">processing转换p5js完成！</h4>
+                            </div>
 
-        <div class="btn-group">
-            </br>
-            <button class="btn btn-primary" type="button" class="btn" onclick="run(0)">运行 </button>
-        </div>
-        <div class="btn-group">
-            </br>
-            <button class="btn btn-primary" type="button" class="btn" onclick="stop(0)">停止 </button>
-        </div>
-        <div class="btn-group">
-            </br>
-            <button class="btn btn-primary" type="button" class="btn" onclick="copy()">复制 </button>
-        </div>
-        <div class="btn-group">
-            </br>
-            <button class="btn btn-primary" type="button" class="btn" style="float:right;" id="clear">清空
-            </button>
-        </div>
-        <div class="btn-group">
-        </br>
-        <button class="btn btn-primary" id="p52h5" style="float:right;" data-toggle="modal" data-target="#myModal" onclick="p52h5()">转为p5.js</button>
-        </button>
-    </div>
-        <div>
-            <br>
-            <canvas id="canvas0" width="100px" height="100px"></canvas>
-        </div>
+                            <nav class="navbar navbar-default" role="navigation">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#" style="text-align:center" onclick="copyp5js()">
+                                        <h4 class="list-group-item-heading">复制</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-copy"></i></p>
+                                        </a>
+                                    </li>
+                                    <li><a href="#" id="clear" style="text-align:center" onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/pqi486')">
+                                        <h4 class="list-group-item-heading">详情</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-book"></i></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
 
-        <!-- processing 转 p5.js-->
-        <div id="myModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span
-                                aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
-                        <h4 class="modal-title">processing转换p5js完成！！！</h4>
-                    </div>
-                    <div class="modal-body">
-                        <textarea id="t2" style="width:100%" rows="15" cols="15"
-                            placeholder="这里有转换代码"></textarea>
-                    </div>
-                    
-                        <button type="button" class="btn" onclick="copyp5js()">复制 <i class="icon icon-copy"></i>
-                        </button>
+                            <div class="modal-body">
+                                <textarea id="t2" style="width:100%" rows="15" cols="15"
+                                    placeholder="这里有转换代码"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-xs-6">
+                <div class="alert alert-danger-inverse">显示结果</div>
+                <div>
+                    <canvas id="canvas0" width="100px" height="100px"></canvas>
+                </div>
+            </div>
         </div>
-        <!-- processing 转 p5.js-->
+
+
     </div>
-
-
-</div>
-</div>
-<script src="https://s0.pstatp.com/cdn/expire-1-M/jquery/3.4.0/jquery.js"></script>
-<script src="https://s0.pstatp.com/cdn/expire-1-M/zui/1.9.0/js/zui.js"></script>
-<script src="js/jquery.atwho.js"></script>
-<script src="js/jquery.caret.js"></script>
-<script src="p5tool.js"></script>
-<script src="https://s2.pstatp.com/cdn/expire-1-M/vue/2.6.10/vue.min.js"></script>
-<script src="js/vant.min.js"></script>
-
+    </div>
+    <script src="https://s0.pstatp.com/cdn/expire-1-M/jquery/3.4.0/jquery.js"></script>
+    <script src="https://s0.pstatp.com/cdn/expire-1-M/zui/1.9.0/js/zui.js"></script>
+    <script src="js/jquery.atwho.js"></script>
+    <script src="js/jquery.caret.js"></script>
+    <script src="p5web.js"></script>
 
 </body>
 
