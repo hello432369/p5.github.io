@@ -6,83 +6,821 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://s1.pstatp.com/cdn/expire-1-M/zui/1.9.0/css/zui.css" rel="stylesheet">
-    
+    <link href="css/jquery.atwho.css" rel="stylesheet">
+    <script src="js/processing.min.js"></script>
+
+    <style>
+        iframe {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+
     <title>processing 中文助手</title>
 </head>
 
-<body style="margin:0; padding:0; background-color: rgb(246,246,246)">
-    <!-- 1 -->
+<body onload="savecontent()" style="margin:0; padding:0; background-color: rgb(234,234,234)">
+
     <nav class="navbar navbar-default" role="navigation">
-        <!-- 1.1 -->
+
         <div class="navbar-header">
             <a class="navbar-brand" href="">processing.hub</a>
         </div>
-        <!-- 1.2 -->
+
         <div class="navbar-collapse">
-            <!-- 1.2.1 -->
-            <!-- <ul class="nav navbar-nav">
-                <li class="active"><a href="">首页</a></li>
-            </ul> -->
-            <!-- 1.2.2 -->
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="">QQ群：422856731</a></li>
             </ul>
         </div>
+
     </nav>
 
-    <!-- 2 -->
     <div class="container-fluid">
+
+        <!-- 代码编辑器 -->
         <div class="row">
-            <!-- 2.1 -->
-            <div class="col-xs-1">
-                <div class="list-group">
-                    <a class="list-group-item active" target="myiframe" href="p5home.html">
-                        <h4 class="list-group-item-heading">首页</h4>
-                        <!-- <p class="list-group-item-text text-muted">测试1</p> -->
-                    </a>
-                    <a class="list-group-item" target="myiframe" href="p5tool.html">
-                        <h4 class="list-group-item-heading">p5工具</h4>
-                        <p class="list-group-item-text text-muted">在线使用</p>
-                    </a>
-                    <a class="list-group-item" target="myiframe" href="p5sound.html">
-                        <h4 class="list-group-item-heading">p5音频</h4>
-                        <p class="list-group-item-text text-muted">音频转换</p>
-                    </a>
-                    <a class="list-group-item" target="blank" href="test.html">
-                        <h4 class="list-group-item-heading">p5娱乐</h4>
-                        <p class="list-group-item-text text-muted">测试</p>
-                    </a>
+            <div class="col-xs-12">
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-tab href="#tabContent1">1.结构</a></li>
+                    <li><a data-tab href="#tabContent2">2.建模</a></li>
+                    <li><a data-tab href="#tabContent3">3.着色</a></li>
+                    <li><a data-tab href="#tabContent4">4.功能</a></li>
+                    <li><a data-tab href="#tabContent5">5.动画</a></li>
+                    <li><a data-tab href="#tabContent6">6.交互</a></li>
+                    <li><a data-tab href="#tabContent7">7.输出</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabContent1">
+
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <!-- 编辑模式 -->
+                                <li class="active">
+                                    <a href="#" style="text-align:center" data-toggle="collapse" data-target="#collapseExample">
+                                        <h4 class="list-group-item-heading">编辑</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-toggle-on"></i></p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+void setup()   //一次循环
+{
+    size(369,369);      //窗口宽高
+}
+                        
+void draw()     //无限循环
+{
+
+}
+`)">
+                                        <h4 class="list-group-item-heading">默认</h4>
+                                        <p class="list-group-item-text text-muted">void</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+void setup()    
+{
+size(369,369,P2D);      //窗口宽高，二维模式
+frameRate(30);          //调整帧数(默认每秒执行60次)
+}
+
+void draw()     
+{
+
+}
+`)">
+                                        <h4 class="list-group-item-heading">平面</h4>
+                                        <p class="list-group-item-text text-muted">P2D</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+void setup()    
+{
+size(369,369,P3D);      //窗口宽高，三维模式
+frameRate(30);          
+smooth(3); 	            //抗锯齿（光滑数值)   
+}
+                                
+void draw()   
+{
+        
+}
+`)">
+                                        <h4 class="list-group-item-heading">立体</h4>
+                                        <p class="list-group-item-text text-muted">P3D</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+PFont f;    //声明字体
+void setup()   
+{
+size(369,369);      
+f = createFont( '宋体' , 24, true);       //字体名称，字体大小，是否光滑
+}
+                                                
+void draw()    
+{
+textFont(f,36);             //字体设置，字体大小
+fill(0);                    //字体颜色
+text( '大家好，hello world' ,10,100);    //字体内容，x,y坐标           
+}
+`)">
+                                        <h4 class="list-group-item-heading">文字</h4>
+                                        <p class="list-group-item-text text-muted">PFont</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+PImage img;     //声明图片
+void setup()    
+{
+size(369,369);
+img = loadImage('图片名称.jpg');      //加载图片，图片名称
+}
+                                        
+void draw()     
+{
+image(img,0,0);     //图片，x,y坐标     
+}
+`)">
+                                        <h4 class="list-group-item-heading">图片</h4>
+                                        <p class="list-group-item-text text-muted">PImage</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+import processing.video.*;      //插入视频库
+                        
+Capture video;  //声明摄像头
+                        
+void setup()       
+{
+size(369,369);  
+video = new Capture(this,320,240,30);   //摄像头 x,y坐标，帧数
+video.start();      //摄像头开始
+}
+                        
+void draw()     
+{
+if(video.available())       //摄像头获取
+{
+    video.read();       //摄像头读取
+}
+                        
+image(video,0,0);   //现时摄像头，x,y坐标
+}  
+`)">
+                                        <h4 class="list-group-item-heading">直播</h4>
+                                        <p class="list-group-item-text text-muted">Video</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+import processing.video.*;      //插入视频库
+Movie video;    //声明视频
+                        
+void setup()    
+{
+size(369,369);  
+video = new Movie(this, '视频名称.mp4');  //设置视频，视频文件名称
+video.play();   //视频播放
+}
+                        
+void draw()     
+{
+if(video.available())   //视频获取
+{
+    video.read();   //视频读取
+}
+                        
+image(video,0,0);    //显示视频，x,y坐标
+}  
+`)">
+                                        <h4 class="list-group-item-heading">视频</h4>
+                                        <p class="list-group-item-text text-muted">Movie</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+import processing.sound.*;      //插入声音库
+                        
+AudioIn ai;     //声明麦克风输入                           
+Amplitude ampl;     //声明振幅
+                        
+void setup()    
+{
+size(369,369);      
+                        
+ai = new AudioIn(this,0);   //设置麦克风输入
+ai.play();      //麦克风播放
+                        
+ampl = new Amplitude(this);     //设置振幅
+ampl.input(ai);     //振幅输入
+}
+                        
+void draw()     
+{
+float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）                         
+}         
+`)">
+                                        <h4 class="list-group-item-heading">录音</h4>
+                                        <p class="list-group-item-text text-muted">AudioIn</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+import processing.sound.*;      //插入声音库
+                        
+SoundFile s;    //声明音频文件
+                                
+void setup()    
+{
+size(369,369);      
+s = new SoundFile(this,'音频名称.mp3');   //设置音频，音频文件名称
+s.play();     //音频播放
+}
+                                
+void draw()     
+{
+    //内容空着即可，删除无声音   
+}         
+`)">
+                                        <h4 class="list-group-item-heading">音频</h4>
+                                        <p class="list-group-item-text text-muted">Sound</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <div class="tab-pane" id="tabContent2">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`point( , );   //x,y坐标 
+`)">
+                                        <h4 class="list-group-item-heading">标点</h4>
+                                        <p class="list-group-item-text text-muted">point()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`line( ,  ,  ,  );   //x,y坐标;  x,y坐标 
+`)">
+                                        <h4 class="list-group-item-heading">直线</h4>
+                                        <p class="list-group-item-text text-muted">line()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`triangle( , ,  , , , );   //x,y坐标;  x,y坐标;  x,y坐标 
+`)">
+                                        <h4 class="list-group-item-heading">三角</h4>
+                                        <p class="list-group-item-text text-muted">triangle()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`rect( , ,  , , );   //x，y坐标;  w,h宽高;  4个边角半径 
+`)">
+                                        <h4 class="list-group-item-heading">矩形</h4>
+                                        <p class="list-group-item-text text-muted">rect()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`quad( , ,  , ,  , , , );   //x,y坐标;  x,y坐标;  x,y坐; x,y坐标 
+`)">
+                                        <h4 class="list-group-item-heading">棱形</h4>
+                                        <p class="list-group-item-text text-muted">quad()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`ellipse( , ,  , );   //x，y坐标;  w,h宽高; 
+`)">
+                                        <h4 class="list-group-item-heading">圆形</h4>
+                                        <p class="list-group-item-text text-muted">ellipse()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`arc( , ,  , ,  , , );   //x，y坐标;  w,h宽高; 起始角度，结束角度，闭合模式 
+`)">
+                                        <h4 class="list-group-item-heading">弧线</h4>
+                                        <p class="list-group-item-text text-muted">arc()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(` 
+beginshape();       //开始绘图
+vertex( , );    //x，y坐标
+vertex( , );    //x，y坐标
+vertex( , );    //x，y坐标 
+endshape(CLOSE);    //结束绘图（关闭模式）
+`)">
+                                        <h4 class="list-group-item-heading">顶点绘图</h4>
+                                        <p class="list-group-item-text text-muted">Pshape</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="tab-pane" id="tabContent3">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`background( , , , );   //红色，绿色，蓝色,透明度 （范围0~255） 
+`)">
+                                        <h4 class="list-group-item-heading">背景色</h4>
+                                        <p class="list-group-item-text text-muted">background()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`fill( , , , );   //红色，绿色，蓝色,透明度 （范围0~255） 
+`)">
+                                        <h4 class="list-group-item-heading">填充色</h4>
+                                        <p class="list-group-item-text text-muted">fill()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`noFill();   //填充色看不见
+`)">
+                                        <h4 class="list-group-item-heading">无填充色</h4>
+                                        <p class="list-group-item-text text-muted">noFill()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`stroke( , , , );   //红色，绿色，蓝色,透明度 （范围0~255） 
+`)">
+                                        <h4 class="list-group-item-heading">边框色</h4>
+                                        <p class="list-group-item-text text-muted">stroke()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`noStroke();   //边框色看不见
+`)">
+                                        <h4 class="list-group-item-heading">无边框色</h4>
+                                        <p class="list-group-item-text text-muted">noStroke()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`colorMode(RGB, 100，100，100，100);   //采用RGB颜色模式，颜色范围改成0~100 
+`)">
+                                        <h4 class="list-group-item-heading">RGB颜色</h4>
+                                        <p class="list-group-item-text text-muted">colorMode(RGB)</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`colorMode(HSB, 100，100，100，100);   //采用RGB颜色模式，颜色范围改成0~100
+`)">
+                                        <h4 class="list-group-item-heading">HSB颜色</h4>
+                                        <p class="list-group-item-text text-muted">colorMode(HSB)</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="tab-pane" id="tabContent4">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`println( );   //隔行显示结果 
+`)">
+                                        <h4 class="list-group-item-heading">隔行打印</h4>
+                                        <p class="list-group-item-text text-muted">println()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`print( );   //连续显示结果 
+`)">
+                                        <h4 class="list-group-item-heading">连续打印</h4>
+                                        <p class="list-group-item-text text-muted">print()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+for(int i =0; i <  ; i += )     //每次递增/减并与另一个值比较，直到超出范围为止
+{
+                                        
+}
+`)">
+                                        <h4 class="list-group-item-heading">循环</h4>
+                                        <p class="list-group-item-text text-muted">for()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+if( == )    //判断两个值之间的关系 == >= <= > <
+{
+                                                                        
+}
+else if( $$ )    //再判断两个值之间的关系 || && ! 
+{
+                        
+}
+else    //不符合上面的特殊判断情况，那么默认执行这里内容
+{
+                        
+}                               
+`)">
+                                        <h4 class="list-group-item-heading">判断</h4>
+                                        <p class="list-group-item-text text-muted">if()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`
+push();   //保存当前风格
+
+pop();    //恢复当前风格                             
+`)">
+                                        <h4 class="list-group-item-heading">定格</h4>
+                                        <p class="list-group-item-text text-muted">push()pop()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`random( , );   //无规律的选择随机数（最小值，最大值）
+`)">
+                                        <h4 class="list-group-item-heading">随机</h4>
+                                        <p class="list-group-item-text text-muted">random()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`noise( );   //有规律的选择随机数（一维，二维，三维）
+`)">
+                                        <h4 class="list-group-item-heading">噪音</h4>
+                                        <p class="list-group-item-text text-muted">noise()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`constrain(  ， ， );   //限制范围（变量，最小值，最大值）
+`)">
+                                        <h4 class="list-group-item-heading">限制</h4>
+                                        <p class="list-group-item-text text-muted">constrain()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`map( ，，, ，);   //投影范围（变量，投影前最小值，投影前最大值，投影后最小值，投影后最大值）
+`)">
+                                        <h4 class="list-group-item-heading">投影</h4>
+                                        <p class="list-group-item-text text-muted">map()</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="tab-pane" id="tabContent5">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`x +=1;    
+`)">
+                                        <h4 class="list-group-item-heading">匀速运动</h4>
+                                        <p class="list-group-item-text text-muted">x +=1</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=s;     
+`)">
+                                        <h4 class="list-group-item-heading">加速运动</h4>
+                                        <p class="list-group-item-text text-muted">x +=s;</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`x +=random( , );
+`)">
+                                        <h4 class="list-group-item-heading">随机运动</h4>
+                                        <p class="list-group-item-text text-muted">x +=random()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=noise(s); 
+`)">
+                                        <h4 class="list-group-item-heading">噪音运动</h4>
+                                        <p class="list-group-item-text text-muted">x +=noise()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=sin(TAU /360 *s);  
+`)">
+                                        <h4 class="list-group-item-heading">往复运动1</h4>
+                                        <p class="list-group-item-text text-muted">x +=sin()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=cos(TAU /360 *s);  
+`)">
+                                        <h4 class="list-group-item-heading">往复运动2</h4>
+                                        <p class="list-group-item-text text-muted">x +=cos()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; x +=sin(TAU /360 *s); y +=cos(TAU /360 *s); 
+`)">
+                                        <h4 class="list-group-item-heading">圆周运动</h4>
+                                        <p class="list-group-item-text text-muted">sin()+cos()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`s +=0.1; rotate(TAU /360 *s);   
+`)">
+                                        <h4 class="list-group-item-heading">旋转运动</h4>
+                                        <p class="list-group-item-text text-muted">rotate()</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="tab-pane" id="tabContent6">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center"
+                                        onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/hardware')">
+                                        <h4 class="list-group-item-heading">更多</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-list-ul"></i></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="tab-pane" id="tabContent7">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`save('####.png');   
+`)">
+                                        <h4 class="list-group-item-heading">png</h4>
+                                        <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`save('####.jpg');   
+`)">
+                                        <h4 class="list-group-item-heading">jpg</h4>
+                                        <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`save('####.tif');   
+`)">
+                                        <h4 class="list-group-item-heading">tif</h4>
+                                        <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="AddContent(`saveFrame('####.tga');   
+`)">
+                                        <h4 class="list-group-item-heading">tga</h4>
+                                        <p class="list-group-item-text text-muted">save()</p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center"
+                                        onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/output#c7Yz0')">
+                                        <h4 class="list-group-item-heading">更多</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-list-ul"></i></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
-            <!-- 2.2 -->
-            <div class="col-xs-9">
-                <iframe src="p5home.html" id="myiframe" name="myiframe" scrolling="no" frameborder="0"
-                    style="width: 100%; height: 100rem;"></iframe>
+        </div>
+
+        <div class="row">
+
+            <div class="collapse in" id="collapseExample">
+                <div class=" with-padding"> 
+
+                    <div class="col-xs-5">
+                        <div class="alert alert-danger-inverse">显示结果</div>
+                        <div>
+                            <canvas id="canvas0" width="100px" height="100px"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-5">
+                        <!-- 编辑器 -->
+                        <div class="alert alert-success-inverse">编辑内容</div>
+
+                        <nav class="navbar navbar-default" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" style="text-align:center" onclick="run(0)">
+                                        <h4 class="list-group-item-heading">运行</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-play"></i></p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="stop(0)">
+                                        <h4 class="list-group-item-heading">停止</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-off"></i>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" onclick="copy()">
+                                        <h4 class="list-group-item-heading">复制</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-copy"></i></p>
+                                    </a>
+                                </li>
+                                <li><a href="#" id="clear" style="text-align:center" onclick="run(0)">
+                                        <h4 class="list-group-item-heading">清空</h4>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-trash"></i></p>
+                                    </a>
+                                </li>
+                                <li><a href="#" style="text-align:center" data-toggle="modal" data-target="#myModal"
+                                        onclick="p52h5()">
+                                        <h4 class="list-group-item-heading">转p5.js</h4>
+                                        <p class="list-group-item-text text-muted"><i
+                                                class="icon icon-spin icon-refresh"></i></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <textarea id="t1" name="t1" style="width:100%" rows="18" cols="50" placeholder="温馨提示：
+1.  在本区域内编辑processing代码
+2. 【shift + :】 两个键同时按下出现补全代码
+3.  拖拽右下角，伸长编辑区域
+">
+                </textarea>
+
+                        <!-- processing 转 p5.js-->
+                        <div id="myModal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><i
+                                                class="icon icon-times"></i></button>
+                                        <h4 class="modal-title">processing转换p5js完成！</h4>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <nav class="navbar navbar-default" role="navigation">
+                                            <ul class="nav navbar-nav">
+                                                <li><a href="#" style="text-align:center" onclick="copyp5js()">
+                                                        <h4 class="list-group-item-heading">复制</h4>
+                                                        <p class="list-group-item-text text-muted"><i
+                                                                class="icon icon-copy"></i></p>
+                                                    </a>
+                                                </li>
+                                                <li><a href="#" id="clear" style="text-align:center"
+                                                        onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/pqi486')">
+                                                        <h4 class="list-group-item-heading">详情</h4>
+                                                        <p class="list-group-item-text text-muted"><i
+                                                                class="icon icon-book"></i></p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <textarea id="t2" style="width:100%" rows="15" cols="15"
+                                            placeholder="这里有转换代码"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2">
+                        <div class="alert alert-primary-inverse">助手提示</div>
+
+                        <div class="panel-group" id="accordionPanels" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                              <div class="panel-heading" id="headingOne">
+                                <h4 class="panel-title">
+                                  <a data-toggle="collapse" data-parent="#accordionPanels" href="#collapseOne">
+                                    修改基本属性
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">原点</span>
+                                        <input type="text" class="form-control" placeholder="修改原点坐标">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">坐标</span>
+                                        <input type="text" class="form-control" placeholder="让对象移动">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">宽高</span>
+                                        <input type="text" class="form-control" placeholder="让对象缩放">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">旋转</span>
+                                        <input type="text" class="form-control" placeholder="让对象旋转">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">边框</span>
+                                        <input type="text" class="form-control" placeholder="调整边框粗细">
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading" id="headingTwo">
+                                <h4 class="panel-title">
+                                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels" href="#collapseTwo">
+                                    修改材质属性
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">背景</span>
+                                        <input type="text" class="form-control" placeholder="背景色调整">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">边框</span>
+                                        <input type="text" class="form-control" placeholder="边框色调整">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">填充</span>
+                                        <input type="text" class="form-control" placeholder="填充色调整">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">模式</span>
+                                        <input type="text" class="form-control" placeholder="HSB模式调整">
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="panel panel-default">
+                              <div class="panel-heading" id="headingThree">
+                                <h4 class="panel-title">
+                                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels" href="#collapseThree">
+                                    修改参数属性
+                                  </a>
+                                </h4>
+                              </div>
+                              <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">数字</span>
+                                        <input type="text" class="form-control" placeholder="使用具体数字">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">比例</span>
+                                        <input type="text" class="form-control" placeholder="使用百分比">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">角度</span>
+                                        <input type="text" class="form-control" placeholder="使用角度">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">弧度</span>
+                                        <input type="text" class="form-control" placeholder="使用弧度">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">三角</span>
+                                        <input type="text" class="form-control" placeholder="使用三角函数">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">随机</span>
+                                        <input type="text" class="form-control" placeholder="无规律随机">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">噪音</span>
+                                        <input type="text" class="form-control" placeholder="有规律随机">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">分形</span>
+                                        <input type="text" class="form-control" placeholder="使用递归算法">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">向量</span>
+                                        <input type="text" class="form-control" placeholder="使用向量">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">数组</span>
+                                        <input type="text" class="form-control" placeholder="使用二维数组">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">矩阵</span>
+                                        <input type="text" class="form-control" placeholder="使用矩阵数组">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">遗传</span>
+                                        <input type="text" class="form-control" placeholder="使用遗传算法">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">物理</span>
+                                        <input type="text" class="form-control" placeholder="模拟物理算法">
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
             </div>
-            <!-- 2.3 -->
-            <div class="col-xs-2">
-                <a class="card" target="blank" href="https://www.yuque.com/processing.hub/tutorials">
-                    <div class="card-heading"><strong>官方教程</strong>&nbsp;&nbsp;&nbsp;<span
-                            class="label label-danger">荐</span></div>
-                    <div class="card-content text-muted">官网图文教程</div>
-                </a>
-                <a class="card" target="blank" href="https://p5.中国/qingtong.html">
-                    <div class="card-heading"><strong>入门教程</strong>&nbsp;&nbsp;&nbsp;<span
-                            class="label label-danger">荐</span></div>
-                    <div class="card-content text-muted">官网无法访问，看此教程</div>
-                </a>
-                <a class="card" target="blank" href="https://www.leangoo.com/kanban/board/go/2419758">
-                    <div class="card-heading"><strong>模拟物理</strong>&nbsp;&nbsp;&nbsp;<span
-                            class="label label-danger">荐</span></div>
-                    <div class="card-content text-muted">入门毕业后，可看此教程</div>
+        </div>
+
+    <hr>
+
+    <!-- 导航 -->
+    <div class="row">
+        <!-- 2.1 -->
+        <div class="col-xs-1">
+            <div class="list-group">
+                <a class="list-group-item active" target="myiframe" href="p5home.html">
+                    <h4 class="list-group-item-heading">p5导航</h4>
+                    <!-- <p class="list-group-item-text text-muted">测试1</p> -->
                 </a>
             </div>
         </div>
+        <!-- 2.2 -->
+        <div class="col-xs-9">
+            <iframe src="p5home.html" id="myiframe" name="myiframe" scrolling="no" frameborder="0"
+                style="width: 100%; height: 120rem;"></iframe>
+        </div>
+        <!-- 2.3 -->
+        <div class="col-xs-2">
+            <a class="card" target="blank" href="https://www.yuque.com/processing.hub/tutorials">
+                <div class="card-heading"><strong>官方入门</strong>&nbsp;&nbsp;&nbsp;<span
+                        class="label label-danger">荐</span></div>
+                <div class="card-content text-muted">中文翻译版</div>
+            </a>
+            <a class="card" target="blank" href="https://p5.中国/qingtong.html">
+                <div class="card-heading"><strong>入门教程</strong>&nbsp;&nbsp;&nbsp;<span
+                        class="label label-danger">荐</span></div>
+                <div class="card-content text-muted">官网无法访问，看此教程</div>
+            </a>
+            <a class="card" target="blank" href="https://www.leangoo.com/kanban/board/go/2419758">
+                <div class="card-heading"><strong>模拟物理</strong>&nbsp;&nbsp;&nbsp;<span
+                        class="label label-danger">荐</span></div>
+                <div class="card-content text-muted">入门毕业后，可看此教程</div>
+            </a>
+        </div>
+    </div>
     </div>
 
 </body>
 <script src="https://s0.pstatp.com/cdn/expire-1-M/jquery/3.4.0/jquery.js"></script>
 <script src="https://s0.pstatp.com/cdn/expire-1-M/zui/1.9.0/js/zui.js"></script>
+<script src="js/jquery.atwho.js"></script>
+<script src="js/jquery.caret.js"></script>
+<script src="p5web.js"></script>
 <script>
     var ifm = document.getElementById("myiframe");
     ifm.height = document.documentElement.clientHeight;
