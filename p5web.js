@@ -19,7 +19,7 @@ window.onload = function () {
     }
 }
 
-// 娓呯┖鍔熻兘-----------------------------------------------------start
+//清除p代码-----------------------------------------------------start
 document.getElementById("clear").onclick = function () {
     editor.value = "";
     if (!window.localStorage) {
@@ -30,7 +30,7 @@ document.getElementById("clear").onclick = function () {
 };
 
 
-//鐐瑰嚮鎸夐挳锛氬鍒舵枃鏈t1鍐呭-----------------------------------------------------start
+//复制p代码-----------------------------------------------------start
 function copy() {
     var text = document.getElementById("t1");
     text.select();
@@ -38,7 +38,7 @@ function copy() {
     alert("复制成功");
 }
 
-//鐐瑰嚮鎸夐挳锛氬鍔犲唴瀹�-----------------------------------------------------start
+//通过按钮添加代码-----------------------------------------------------start
 function AddContent(str) {
     if (lastInput) {
         lastInput.focus();
@@ -51,27 +51,37 @@ function AddContent(str) {
     }
 }
 
-//鎸夐挳锛歱5杞琱5-----------------------------------------------------start
+//p转p5.js-----------------------------------------------------start
 function p52h5() {
     var s = document.getElementById("t1").value;
-    s = s.replace(/\b(void|size|float|int|boolean|char|String|PImage|PFont|PShape|pushMatrix()|popMatrix()|mousePressed)\b/g, function ($0, $1) {
+    s = s.replace(/\b(void|size|float|int|boolean|char|String|PImage|PFont|PShape|double|long|Array|array|pushMatrix|popMatrix|pushStyle|popStyle|println|mousePressed)\b/g, function ($0, $1) {
         return {
             "void": "function",
             "size": "createCanvas",
 
-            "float": "var",
-            "int": "var",
-            "boolean": "var",
-            "char": "var",
-            "String": "var",
-            "PImage": "var",
-            "PFont": "var",
-            "PShape": "var",
+            "float": "let",
+            "int": "let",
+            "boolean": "let",
+            "char": "let",
+            "String": "let",
+            "PImage": "let",
+            "PFont": "let",
+            "PShape": "let",
+            "double": "let",
+            "long": "let",
+            "Array": "let",
+            "array": "let",
 
-            "pushMatrix()": "push()",
-            "popMatrix()": "pop()",
+            "pushMatrix": "push",
+            "popMatrix": "pop",
+            "pushStyle": "push",
+            "popStyle": "pop",
 
-            "mousePressed": "mouseIsPressed"
+            "println": "print",
+
+            "mousePressed": "mouseIsPressed",
+
+            
 
         }[$1];
 
@@ -84,7 +94,7 @@ function p52h5() {
     $('#myModal').on('cancelHidden', function (e) { console.log('cancelHidden') })
 }
 
-//鎸夐挳锛氬鍒秔5js-----------------------------------------------------start
+//复制p5.js代码-----------------------------------------------------start
 function copyp5js() {
     var text = document.getElementById("t2");
     text.select();
@@ -92,7 +102,7 @@ function copyp5js() {
     alert("复制成功");
 }
 
-//杩愯,鍋滄鎸夐挳-----------------------------------------------------start
+//运行与停止-----------------------------------------------------start
 var Pjs = new Array(1);
 
 function stop(num) {
@@ -111,7 +121,7 @@ function run(num) {
 }
 
 
-//涓嶅叏浠ｇ爜-----------------------------------------------------start
+//补全代码-----------------------------------------------------start
 $(function () {
     $.fn.atwho.debug = true
     var p5json = [
@@ -164,7 +174,6 @@ $(function () {
         "TAU", "TWO_PI"
 
     ]
-    var jeremy = decodeURI("J%C3%A9r%C3%A9my") // J茅r茅my
 
     var p5json = $.map(p5json, function (value, i) { return { key: value, name: value } });
 
