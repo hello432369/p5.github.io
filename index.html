@@ -16,7 +16,7 @@
         }
     </style>
 
-    <title>processing 中文助手</title>
+    <title>processing中文助手--数字艺术的基础设施</title>
 </head>
 
 <body onload="savecontent()" style="margin:0; padding:0; background-color: rgb(234,234,234)">
@@ -27,11 +27,11 @@
             <a class="navbar-brand" href="">processing.hub</a>
         </div>
 
-        <div class="navbar-collapse">
+        <!-- <div class="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="">QQ群：422856731</a></li>
             </ul>
-        </div>
+        </div> -->
 
     </nav>
 
@@ -57,9 +57,11 @@
                             <ul class="nav navbar-nav">
                                 <!-- 编辑模式 -->
                                 <li class="active">
-                                    <a href="#" style="text-align:center" data-toggle="collapse" data-target="#collapseExample">
+                                    <a href="#" style="text-align:center" data-toggle="collapse"
+                                        data-target="#collapseExample">
                                         <h4 class="list-group-item-heading">编辑</h4>
-                                        <p class="list-group-item-text text-muted"><i class="icon icon-toggle-on"></i></p>
+                                        <p class="list-group-item-text text-muted"><i class="icon icon-toggle-on"></i>
+                                        </p>
                                     </a>
                                 </li>
                                 <li><a href="#" style="text-align:center" onclick="AddContent(`
@@ -549,7 +551,7 @@ pop();    //恢复当前风格
         <div class="row">
 
             <div class="collapse in" id="collapseExample">
-                <div class=" with-padding"> 
+                <div class=" with-padding">
 
                     <div class="col-xs-5">
                         <div class="alert alert-danger-inverse">显示结果</div>
@@ -644,175 +646,189 @@ pop();    //恢复当前风格
 
                         <div class="panel-group" id="accordionPanels" aria-multiselectable="true">
                             <div class="panel panel-default">
-                              <div class="panel-heading" id="headingOne">
-                                <h4 class="panel-title">
-                                  <a data-toggle="collapse" data-parent="#accordionPanels" href="#collapseOne">
-                                    修改基本属性
-                                  </a>
-                                </h4>
-                              </div>
-                              <div id="collapseOne" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">原点</span>
-                                        <input type="text" class="form-control" placeholder="修改原点坐标">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">坐标</span>
-                                        <input type="text" class="form-control" placeholder="让对象移动">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">宽高</span>
-                                        <input type="text" class="form-control" placeholder="让对象缩放">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">旋转</span>
-                                        <input type="text" class="form-control" placeholder="让对象旋转">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">边框</span>
-                                        <input type="text" class="form-control" placeholder="调整边框粗细">
+                                <div class="panel-heading" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordionPanels" href="#collapseOne">
+                                            修改基本属性
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">原点</span>
+                                            <input type="text" class="form-control" placeholder="修改原点坐标">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">坐标</span>
+                                            <input type="text" class="form-control" placeholder="让对象移动">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">宽高</span>
+                                            <input type="text" class="form-control" placeholder="让对象缩放">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">旋转</span>
+                                            <input type="text" class="form-control" placeholder="让对象旋转">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">边框</span>
+                                            <input type="text" class="form-control" placeholder="调整边框粗细">
+                                        </div>
                                     </div>
                                 </div>
-                              </div>
                             </div>
                             <div class="panel panel-default">
-                              <div class="panel-heading" id="headingTwo">
-                                <h4 class="panel-title">
-                                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels" href="#collapseTwo">
-                                    修改材质属性
-                                  </a>
-                                </h4>
-                              </div>
-                              <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">背景</span>
-                                        <input type="text" class="form-control" placeholder="背景色调整">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">边框</span>
-                                        <input type="text" class="form-control" placeholder="边框色调整">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">填充</span>
-                                        <input type="text" class="form-control" placeholder="填充色调整">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">模式</span>
-                                        <input type="text" class="form-control" placeholder="HSB模式调整">
+                                <div class="panel-heading" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels"
+                                            href="#collapseTwo">
+                                            修改材质属性
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">背景</span>
+                                            <input type="text" class="form-control" placeholder="背景色调整">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">边框</span>
+                                            <input type="text" class="form-control" placeholder="边框色调整">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">填充</span>
+                                            <input type="text" class="form-control" placeholder="填充色调整">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">模式</span>
+                                            <input type="text" class="form-control" placeholder="HSB模式调整">
+                                        </div>
                                     </div>
                                 </div>
-                              </div>
                             </div>
                             <div class="panel panel-default">
-                              <div class="panel-heading" id="headingThree">
-                                <h4 class="panel-title">
-                                  <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels" href="#collapseThree">
-                                    修改参数属性
-                                  </a>
-                                </h4>
-                              </div>
-                              <div id="collapseThree" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">数字</span>
-                                        <input type="text" class="form-control" placeholder="使用具体数字">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">比例</span>
-                                        <input type="text" class="form-control" placeholder="使用百分比">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">角度</span>
-                                        <input type="text" class="form-control" placeholder="使用角度">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">弧度</span>
-                                        <input type="text" class="form-control" placeholder="使用弧度">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">三角</span>
-                                        <input type="text" class="form-control" placeholder="使用三角函数">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">随机</span>
-                                        <input type="text" class="form-control" placeholder="无规律随机">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">噪音</span>
-                                        <input type="text" class="form-control" placeholder="有规律随机">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">分形</span>
-                                        <input type="text" class="form-control" placeholder="使用递归算法">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">向量</span>
-                                        <input type="text" class="form-control" placeholder="使用向量">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">数组</span>
-                                        <input type="text" class="form-control" placeholder="使用二维数组">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">矩阵</span>
-                                        <input type="text" class="form-control" placeholder="使用矩阵数组">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">遗传</span>
-                                        <input type="text" class="form-control" placeholder="使用遗传算法">
-                                    </div>
-                                    <div class="input-group">
-                                        <span class="input-group-addon">物理</span>
-                                        <input type="text" class="form-control" placeholder="模拟物理算法">
+                                <div class="panel-heading" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels"
+                                            href="#collapseThree">
+                                            修改参数属性
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">数字</span>
+                                            <input type="text" class="form-control" placeholder="使用具体数字">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">比例</span>
+                                            <input type="text" class="form-control" placeholder="使用百分比">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">角度</span>
+                                            <input type="text" class="form-control" placeholder="使用角度">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">弧度</span>
+                                            <input type="text" class="form-control" placeholder="使用弧度">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">三角</span>
+                                            <input type="text" class="form-control" placeholder="使用三角函数">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">随机</span>
+                                            <input type="text" class="form-control" placeholder="无规律随机">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">噪音</span>
+                                            <input type="text" class="form-control" placeholder="有规律随机">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">分形</span>
+                                            <input type="text" class="form-control" placeholder="使用递归算法">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">向量</span>
+                                            <input type="text" class="form-control" placeholder="使用向量">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">数组</span>
+                                            <input type="text" class="form-control" placeholder="使用二维数组">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">矩阵</span>
+                                            <input type="text" class="form-control" placeholder="使用矩阵数组">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">遗传</span>
+                                            <input type="text" class="form-control" placeholder="使用遗传算法">
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">物理</span>
+                                            <input type="text" class="form-control" placeholder="模拟物理算法">
+                                        </div>
                                     </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-    <hr>
+        <hr>
 
-    <!-- 导航 -->
-    <div class="row">
-        <!-- 2.1 -->
-        <div class="col-xs-1">
-            <div class="list-group">
-                <a class="list-group-item active" target="myiframe" href="p5home.html">
-                    <h4 class="list-group-item-heading">p5导航</h4>
-                    <!-- <p class="list-group-item-text text-muted">测试1</p> -->
+        <!-- 导航 -->
+        <div class="row">
+            <!-- 2.1 -->
+            <div class="col-xs-1">
+                <div class="list-group">
+                    <a class="list-group-item active" target="myiframe" href="p5home.html">
+                        <h4 class="list-group-item-heading">p5导航</h4>
+                        <!-- <p class="list-group-item-text text-muted">测试1</p> -->
+                    </a>
+                </div>
+            </div>
+            <!-- 2.2 -->
+            <div class="col-xs-9">
+                <iframe src="p5home.html" id="myiframe" name="myiframe" scrolling="no" frameborder="0"
+                    style="width: 100%; height: 90rem;"></iframe>
+            </div>
+            <!-- 2.3 -->
+            <div class="col-xs-2">
+                <a class="card" target="blank" href="https://www.yuque.com/processing.hub/tutorials">
+                    <div class="card-heading"><strong>官方入门</strong>&nbsp;&nbsp;&nbsp;<span
+                            class="label label-danger">荐</span></div>
+                    <div class="card-content text-muted">中文翻译版</div>
+                </a>
+                <a class="card" target="blank" href="https://p5.中国/qingtong.html">
+                    <div class="card-heading"><strong>入门教程</strong>&nbsp;&nbsp;&nbsp;<span
+                            class="label label-danger">荐</span></div>
+                    <div class="card-content text-muted">官网无法访问，看此教程</div>
+                </a>
+                <a class="card" target="blank" href="https://www.leangoo.com/kanban/board/go/2419758">
+                    <div class="card-heading"><strong>模拟物理</strong>&nbsp;&nbsp;&nbsp;<span
+                            class="label label-danger">荐</span></div>
+                    <div class="card-content text-muted">入门毕业后，可看此教程</div>
                 </a>
             </div>
         </div>
-        <!-- 2.2 -->
-        <div class="col-xs-9">
-            <iframe src="p5home.html" id="myiframe" name="myiframe" scrolling="no" frameborder="0"
-                style="width: 100%; height: 120rem;"></iframe>
+
+        <!-- 底部 -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-header" style="text-align:center"> 
+                    <a target="blank" href="#"> QQ群：422856731</a> | 
+                    <a target="blank" href="https://www.yuque.com/processing.hub"> 语雀</a> | 
+                    <a target="blank" href="https://space.bilibili.com/9004724/channel/index"> 哔哩哔哩</a> |
+                    <a target="blank" href="https://github.com/search?l=Processing&q=processing&type=Repositories"> github</a> 
+                </br> Copyright © 2018 - 2020 p5.中国 All Rights Reserved.  </div>
+            </div>
         </div>
-        <!-- 2.3 -->
-        <div class="col-xs-2">
-            <a class="card" target="blank" href="https://www.yuque.com/processing.hub/tutorials">
-                <div class="card-heading"><strong>官方入门</strong>&nbsp;&nbsp;&nbsp;<span
-                        class="label label-danger">荐</span></div>
-                <div class="card-content text-muted">中文翻译版</div>
-            </a>
-            <a class="card" target="blank" href="https://p5.中国/qingtong.html">
-                <div class="card-heading"><strong>入门教程</strong>&nbsp;&nbsp;&nbsp;<span
-                        class="label label-danger">荐</span></div>
-                <div class="card-content text-muted">官网无法访问，看此教程</div>
-            </a>
-            <a class="card" target="blank" href="https://www.leangoo.com/kanban/board/go/2419758">
-                <div class="card-heading"><strong>模拟物理</strong>&nbsp;&nbsp;&nbsp;<span
-                        class="label label-danger">荐</span></div>
-                <div class="card-content text-muted">入门毕业后，可看此教程</div>
-            </a>
-        </div>
-    </div>
     </div>
 
 </body>
