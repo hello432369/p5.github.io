@@ -40,6 +40,7 @@ function copy() {
 
 //通过按钮添加代码-----------------------------------------------------start
 function AddContent(str) {
+    
     if (lastInput) {
         lastInput.focus();
     }
@@ -50,6 +51,13 @@ function AddContent(str) {
         lastInput.value = lastInput.value.substr(0, lastInput.selectionStart) + str + lastInput.value.substring(lastInput.selectionStart, lastInput.value.length);
     }
 }
+
+
+//通过按钮添加代码注释-----------------------------------------------------start
+function Adds(str) {
+    document.getElementById('message').innerHTML = str;
+}
+
 
 //p转p5.js-----------------------------------------------------start
 function p52h5() {
