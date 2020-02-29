@@ -38,7 +38,8 @@
 
         <!-- 代码编辑器 -->
         <div class="row">
-            <div class="col-xl-12">
+                <div class=" with-padding">
+                <div class="col-xl-12">
 
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-tab href="#tabContent1">1.结构</a></li>
@@ -55,10 +56,14 @@
                     <!-- 结构 -->
                     <div class="tab-pane active" id="tabContent1">
                         <div class="btn-group">
-                            <button type="button" class="btn btn" data-toggle="collapse" data-target="#collapseExample">
+                            <!-- <button type="button" class="btn btn" data-toggle="collapse" data-target="#collapseExample">
                                 <h4 class="list-group-item-heading">编辑</h4>
-                                <p class="list-group-item-text text-muted"><i class="icon icon-toggle-on"></i>
-                            </button>
+                                <p class="list-group-item-text text-muted">ON/OFF
+                            </button> -->
+                            <div class="switch" data-toggle="collapse" data-target="#collapseExample">
+                                <input type="checkbox">
+                                <label>编辑模式</label>
+                              </div>
                         </div>
                         <div class="btn-group">
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -426,7 +431,7 @@ Adds('pixelDensity();   //像素密度默认为1，可以增加密度');">
                     <div class="tab-pane" id="tabContent3">
                         <div class="row">
                             <div class="btn-group">
-                                <button type="button" class="btn btn active">
+                                <button type="button" class="btn btn active" >
                                     <h4 class="list-group-item-heading">二维</h4>
                                     <p class="list-group-item-text text-muted">2D</p>
                                 </button>
@@ -1758,7 +1763,8 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
+    </div>
         </div>
 
         <div class="row">
