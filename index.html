@@ -18,7 +18,7 @@
         }
     </style>
 
-    <title>processing中文助手--数字艺术的基础设施</title>
+    <title>processing数字艺术中文助手--基础设施</title>
 </head>
 
 <body onload="savecontent()" style="margin:0; padding:0; ">
@@ -76,6 +76,7 @@ void draw()     //无限循环
 
 }
 `)">
+<i class="icon-flag"></i>
                                 <h4 class="list-group-item-heading">默认</h4>
                                 <p class="list-group-item-text text-muted">void</p>
                             </button>
@@ -90,6 +91,7 @@ void draw()
 
 }
 `)">
+<i class="icon-stop"></i>
                                 <h4 class="list-group-item-heading">平面</h4>
                                 <p class="list-group-item-text text-muted">P2D</p>
                             </button>
@@ -104,11 +106,12 @@ void draw()
         
 }
 `)">
+<i class="icon-cube-alt"></i>
                                 <h4 class="list-group-item-heading">立体</h4>
                                 <p class="list-group-item-text text-muted">P3D</p>
                             </button>
                             <div class="btn-group dropdown dropdown-hover">
-                                <button type="button" class="btn btn" onclick="AddContent(`loop();    
+                                <button type="button" class="btn btn" onclick="AddContent(` 
 void setup()   
 {
 size(369,369);      
@@ -121,6 +124,7 @@ textFont('宋体',36);             //字体设置，字体大小
 text( '大家好，hello world' ,10,100);    //字体内容，x,y坐标           
 }
 `)">
+<i class="icon-font"></i>
                                     <h4 class="list-group-item-heading">文本</h4>
                                     <p class="list-group-item-text text-muted">text()</p>
                                 </button>
@@ -161,6 +165,7 @@ void draw() {
   shape(s,  , , , );   //显示图形：x，y坐标，宽高
 }
 `)">
+<i class="icon-paint-brush"></i>
                                 <h4 class="list-group-item-heading">形状</h4>
                                 <p class="list-group-item-text text-muted">PShape</p>
                             </button>
@@ -178,6 +183,7 @@ void draw()
 image(img,0,0);     //显示图片，x,y坐标     
 }
 `)">
+<i class="icon-picture"></i>
                                 <h4 class="list-group-item-heading">图片</h4>
                                 <p class="list-group-item-text text-muted">PImage</p>
                             </button>
@@ -203,6 +209,7 @@ if(video.available())       //摄像头获取
 image(video,0,0);   //显示摄像头，x,y坐标
 }  
 `)">
+<i class="icon-group"></i>
                                 <h4 class="list-group-item-heading">直播</h4>
                                 <p class="list-group-item-text text-muted">Video</p>
                             </button>
@@ -227,6 +234,7 @@ if(video.available())   //视频获取
 image(video,0,0);    //显示视频，x,y坐标
 }  
 `)">
+<i class="icon-film"></i>
                                 <h4 class="list-group-item-heading">视频</h4>
                                 <p class="list-group-item-text text-muted">Movie</p>
                             </button>
@@ -252,6 +260,7 @@ void draw()
 float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）                         
 }         
 `)">
+<i class="icon-bullhorn"></i>
                                 <h4 class="list-group-item-heading">录音</h4>
                                 <p class="list-group-item-text text-muted">AudioIn</p>
                             </button>
@@ -259,19 +268,25 @@ float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）
 import processing.sound.*;      //插入声音库
                         
 SoundFile s;    //声明音频文件
+Amplitude ampl;     //声明振幅
                                 
 void setup()    
 {
-size(369,369);      
+size(369,369);   
+
 s = new SoundFile(this,'音频名称.mp3');   //设置音频，音频文件名称
 s.play();     //音频播放
+
+ampl = new Amplitude(this);     //设置振幅
+ampl.input(s);     //振幅输入
 }
                                 
 void draw()     
 {
-    //内容空着即可，删除无声音   
+float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）   
 }         
 `)">
+<i class="icon-music"></i>
                                 <h4 class="list-group-item-heading">音频</h4>
                                 <p class="list-group-item-text text-muted">Sound</p>
                             </button>
@@ -288,8 +303,42 @@ void draw() {
   shape(s,  ,  ,  ,  ); //显示文件：x，y坐标，宽高
 }         
 `)">
+<i class="icon-folder-open"></i>
                                 <h4 class="list-group-item-heading">文件</h4>
                                 <p class="list-group-item-text text-muted">Files</p>
+                            </button>
+                            <button type="button" class="btn btn" onclick="AddContent(`
+c1[ ] c1c = new c1[ 1 ];      //声明c1对象类型数量
+
+void setup() {
+    size(369, 369);
+
+    for (int i=0; i<c1c.length; i+=1) {    
+        c1c[i]= new c1();
+    }
+}
+
+void draw() {
+    for (int i=0; i<c1c.length; i+=1) {    
+        c1c[i].c1v1();
+    }
+} 
+
+class c1{
+    
+    c1(){
+
+    }
+
+    void c1v1(){
+
+    }
+}
+`);
+Adds('class;   //自定义对象类型。  ');">
+<i class="icon-cubes"></i>
+                                <h4 class="list-group-item-heading">集群</h4>
+                                <p class="list-group-item-text text-muted">class</p>
                             </button>
                         </div>
                     </div>
@@ -297,6 +346,7 @@ void draw() {
                     <!-- 设置 -->
                     <div class="tab-pane" id="tabContent2">
                         <div class="btn-group">
+                            
                             <div class="btn-group dropdown dropdown-hover">
                                 <button type="button" class="btn btn" onclick="AddContent(`loop();    
 `);
@@ -333,6 +383,12 @@ Adds('noCursor();   //隐藏鼠标');">
                                     </li>
                                 </ul>
                             </div>
+                            <button type="button" class="btn btn" onclick="AddContent(`frameCount
+`);
+Adds('frameCount;   //记录显示的帧数，从0开始一直记录帧数数量，可当做x++使用 ');">
+                                <h4 class="list-group-item-heading">记帧</h4>
+                                <p class="list-group-item-text text-muted">frameCount</p>
+                            </button>
                             <button type="button" class="btn btn" onclick="AddContent(`fullScreen();
 `);
 Adds('fullScreen();   //窗口全屏化 ');">
@@ -863,12 +919,28 @@ Adds('quadraticVerte(控制点1,控制点2,控制点3, 锚点x坐标，锚点y�
                     <!-- 着色 -->
                     <div class="tab-pane" id="tabContent4">
                         <div class="btn-group">
-                            <button type="button" class="btn btn" onclick="AddContent(`background( , , , );
+                            <div class="btn-group dropdown dropdown-hover">
+                                <button type="button" class="btn btn" onclick="AddContent(`background( , , , );
 `);
 Adds('background(红色0~255，绿色0~255，蓝色0~255,透明度0~255);  ');">
                                 <h4 class="list-group-item-heading">背景色</h4>
                                 <p class="list-group-item-text text-muted">background()</p>
                             </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#" style="text-align:center" onclick="AddContent(`
+fill(0, 10);
+noStroke();
+rect(0, 0, width, height);
+`);
+Adds('rect();   //对象运动时有残影');">
+                                            <h4 class="list-group-item-heading">残影背景</h4>
+                                            <p class="list-group-item-text text-muted">rect()</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
                             <button type="button" class="btn btn" onclick="AddContent(`fill( , , , );
 `);
 Adds('fill(红色0~255，绿色0~255，蓝色0~255,透明度0~255); ');">
@@ -1165,7 +1237,7 @@ Adds('push();  //保存当前风格，   pop(); //恢复之前风格  ');">
                                 <button type="button" class="btn btn" onclick="AddContent(`	return ; 
 `);
 Adds('	return;   //返回计算结果，用于复杂计算公式  ');">
-                                    <h4 class="list-group-item-heading">隔行打印</h4>
+                                    <h4 class="list-group-item-heading">返回结果</h4>
                                     <p class="list-group-item-text text-muted">	return</p>
                                 </button>
                                 <div class="btn-group dropdown dropdown-hover">
@@ -1226,7 +1298,94 @@ Adds('year(2020) //记录年份，直接输入具体年份2020 ');">
                                         </li>
                                     </ul>
                                 </div>
-                                
+                                <div class="btn-group dropdown dropdown-hover">
+                                    <button type="button" class="btn btn" onclick="AddContent(`PVector p1 = new PVector( 0, 0);     
+`);
+Adds('PVector p1 = new PVector( 0, 0); //向量坐标有三个属性：点坐标，原点与该点距离，原点与该点方向；后2个参数需要提取使用，比传统坐标多了2个功能  ');">
+                                        <h4 class="list-group-item-heading">向量</h4>
+                                        <p class="list-group-item-text text-muted">PVector</p>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.add( );
+`);
+Adds('add(向量)   //p1.add(p2); 向量之间相加  ');">
+                                                <h4 class="list-group-item-heading">加</h4>
+                                                <p class="list-group-item-text text-muted">add()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.sub( );
+`);
+Adds('sub(向量)   //p1.sub(p2); 向量之间相减  ');">
+                                                <h4 class="list-group-item-heading">减</h4>
+                                                <p class="list-group-item-text text-muted">sub()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.mult( );
+`);
+Adds('.mult(标量)   //p1.mult(p2);  向量乘以标量，延长向量长度   ');">
+                                                <h4 class="list-group-item-heading">乘</h4>
+                                                <p class="list-group-item-text text-muted">mult()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.div( );
+`);
+Adds('.div(标量)   // p1.div(p2);  向量除以标量，缩短向量长度   ');">
+                                                <h4 class="list-group-item-heading">除</h4>
+                                                <p class="list-group-item-text text-muted">div()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.get();
+`);
+Adds('.get()   //p1.get(); 克隆：向量p1参数。有利于多个对象同时使用向量p1时，向量p1参数不受影响，被改变的只是克隆向量 ');">
+                                                <h4 class="list-group-item-heading">克隆</h4>
+                                                <p class="list-group-item-text text-muted">get()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.mag();
+`);
+Adds('.mag()   //p1.mag(); 提取向量长度，    ');">
+                                                <h4 class="list-group-item-heading">提取长度</h4>
+                                                <p class="list-group-item-text text-muted">mag()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.setMag();
+`);
+Adds('.setMag(设定参数)   //p1.setMag(); 设置向量长度，    ');">
+                                                <h4 class="list-group-item-heading">设定长度</h4>
+                                                <p class="list-group-item-text text-muted">setMag()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.normalize();
+`);
+Adds('.normalize()   //p1.normalize(); 设置向量长度固定为1，再通过向量乘法放大长度，向量长度始终固定不变  ');">
+                                                <h4 class="list-group-item-heading">固定长度</h4>
+                                                <p class="list-group-item-text text-muted">normalize()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" style="text-align:center" onclick="AddContent(`.limit();
+`);
+Adds('.limit(限制参数)   //p1.limit(50); 限制向量最长范围，    ');">
+                                                <h4 class="list-group-item-heading">限制长度</h4>
+                                                <p class="list-group-item-text text-muted">limit()</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://processing.org/reference/PVector.html" target="blank" style="text-align:center" >
+                                                <h4 class="list-group-item-heading">更多</h4>
+                                                <p class="list-group-item-text text-muted">详情</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -1296,7 +1455,7 @@ Adds('atan2() //计算从指定点到坐标原点的角度（以弧度为单位�
                                     </ul>
                                 </div>
                                 <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`random( ,);
+                                    <button type="button" class="btn btn" onclick="AddContent(`random( , );
 `);
 Adds('random(最小值,最大值) //无规律随机选取数字  ');">
                                         <h4 class="list-group-item-heading">随机</h4>
@@ -1322,7 +1481,7 @@ Adds('randomSeed() //将种子参数设置为常数，以在每次运行软件�
                                     </ul>
                                 </div>
                                 <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`noise();
+                                    <button type="button" class="btn btn" onclick="AddContent(`noise( );
 `);
 Adds('noise() //有规律随机选取数字 ，二维噪音：noise(x，y坐标); 三维噪音：noise(x,y,z坐标) ');">
                                         <h4 class="list-group-item-heading">Perlin噪音</h4>
@@ -1589,27 +1748,39 @@ Adds('rotate(TAU /360 *s) //默认绕着原点旋转，参数为弧度 ， TAU/3
                         <div class="btn-group">
                             <button type="button" class="btn btn" onclick="AddContent(`mouseX    
 `);
-Adds('mouseX //鼠标x坐标');">
+Adds('mouseX //鼠标x坐标，不受原点坐标变更，鼠标原点始终是左上角');">
                                     <h4 class="list-group-item-heading">鼠标X</h4>
                                     <p class="list-group-item-text text-muted">mouseX</p>
                                 </button>
                                 <button type="button" class="btn btn" onclick="AddContent(`mouseY    
 `);
-Adds('mouseY //鼠标y坐标');">
+Adds('mouseY //鼠标y坐标，不受原点坐标变更，鼠标原点始终是左上角');">
                                     <h4 class="list-group-item-heading">鼠标Y</h4>
                                     <p class="list-group-item-text text-muted">mouseY</p>
                                 </button>
+                                <button type="button" class="btn btn" onclick="AddContent(`mouseX，mouseY    
+`);
+Adds('mouseX，mouseY //鼠标x,y坐标，不受原点坐标变更，鼠标原点始终是左上角');">
+                                    <h4 class="list-group-item-heading">鼠标X,Y</h4>
+                                    <p class="list-group-item-text text-muted">mouseX,Y</p>
+                                </button>
                                 <button type="button" class="btn btn" onclick="AddContent(`pmouseX    
 `);
-Adds('pmouseX //鼠标x坐标');">
+Adds('pmouseX //鼠标x前一帧坐标 ');">
                                     <h4 class="list-group-item-heading">鼠标X前一帧</h4>
                                     <p class="list-group-item-text text-muted">pmouseX</p>
                                 </button>
                                 <button type="button" class="btn btn" onclick="AddContent(`pmouseY    
 `);
-Adds('pmouseY //鼠标y坐标');">
+Adds('pmouseY //鼠标y前一帧坐标 ');">
                                     <h4 class="list-group-item-heading">鼠标Y前一帧</h4>
                                     <p class="list-group-item-text text-muted">pmouseY</p>
+                                </button>
+                                <button type="button" class="btn btn" onclick="AddContent(`pmouseX,pmouseY    
+`);
+Adds('pmouseX,pmouseY //鼠标x,y前一帧坐标 ');">
+                                    <h4 class="list-group-item-heading">鼠标X,Y前一帧</h4>
+                                    <p class="list-group-item-text text-muted">pmouseX,Y</p>
                                 </button>
                             <div class="btn-group dropdown dropdown-hover">
                                 <button type="button" class="btn btn" onclick="AddContent(`mousePressed   
@@ -2035,7 +2206,7 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
         <div class="row">
             <div class="col-xs-12">
                 <div class="page-header" style="text-align:center">
-                    <a target="blank" href="#"> QQ群：422856731</a> |
+                    <a> p5cn@vip.qq.com</a> |
                     <a target="blank" href="https://www.yuque.com/processing.hub"> 语雀</a> |
                     <a target="blank" href="https://space.bilibili.com/9004724/channel/index"> 哔哩哔哩</a> |
                     <a target="blank" href="https://github.com/search?l=Processing&q=processing&type=Repositories">
@@ -2057,5 +2228,7 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
     var ifm = document.getElementById("myiframe");
     ifm.height = document.documentElement.clientHeight;
 </script>
+<script>
 
+</script>
 </html>
