@@ -197,3 +197,25 @@ $(function () {
     $inputor.focus().atwho('run');
 
 });
+
+// ctrl+z撤销
+var log = [];
+$(function () {
+    var txt = window.setInterval(function () {
+        if (log[log.length - 1] != $("#t1").val()) {
+            log[log.length] = $("#t1").val();
+        }
+    }, 1500);
+    var isCtrl = false;
+    $(document).keydown(function (e) {
+        if (e.which === 17)
+            isCtrl = true;
+        if (e.which === 90 && isCtrl === true) {
+            log.pop();
+            $("#t1").val(log[log.length - 1]).blur();
+        }
+    }).keyup(function (e) {
+        if (e.which === 17)
+            isCtrl = false;
+    });
+});
