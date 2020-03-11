@@ -3,6 +3,7 @@ var a1c,a1s,a1b;
 var a2w,a2h,a2c,a2s,a2b,a2x2,a2y2,a2t;
 var a3x,a3c,a3s,a3b,a3t;
 var a4r; var theta=0.0;
+var yoff = 100; var timer = 0.0; var cnt = 0;let v1,v2,v3;
 
 //全屏设置画图区域
 function setup() 
@@ -10,7 +11,8 @@ function setup()
     createCanvas(windowWidth, windowHeight);  
 
     //draw变量
-    r = int(random(4));
+    // r = int(random(5));
+    r = 2;
 
     //a2变量
     a2w = 18; a2h = 18; a2x2 = random(width); a2y2 = random(100, height); a2t = 0;
@@ -23,6 +25,7 @@ function draw()
     if(r==1){ ani2();}
     if(r==2){ ani3();}
     if(r==3){ ani4();}
+    // if(r==4){ ani5();}
 }
 
 //重置全屏设置画图区域
@@ -31,7 +34,7 @@ function windowResized()
     resizeCanvas(windowWidth, windowHeight);
 }
 
-//动画1
+//动画1 背景色渐变
 function ani1()
 {
     colorMode(HSB,360,100,100);
@@ -45,7 +48,7 @@ function ani1()
     }
 }
 
-//动画2
+//动画2  小游戏
 function ani2()
 {
     colorMode(HSB,360,100,100);
@@ -83,11 +86,11 @@ function ani2()
     }
 }
 
-//动画3
+//动画3  数字
 function ani3()
 {
     colorMode(HSB,360,100,100);
-    background(360,0,96);
+    background(360,0,100);
   
     a3x = map(mouseX, 0, width, 0, 6); 
     a3c = map(mouseY, 0, height, 0, 360);
@@ -108,14 +111,14 @@ function ani3()
     }  
 }
 
-//动画4
+//动画4  海水
 function ani4()
 {
     colorMode(HSB,360,100,100,100);
     background(360,0,mouseY/3);
  
     fill(60, 100 -mouseY/4, 100)
-    ellipse(width/2, 0, 520, 520) 
+    ellipse(width/2, 0, 520, 520)          
 
     //point(width/2 +cos(TAU/360 *frameCount) *60, height/2 +sin(TAU/360  *frameCount) *60);
     //point(width/2 +cos(radians(frameCount)) *60, height/2 +sin(radians(frameCount)) *60);
@@ -169,4 +172,42 @@ function ani4()
         }
         vertex(width, height)
     endShape();
+}
+
+//动画5 研究当中
+function ani5()
+{
+    colorMode(HSB,360,100,100);
+
+    var f = noise(yoff*5)*30;
+    var f1 = 210 + noise(yoff)*30;
+    var f2 = 100;
+
+    fill(f1,f,f2);
+    cnt+=1;
+    stroke(0);
+    strokeWeight(0.5);
+
+    timer+=0.002;
+
+    beginShape();
+        var xoff= 2;
+        for (var x = 0; x <= width + 20; x += 20) 
+        {
+            var y = map(noise(xoff + timer, yoff), 0, 2, 100, 800);
+            vertex(x, y + cnt); 
+            xoff += 0.075;
+
+            stroke(f1,f,f2);
+            strokeWeight(random(10,50));
+            point(x, y + cnt);
+
+            noStroke();
+        }
+        yoff += 0.01;
+        vertex(width + 20, height);
+        vertex(2, height);
+    endShape(CLOSE);
+
+    if (cnt > height) noLoop();
 }
