@@ -1972,6 +1972,37 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
                                             <h4 class="list-group-item-heading">tga</h4>
                                             <p class="list-group-item-text text-muted">save()</p>
                                         </button>
+                                        <button type="button" class="btn btn" onclick="AddContent(`
+import gifAnimation.*;  //导入gif插件
+GifMaker gifout; //声明gif
+
+void setup() {
+size(240,240);
+    frameRate(24);
+
+    gifout = new GifMaker(this, '###.gif');
+
+    gifout.setRepeat(0);        // 循环播放次数，0为无限循环
+    gifout.setTransparent(0,0,0);  // 颜色参数三个为0，表示黑色 = 透明色
+}
+
+void draw() {
+    background(0);
+
+    
+
+    gifout.setDelay(1);  // 帧图与帧图停顿时间，以毫秒计算
+    gifout.addFrame();  // 增加帧数
+
+    if(  ){     //满足条件
+        gifout.finish();          // 导出gif
+    }
+}
+`);
+Adds('gif插件官网：https://github.com/extrapixel/gif-animation/tree/3.0 ');">
+                                            <h4 class="list-group-item-heading">动图</h4>
+                                            <p class="list-group-item-text text-muted">gif</p>
+                                        </button>
                                         <button type="button" class="btn btn"
                                             onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/output#c7Yz0')">
                                             <h4 class="list-group-item-heading">更多</h4>
