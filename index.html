@@ -18,7 +18,7 @@
         }
     </style>
 
-    <title>processing数字艺术中文助手--基础设施</title>
+    <title>processing数字艺术中文助手--基础设</title>
 </head>
 
 <body onload="savecontent()" style="margin:0; padding:0; ">
@@ -177,6 +177,35 @@ image(img,0,0);     //显示图片，x,y坐标
                                                 <i class="icon-picture"></i>
                                                 <h4 class="list-group-item-heading">图片</h4>
                                                 <p class="list-group-item-text text-muted">PImage</p>
+                                            </button>
+                                            <button type="button" class="btn btn" onclick="AddContent(`
+PGraphics pg;   //声明绘图板
+
+void setup() {
+  size(369, 369);
+  pg = createGraphics(width, height);   //创建缓冲区宽高
+}
+
+void draw() {
+  pg.beginDraw();       //开始绘制
+    pg.background(0,0);   //设置背景透明，导出图片透明
+
+    pg.fill(233,0,0);
+    pg.ellipse(width/2,height/2,60,60);
+
+  pg.endDraw();     //结束绘制
+  
+  image(pg, 0,0);  //图形位置及宽高
+}
+
+void mousePressed(){
+  pg.save('###.png');   //通过鼠标点击保存透明图
+}
+`);
+Adds('PGraphics; //绘版类似矢量软件中的独立画布。一个屏幕内可以创建多个画布，实现多个动画不受影响  ');">
+                                                <i class="icon-file-image"></i>
+                                                <h4 class="list-group-item-heading">绘板</h4>
+                                                <p class="list-group-item-text text-muted">PGraphics</p>
                                             </button>
                                             <button type="button" class="btn btn" onclick="AddContent(`
 import processing.video.*;      //插入视频库
@@ -2004,7 +2033,7 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
                             <button type="button" class="btn btn" data-toggle="modal" data-target="#myModal"
                                 onclick="p52h5()">
                                 <h4 class="list-group-item-heading">转p5.js</h4>
-                                <p class="list-group-item-text text-muted"><i class="icon icon-spin icon-refresh"></i>
+                                <p class="list-group-item-text text-muted"><i class="icon icon-refresh"></i>
                                 </p>
                             </button>
                         </div>
