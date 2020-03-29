@@ -727,21 +727,21 @@ Adds('bezierTangent(第1个点，控制点1，控制点2，第2个点，范围0~
                                     </div>
                                     <div class="btn-group">
                                         <button type="button" class="btn btn" onclick="AddContent(`
-beginshape(TRIANGLES);   
+beginShape();   
     
-endshape(CLOSE);    //可不写CLOSE
+endShape(CLOSE);    //可不写CLOSE
 `);
 Adds('beginShape()  //点POINTS, 线LINES, 三角TRIANGLES, 三角TRIANGLE_FAN, 三角TRIANGLE_STRIP, 矩形QUADS, 矩形QUAD_STRIP');">
                                             <h4 class="list-group-item-heading">画形状</h4>
-                                            <p class="list-group-item-text text-muted">beginshape()</p>
+                                            <p class="list-group-item-text text-muted">beginShape()</p>
                                         </button>
                                         <button type="button" class="btn btn" onclick="AddContent(`
-beginshape(TRIANGLES);       
+beginShape(TRIANGLES);       
     
     beginContour();    
         
     endContour();
-endshape(CLOSE);    
+endShape(CLOSE);    
 `);
 Adds('beginContour()  //开始扣形状 ');">
                                             <h4 class="list-group-item-heading">扣形状</h4>
