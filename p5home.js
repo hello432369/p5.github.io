@@ -34,58 +34,6 @@ function windowResized()
     resizeCanvas(windowWidth, windowHeight);
 }
 
-//动画1 背景色渐变
-function ani1()
-{
-    colorMode(HSB,360,100,100);
-    a1c = map(mouseX, 0, width, 0, 360);
-    a1s = map(mouseY, 0, height, 0, 30);
-    background(a1c, a1s, a1b);
-    if (pmouseX == mouseX) {
-        a1b-=0.15;
-    }else{
-        a1b=90;
-    }
-}
-
-//动画2  小游戏
-function ani2()
-{
-    colorMode(HSB,360,100,100);
-    background(360,0,96);
-
-    fill(0,0,0);
-    ellipse(mouseX, mouseY -a2w/2, a2w, a2h);
-
-    noStroke();
-    fill(0,0,99);
-    ellipse(mouseX -a2w/5, mouseY -a2w/1.3, a2w /9, a2h /9);
-    ellipse(mouseX +a2w/5, mouseY -a2w/1.3, a2w /9, a2h /9);
-
-    textSize(12 +a2w/9);
-    textAlign(CENTER);
-    fill(0,0,100);   
-    text(a2t ,mouseX,mouseY -a2w/9);  
-
-    fill(360,99,99);
-    ellipse(a2x2, a2y2, 10, 10);
-
-    if (dist(mouseX,mouseY, a2x2,a2y2) < a2w +10) 
-    {
-        a2x2 = random(width);
-        a2y2 = random(150, height);
-        a2t+=1;
-        a2w+=2;
-        a2h+=2;
-    }
-    if (a2t == 9) {
-        textSize(81);
-        textAlign(CENTER);
-        fill(0,0,0);   
-        text("玩上瘾了？该学习啦！",width/2,height/2);  
-    }
-}
-
 //动画3  数字
 function ani3()
 {
@@ -105,7 +53,7 @@ function ani3()
             textSize(36);
             textAlign(LEFT);  
             rotate(PI*i/a3x);
-            fill(a3c,a3s,a3b);   
+            fill(144,0,30);   
             text(a3t ,0,0);  
         pop();     
     }  
