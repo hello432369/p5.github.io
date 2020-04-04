@@ -8,26 +8,33 @@
     <link href="https://s1.pstatp.com/cdn/expire-1-M/zui/1.9.0/css/zui.css" rel="stylesheet">
     <link href="https://s1.pstatp.com/cdn/expire-1-M/at.js/1.5.4/css/jquery.atwho.min.css" type="text/css"
         rel="stylesheet" />
-    <script src="https://s1.pstatp.com/cdn/expire-1-M/processing.js/1.6.6/processing.min.js"
-        type="application/javascript"></script>
+    <script src="https://s1.pstatp.com/cdn/expire-1-M/processing.js/1.6.6/processing.min.js"></script>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/p5.js/0.8.0/p5.min.js" type="application/javascript"></script>
+    <script language="javascript" type="text/javascript" src="p5home.js"></script>
 
     <style>
         iframe {
             width: 100%;
             height: 500px;
         }
+
+        canvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
     </style>
 
-    <title>processing数字艺术中文助手--基础设</title>
+    <title>processing 数字艺术中文助手--基础设施</title>
 </head>
 
 <body onload="savecontent()" style="margin:0; padding:0; ">
-    
+
     <div class="container-fluid">
 
         <!-- 代码编辑器 -->
         <div class="row">
-            <h1 align="center">深切哀悼抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞</h1>
             <div class=" with-padding">
                 <div class="col-xl-12">
 
@@ -49,13 +56,7 @@
                             <div class="panel">
                                 <div class="panel-body">
                                     <div class="btn-toolbar">
-                                        
-                                        <div class="btn-group">
-                                            <div class="switch" data-toggle="collapse" data-target="#collapseExample">
-                                                <input type="checkbox">
-                                                <label>编辑&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                                            </div>
-                                        </div>
+
                                         <div class="btn-group">
                                             <button type="button" class="btn btn" onclick="AddContent(`
 void setup()   //一次循环
@@ -358,9 +359,10 @@ class c1{
 `);
 Adds('class;   //自定义对象类型。  ');">
                                                 <i class="icon-cubes"></i>
-                                                <h4 class="list-group-item-heading">你好</h4>
+                                                <h4 class="list-group-item-heading">类群</h4>
                                                 <p class="list-group-item-text text-muted">class</p>
                                             </button>
+
                                         </div>
                                     </div>
                                 </div>
@@ -387,7 +389,7 @@ Adds(' loop() //控制draw循环');">
                                                     <a href="#" style="text-align:center" onclick="AddContent(`noLoop();
 `);
 Adds('noLoop();   //控制draw不循环');">
-                                                    <h4 class="list-group-item-heading">不循环</h4>
+                                                        <h4 class="list-group-item-heading">不循环</h4>
                                                         <p class="list-group-item-text text-muted">noLoop()</p>
                                                     </a>
                                                 </li>
@@ -2025,11 +2027,10 @@ Adds('gif插件官网：https://github.com/extrapixel/gif-animation/tree/3.0 ');
             <div class="collapse in" id="collapseExample">
                 <div class=" with-padding">
 
-                    <div class="col-xs-5">
-                        <!-- <div class="panel panel-danger">     -->
-                            <div class="panel">
+                    <div class="col-xs-4">
+                        <div class="panel panel-danger">
                             <div class="panel-heading">
-                                预览效果
+                                视觉效果
                             </div>
                         </div>
                         <div>
@@ -2037,12 +2038,10 @@ Adds('gif插件官网：https://github.com/extrapixel/gif-animation/tree/3.0 ');
                         </div>
                     </div>
 
-                    <div class="col-xs-5">
-                        <!-- 编辑器 -->
-                        <!-- <div class="panel panel-success"> -->
-                            <div class="panel">
-                            <div class="panel-heading">
-                                视觉效果
+                    <div class="col-xs-4">
+                        <div class="panel panel-success" id="app">
+                            <div class="panel-heading" id="message">
+                                代码编辑
                             </div>
                         </div>
 
@@ -2072,18 +2071,23 @@ Adds('gif插件官网：https://github.com/extrapixel/gif-animation/tree/3.0 ');
                             </button>
                         </div>
 
-                        <div id="app">
-                            </br>
-                            <p id="message" class="text-primary">
-                                <!-- <span class="label label-success">参考使用方法 o(*￣︶￣*)o</span> -->
-                                <span class="label ">参考使用方法 o(*￣︶￣*)o</span>
-                            </p>
-                        </div>
-                        <textarea class="form-control" id="t1" name="t1" style="width:100%" rows="18" cols="50"
-                            placeholder="温馨提示：
-1. 编辑区域：在此框内编辑代码
-2. 补全代码：同时按两键 shift 和 :
-3. 扩大区域：右下角拖拽伸长
+
+                        <textarea class="form-control" id="t1" name="t1" style="width:100%" rows="15" cols="50"
+                            placeholder="
+温馨提示：
+1. 在此编写代码
+2. 补全代码需同时按两键 shift 和 :
+3. 右下角拖拽，扩大编辑区域
+
+
+
+
+
+
+
+
+
+Copyright © 2018 - 2020 p5.中国 All Rights Reserved.
 ">
                 </textarea>
 
@@ -2120,201 +2124,262 @@ Adds('gif插件官网：https://github.com/extrapixel/gif-animation/tree/3.0 ');
                         </div>
                     </div>
 
-                    <div class="col-xs-2">
-                        <!-- <div class="panel panel-primary"> -->
-                            <div class="panel">
+                    <div class="col-xs-4">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 助手提示
                             </div>
                         </div>
 
-                        <div class="panel-group" id="accordionPanels" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordionPanels" href="#collapseOne">
-                                            调整基本属性
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">原点</span>
-                                            <input type="text" class="form-control" placeholder="translate()">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="###" data-target="#tab2Content1" data-toggle="tab">参考</a>
+                            </li>
+                            <li><a href="###" data-target="#tab2Content2" data-toggle="tab">导航</a></li>
+                            <li><a href="###" data-target="#tab2Content3" data-toggle="tab">社交</a></li>
+                        </ul>
+                        <div class="scrollbar-hover" style="max-height: 360px; overflow: scroll;">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="tab2Content1">
+                                    <br>
+                                    <div class="panel-group" id="accordionPanels" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordionPanels"
+                                                        href="#collapseOne">
+                                                        调整基本属性
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">原点</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="translate()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">坐标</span>
+                                                        <input type="text" class="form-control" placeholder="x,y,z">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">宽高</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="width,height">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">旋转</span>
+                                                        <input type="text" class="form-control" placeholder="rotate()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">边框</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="strokeWeight()">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">坐标</span>
-                                            <input type="text" class="form-control" placeholder="x,y,z">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse"
+                                                        data-parent="#accordionPanels" href="#collapseTwo">
+                                                        调整材质属性
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">背景</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="background()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">边框</span>
+                                                        <input type="text" class="form-control" placeholder="stroke()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">填充</span>
+                                                        <input type="text" class="form-control" placeholder="fill()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">模式</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="color(HSB)">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">宽高</span>
-                                            <input type="text" class="form-control" placeholder="width,height">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">旋转</span>
-                                            <input type="text" class="form-control" placeholder="rotate()">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">边框</span>
-                                            <input type="text" class="form-control" placeholder="strokeWeight()">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse"
+                                                        data-parent="#accordionPanels" href="#collapseThree">
+                                                        调整参数属性
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">数字</span>
+                                                        <input type="text" class="form-control" placeholder="3,6,9">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">比例</span>
+                                                        <input type="text" class="form-control" placeholder="0.6">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">角度</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="radians(90)">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">弧度</span>
+                                                        <input type="text" class="form-control" placeholder="TAU/360">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">三角</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="sin(),cos()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">随机</span>
+                                                        <input type="text" class="form-control" placeholder="random()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">噪音</span>
+                                                        <input type="text" class="form-control" placeholder="noise()">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">分形</span>
+                                                        <input type="text" class="form-control" placeholder="递归算法">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">向量</span>
+                                                        <input type="text" class="form-control" placeholder="PVector">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">数组</span>
+                                                        <input type="text" class="form-control" placeholder="int[][]">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">矩阵</span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="float[][][]">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">遗传</span>
+                                                        <input type="text" class="form-control" placeholder="遗传算法">
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">物理</span>
+                                                        <input type="text" class="form-control" placeholder="模拟现实">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels"
-                                            href="#collapseTwo">
-                                            调整材质属性
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">背景</span>
-                                            <input type="text" class="form-control" placeholder="background()">
+                                <div class="tab-pane fade" id="tab2Content2">
+                                    <br>
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            <div class="btn-group">
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://www.yuque.com/processing.hub/tutorials')">图文教程</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/qingtong.html')">视频教程</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://www.leangoo.com/kanban/board/go/2419758')">渡劫教程</button>
+                                            </div>
                                         </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">边框</span>
-                                            <input type="text" class="form-control" placeholder="stroke()">
+                                    </div>
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            官方传送门
                                         </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">填充</span>
-                                            <input type="text" class="form-control" placeholder="fill()">
+                                        <div class="panel-body">
+                                            <div class="btn-group">
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/')">官网</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/download/')">下载</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/reference/environment/')">界面</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/tutorials/')">教程</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/reference/')">词典</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/examples/')">案例</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/reference/libraries/')">插件</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/reference/tools/')">工具</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/books/')">图书</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/exhibition/')">展览</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/overview/')">历史</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://processing.org/people/')">人物</button>
+                                            </div>
                                         </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">模式</span>
-                                            <input type="text" class="form-control" placeholder="color(HSB)">
+                                    </div>
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            其他传送门
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="btn-group">
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/nav')">藏经阁</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://www.yuque.com/processing.hub/open/st97x7')">闲聊斋</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://www.yuque.com/processing.hub/topics')">问答坊</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            在线工具
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="btn-group">
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://editor.p5js.org/')">p5js在线</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/p5sound.html')">转音频</button>
+                                                <button class="btn"
+                                                    onclick="javascript:window.open('https://p5.xn--fiqs8s/test.html')">测试</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" id="headingThree">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionPanels"
-                                            href="#collapseThree">
-                                            调整参数属性
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">数字</span>
-                                            <input type="text" class="form-control" placeholder="3,6,9">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">比例</span>
-                                            <input type="text" class="form-control" placeholder="0.6">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">角度</span>
-                                            <input type="text" class="form-control" placeholder="radians(90)">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">弧度</span>
-                                            <input type="text" class="form-control" placeholder="TAU/360">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">三角</span>
-                                            <input type="text" class="form-control" placeholder="sin(),cos()">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">随机</span>
-                                            <input type="text" class="form-control" placeholder="random()">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">噪音</span>
-                                            <input type="text" class="form-control" placeholder="noise()">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">分形</span>
-                                            <input type="text" class="form-control" placeholder="递归算法">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">向量</span>
-                                            <input type="text" class="form-control" placeholder="PVector">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">数组</span>
-                                            <input type="text" class="form-control" placeholder="int[][]">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">矩阵</span>
-                                            <input type="text" class="form-control" placeholder="float[][][]">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">遗传</span>
-                                            <input type="text" class="form-control" placeholder="遗传算法">
-                                        </div>
-                                        <div class="input-group">
-                                            <span class="input-group-addon">物理</span>
-                                            <input type="text" class="form-control" placeholder="模拟现实">
-                                        </div>
+                                <div class="tab-pane fade" id="tab2Content3">
+                                    <br>
+                                    <div class="list-group">
+                                        <a href="" target="_blank" class="list-group-item">QQ群:422856731</a>
+                                        <a href="" target="_blank" class="list-group-item">邮箱:p5cn@vip.qq.com</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
 
-        <hr>
 
-        <!-- 导航 -->
-        <div class="row">
-            <!-- 2.1 -->
-            <div class="col-xs-1">
-                <div class="list-group">
-                    <a class="list-group-item " target="myiframe" href="p5home.html">
-                        <h4 class="list-group-item-heading">导航</h4>
-                        <!-- <p class="list-group-item-text text-muted">测试1</p> -->
-                    </a>
-                </div>
-            </div>
-            <!-- 2.2 -->
-            <div class="col-xs-9">
-                <iframe src="p5home.html" id="myiframe" name="myiframe" scrolling="no" frameborder="0"
-                    style="width: 100%; height: 130rem;"></iframe>
-            </div>
-            <!-- 2.3 -->
-            <div class="col-xs-2">
-                <a class="card" style="color:#838383;" target="blank" href="https://www.yuque.com/processing.hub/tutorials">
-                    <div class="card-heading"><strong>官方入门</strong>&nbsp;&nbsp;&nbsp;<span
-                            class="label ">荐</span></div>
-                    <div class="card-content text-muted">中文翻版</div>
-                </a>
-                <a class="card" style="color:#838383;" target="blank" href="https://p5.中国/qingtong.html">
-                    <div class="card-heading"><strong>新手教程</strong>&nbsp;&nbsp;&nbsp;<span
-                            class="label ">荐</span></div>
-                    <div class="card-content text-muted">入门教程</div>
-                </a>
-                <a class="card" style="color:#838383;"  target="blank" href="https://www.leangoo.com/kanban/board/go/2419758">
-                    <div class="card-heading"><strong>模拟物理</strong>&nbsp;&nbsp;&nbsp;<span
-                            class="label ">荐</span></div>
-                    <div class="card-content text-muted">渡劫教程</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- 底部 -->
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="page-header" style="text-align:center">
-                    <a  style="color:#838383;" > p5cn@vip.qq.com</a> |
-                    <a  style="color:#838383;" > qq群(422856731)</a> |
-                    <a style="color:#838383;"  target="blank" href="https://www.yuque.com/processing.hub"> 语雀</a> |
-                    <a style="color:#838383;"  target="blank" href="https://space.bilibili.com/9004724/channel/index"> 哔哩哔哩</a> |
-                    <a style="color:#838383;"  target="blank" href="https://github.com/search?l=Processing&q=processing&type=Repositories">
-                        github</a>
-                    </br> Copyright © 2018 - 2020 p5.中国 All Rights Reserved. </div>
-            </div>
-        </div>
     </div>
 
 </body>
