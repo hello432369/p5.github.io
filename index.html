@@ -2018,7 +2018,7 @@ Adds('gif插件官网：https://github.com/extrapixel/gif-animation/tree/3.0 ');
                 <div class=" with-padding">
 
                     <div class="col-xs-4">
-                        <div class="panel panel-danger">
+                        <div class="alert alert-danger-inverse">
                             <div class="panel-heading">
                                 视觉效果
                             </div>
@@ -2029,7 +2029,7 @@ Adds('gif插件官网：https://github.com/extrapixel/gif-animation/tree/3.0 ');
                     </div>
 
                     <div class="col-xs-4">
-                        <div class="panel panel-success" id="app">
+                        <div class="alert alert-success-inverse" id="app">
                             <div class="panel-heading" id="message">
                                 代码编辑
                             </div>
@@ -2115,7 +2115,7 @@ Copyright © 2018 - 2020 p5.中国 All Rights Reserved.
                     </div>
 
                     <div class="col-xs-4">
-                        <div class="panel panel-primary">
+                        <div class="alert alert-primary-inverse">
                             <div class="panel-heading">
                                 助手提示
                             </div>
@@ -2126,6 +2126,7 @@ Copyright © 2018 - 2020 p5.中国 All Rights Reserved.
                             </li>
                             <li><a href="###" data-target="#tab2Content2" data-toggle="tab">导航</a></li>
                             <li><a href="###" data-target="#tab2Content3" data-toggle="tab">社交</a></li>
+                            <li><a href="###" data-target="#tab2Content4" data-toggle="tab"></a></li>
                         </ul>
                         <div class="scrollbar-hover" style="max-height: 333px; overflow: scroll;">
                             <div class="tab-content">
@@ -2358,6 +2359,70 @@ Copyright © 2018 - 2020 p5.中国 All Rights Reserved.
                                     <div class="list-group">
                                         <a href="" target="_blank" class="list-group-item">QQ群:422856731</a>
                                         <a href="" target="_blank" class="list-group-item">邮箱:p5cn@vip.qq.com</a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab2Content4">
+                                    <br>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                        案例
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="btn-group">
+                                                <button class="btn" onclick="AddContent(`
+float x = 6;
+
+void setup() 
+{
+    size(666,666);
+}
+
+void draw() 
+{
+    background(233);
+    
+    translate(width/2,height/2);
+    for(int i=0; i<2*x; i++)  
+    {
+        textSize(90);
+        textAlign(LEFT);  //CENTER , LEFT , RIGHT
+        pushMatrix();
+            rotate(PI*i/x);
+            fill(0,150);   
+            text('大家好' ,0,0);  
+        popMatrix();    
+    }  
+}
+`);
+Adds(' 提示：processing中改用双引号“大家好” ');">旋转图腾</button>
+                                                <button class="btn" onclick="AddContent(`
+float x = 6;
+
+void setup() 
+{
+    size(666,666);
+}
+
+void draw() 
+{
+    background(233);
+    
+    translate(width/2,height/2);
+    for(int i=0; i<2*x; i++)  
+    {
+        textSize(90);
+        textAlign(LEFT);  //CENTER , LEFT , RIGHT
+        pushMatrix();
+            rotate(PI*i/x);
+            fill(0,150);   
+            text('大家好' ,0,0);  
+        popMatrix();    
+    }  
+}
+`);
+Adds(' 提示：processing中改用双引号“大家好” ');">旋转图腾</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
