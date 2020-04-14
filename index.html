@@ -2395,32 +2395,6 @@ void draw()
 }
 `);
 Adds(' 提示：processing中改用双引号“大家好” ');">旋转图腾</button>
-                                                <button class="btn" onclick="AddContent(`
-float x = 6;
-
-void setup() 
-{
-    size(666,666);
-}
-
-void draw() 
-{
-    background(233);
-    
-    translate(width/2,height/2);
-    for(int i=0; i<2*x; i++)  
-    {
-        textSize(90);
-        textAlign(LEFT);  //CENTER , LEFT , RIGHT
-        pushMatrix();
-            rotate(PI*i/x);
-            fill(0,150);   
-            text('大家好' ,0,0);  
-        popMatrix();    
-    }  
-}
-`);
-Adds(' 提示：processing中改用双引号“大家好” ');">旋转图腾</button>
                                             </div>
                                         </div>
                                     </div>
