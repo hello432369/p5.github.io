@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://s1.pstatp.com/cdn/expire-1-M/zui/1.9.0/css/zui.css" rel="stylesheet">
-    <link href="https://s1.pstatp.com/cdn/expire-1-M/at.js/1.5.4/css/jquery.atwho.min.css" type="text/css"
-        rel="stylesheet" />
+    <!-- <link href="css/mzui.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://s1.pstatp.com/cdn/expire-1-M/at.js/1.5.4/css/jquery.atwho.min.css" type="text/css"
+        rel="stylesheet" /> -->
     <script src="https://s1.pstatp.com/cdn/expire-1-M/processing.js/1.6.6/processing.min.js"
         type="application/javascript"></script>
 
@@ -19,17 +20,10 @@
         }
     </style>
 
-    <title>processing数字艺术中文助手--基础设施</title>
+    <title>processing移动版</title>
 </head>
 
 <body onload="savecontent()" style="margin:0; padding:0; ">
-
-    <nav class="navbar navbar-default" role="navigation">
-
-        <div class="navbar-header">
-            <a class="navbar-brand" href="">processing.hub</a>
-        </div>
-    </nav>
 
     <div class="container-fluid">
 
@@ -39,29 +33,21 @@
                 <div class="col-xl-12">
 
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-tab href="#tabContent1">1.结构</a></li>
-                    <li><a data-tab href="#tabContent2">2.设置</a></li>
-                    <li><a data-tab href="#tabContent3">3.建模</a></li>
-                    <li><a data-tab href="#tabContent4">4.着色</a></li>
-                    <li><a data-tab href="#tabContent5">5.功能</a></li>
-                    <li><a data-tab href="#tabContent6">6.动画</a></li>
-                    <li><a data-tab href="#tabContent7">7.交互</a></li>
-                    <li><a data-tab href="#tabContent8">8.输出</a></li>
+                    <li class="active"><a data-tab href="#tabContent1">构</a></li>
+                    <li><a data-tab href="#tabContent2">设</a></li>
+                    <li><a data-tab href="#tabContent3">模</a></li>
+                    <li><a data-tab href="#tabContent4">色</a></li>
+                    <li><a data-tab href="#tabContent5">能</a></li>
+                    <li><a data-tab href="#tabContent6">动</a></li>
+                    <li><a data-tab href="#tabContent7">互</a></li>
+                    <li><a data-tab href="#tabContent8">出</a></li>
                 </ul>
                 <div class="tab-content">
 
                     <!-- 结构 -->
                     <div class="tab-pane active" id="tabContent1">
-                        <div class="btn-group">
-                            <!-- <button type="button" class="btn btn" data-toggle="collapse" data-target="#collapseExample">
-                                <h4 class="list-group-item-heading">编辑</h4>
-                                <p class="list-group-item-text text-muted">ON/OFF
-                            </button> -->
-                            <div class="switch" data-toggle="collapse" data-target="#collapseExample">
-                                <input type="checkbox">
-                                <label>编辑模式</label>
-                              </div>
-                        </div>
+						<div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
+                       
                         <div class="btn-group">
                             <button type="button" class="btn btn" onclick="AddContent(`
 void setup()   //一次循环
@@ -74,9 +60,9 @@ void draw()     //无限循环
 
 }
 `)">
-<i class="icon-flag"></i>
-                                <h4 class="list-group-item-heading">默认</h4>
-                                <p class="list-group-item-text text-muted">void</p>
+<!-- <i class="icon-flag"></i> -->
+                                <!-- <h4 class="list-group-item-heading">默认</h4> -->
+                                <p class="list-group-item-text text-muted">P2</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
 void setup()    
@@ -89,8 +75,8 @@ void draw()
 
 }
 `)">
-<i class="icon-stop"></i>
-                                <h4 class="list-group-item-heading">平面</h4>
+<!-- <i class="icon-stop"></i> -->
+                                <!-- <h4 class="list-group-item-heading">平面</h4> -->
                                 <p class="list-group-item-text text-muted">P2D</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -104,8 +90,8 @@ void draw()
         
 }
 `)">
-<i class="icon-cube-alt"></i>
-                                <h4 class="list-group-item-heading">立体</h4>
+<!-- <i class="icon-cube-alt"></i> -->
+                                <!-- <h4 class="list-group-item-heading">立体</h4> -->
                                 <p class="list-group-item-text text-muted">P3D</p>
                             </button>
                             <div class="btn-group dropdown dropdown-hover">
@@ -122,9 +108,9 @@ textFont('宋体',36);             //字体设置，字体大小
 text( '大家好，hello world' ,10,100);    //字体内容，x,y坐标           
 }
 `)">
-<i class="icon-font"></i>
-                                    <h4 class="list-group-item-heading">文本</h4>
-                                    <p class="list-group-item-text text-muted">text()</p>
+<!-- <i class="icon-font"></i> -->
+                                    <!-- <h4 class="list-group-item-heading">文本</h4> -->
+                                    <p class="list-group-item-text text-muted">text</p>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li>
@@ -144,7 +130,7 @@ textFont(f,36);             //字体设置，字体大小
 text( '大家好，hello world' ,10,100);    //字体内容，x,y坐标           
 }
 `)">
-                                            <h4 class="list-group-item-heading">创建字体</h4>
+                                            <!-- <h4 class="list-group-item-heading">创建字体</h4> -->
                                             <p class="list-group-item-text text-muted">PFont</p>
                                         </a>
                                     </li>
@@ -163,8 +149,8 @@ void draw() {
   shape(s,  , , , );   //显示图形：x，y坐标，宽高
 }
 `)">
-<i class="icon-paint-brush"></i>
-                                <h4 class="list-group-item-heading">形状</h4>
+<!-- <i class="icon-paint-brush"></i> -->
+                                <!-- <h4 class="list-group-item-heading">形状</h4> -->
                                 <p class="list-group-item-text text-muted">PShape</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -181,8 +167,8 @@ void draw()
 image(img,0,0);     //显示图片，x,y坐标     
 }
 `)">
-<i class="icon-picture"></i>
-                                <h4 class="list-group-item-heading">图片</h4>
+<!-- <i class="icon-picture"></i> -->
+                                <!-- <h4 class="list-group-item-heading">图片</h4> -->
                                 <p class="list-group-item-text text-muted">PImage</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -207,8 +193,8 @@ if(video.available())       //摄像头获取
 image(video,0,0);   //显示摄像头，x,y坐标
 }  
 `)">
-<i class="icon-group"></i>
-                                <h4 class="list-group-item-heading">直播</h4>
+<!-- <i class="icon-group"></i> -->
+                                <!-- <h4 class="list-group-item-heading">直播</h4> -->
                                 <p class="list-group-item-text text-muted">Video</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -232,8 +218,8 @@ if(video.available())   //视频获取
 image(video,0,0);    //显示视频，x,y坐标
 }  
 `)">
-<i class="icon-film"></i>
-                                <h4 class="list-group-item-heading">视频</h4>
+<!-- <i class="icon-film"></i> -->
+                                <!-- <h4 class="list-group-item-heading">视频</h4> -->
                                 <p class="list-group-item-text text-muted">Movie</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -258,8 +244,8 @@ void draw()
 float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）                         
 }         
 `)">
-<i class="icon-bullhorn"></i>
-                                <h4 class="list-group-item-heading">录音</h4>
+<!-- <i class="icon-bullhorn"></i> -->
+                                <!-- <h4 class="list-group-item-heading">录音</h4> -->
                                 <p class="list-group-item-text text-muted">AudioIn</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -284,8 +270,8 @@ void draw()
 float v = ampl.analyze(); //振幅分析（振幅范围是0~1的数字）   
 }         
 `)">
-<i class="icon-music"></i>
-                                <h4 class="list-group-item-heading">音频</h4>
+<!-- <i class="icon-music"></i> -->
+                                <!-- <h4 class="list-group-item-heading">音频</h4> -->
                                 <p class="list-group-item-text text-muted">Sound</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -301,8 +287,8 @@ void draw() {
   shape(s,  ,  ,  ,  ); //显示文件：x，y坐标，宽高
 }         
 `)">
-<i class="icon-folder-open"></i>
-                                <h4 class="list-group-item-heading">文件</h4>
+<!-- <i class="icon-folder-open"></i> -->
+                                <!-- <h4 class="list-group-item-heading">文件</h4> -->
                                 <p class="list-group-item-text text-muted">Files</p>
                             </button>
                             <button type="button" class="btn btn" onclick="AddContent(`
@@ -334,590 +320,662 @@ class c1{
 }
 `);
 Adds('class;   //自定义对象类型。  ');">
-<i class="icon-cubes"></i>
-                                <h4 class="list-group-item-heading">集群</h4>
+<!-- <i class="icon-cubes"></i> -->
+                                <!-- <h4 class="list-group-item-heading">集群</h4> -->
                                 <p class="list-group-item-text text-muted">class</p>
                             </button>
+							<button type="button" class="btn btn" onclick="AddContent(`
+void setup() {
+  size(666, 666);
+  render();
+}
+
+void render() {
+  VisualPoint[] points = new VisualPoint[1000];
+
+  for (int i=0; i<points.length; i++) {
+    float x = random(width);
+    float y = random(height);
+    float w = random(1, 20);
+    color c = color(random(200));
+    points[i] = new VisualPoint(x, y, w, c);
+  }
+
+  for (VisualPoint p : points) p.display();
+}
+
+
+class Point {
+  float x, y;
+
+  Point(float x, float y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  Point() {
+    x = 0;
+    y = 0;
+  }
+
+  Point copy() {
+    return new Point(x, y);
+  }
+}
+
+
+class VisualPoint extends Point {
+  float w;
+  color c;
+
+  VisualPoint(float x, float y, float w, color c) {
+    super(x, y);
+    this.w = w;
+    this.c = c;
+  }
+
+  void display() {
+    stroke(c);
+    strokeWeight(w);
+    point(x, y);
+  }
+}
+`);
+Adds('class;   //自定义对象类型。  ');">
+<!-- <i class="icon-cubes"></i> -->
+								<!-- <h4 class="list-group-item-heading">继承</h4> -->
+								<p class="list-group-item-text text-muted">extends</p>
+							</button>
                         </div>
-                    </div>
+                    </div></div>
 
                     <!-- 设置 -->
                     <div class="tab-pane" id="tabContent2">
                         <div class="btn-group">
-                            
-                            <div class="btn-group dropdown dropdown-hover">
-                                <button type="button" class="btn btn" onclick="AddContent(`loop();    
+                            <div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
+                              <div class="btn-group dropdown dropdown-hover">
+							  <button type="button" class="btn btn" onclick="AddContent(`loop();    
 `);
 Adds(' loop() //控制draw循环');">
-                                    <h4 class="list-group-item-heading">循环</h4>
-                                    <p class="list-group-item-text text-muted">loop()</p>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#" style="text-align:center" onclick="AddContent(`noLoop();
+								  <h4 class="list-group-item-heading">循环</h4>
+								  <p class="list-group-item-text text-muted">loop()</p>
+							  </button>
+							  <ul class="dropdown-menu">
+								  <li>
+									  <a href="#" style="text-align:center" onclick="AddContent(`noLoop();
 `);
 Adds('noLoop();   //控制draw不循环');">
-                                            <h4 class="list-group-item-heading">不循环</h4>
-                                            <p class="list-group-item-text text-muted">noLoop()</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="btn-group dropdown dropdown-hover">
-                                <button type="button" class="btn btn" onclick="AddContent(`cursor();
+										  <h4 class="list-group-item-heading">不循环</h4>
+										  <p class="list-group-item-text text-muted">noLoop()</p>
+									  </a>
+								  </li>
+							  </ul>
+						  </div>
+						  <div class="btn-group dropdown dropdown-hover">
+							  <button type="button" class="btn btn" onclick="AddContent(`cursor();
 `);
 Adds('cursor();   //显示鼠标;更换鼠标图标');">
-                                    <h4 class="list-group-item-heading">显示鼠标</h4>
-                                    <p class="list-group-item-text text-muted">cursor()</p>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#" style="text-align:center" onclick="AddContent(`noCursor();
+								  <h4 class="list-group-item-heading">显示鼠标</h4>
+								  <p class="list-group-item-text text-muted">cursor()</p>
+							  </button>
+							  <ul class="dropdown-menu">
+								  <li>
+									  <a href="#" style="text-align:center" onclick="AddContent(`noCursor();
 `);
 Adds('noCursor();   //隐藏鼠标');">
-                                            <h4 class="list-group-item-heading">隐藏鼠标</h4>
-                                            <p class="list-group-item-text text-muted">noCursor()</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <button type="button" class="btn btn" onclick="AddContent(`frameCount
+										  <h4 class="list-group-item-heading">隐藏鼠标</h4>
+										  <p class="list-group-item-text text-muted">noCursor()</p>
+									  </a>
+								  </li>
+							  </ul>
+						  </div>
+						  <button type="button" class="btn btn" onclick="AddContent(`frameCount
 `);
 Adds('frameCount;   //记录显示的帧数，从0开始一直记录帧数数量，可当做x++使用 ');">
-                                <h4 class="list-group-item-heading">记帧</h4>
-                                <p class="list-group-item-text text-muted">frameCount</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`fullScreen();
+							  <h4 class="list-group-item-heading">记帧</h4>
+							  <p class="list-group-item-text text-muted">frameCount</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`fullScreen();
 `);
 Adds('fullScreen();   //窗口全屏化 ');">
-                                <h4 class="list-group-item-heading">全屏</h4>
-                                <p class="list-group-item-text text-muted">fullScreen()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`frameRate( );
+							  <h4 class="list-group-item-heading">全屏</h4>
+							  <p class="list-group-item-text text-muted">fullScreen()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`frameRate( );
 `);
 Adds('frameRate(60);   //draw循环,默认fps=60帧/秒 ');">
-                                <h4 class="list-group-item-heading">帧率</h4>
-                                <p class="list-group-item-text text-muted">frameRate()</p>
-                            </button>
-                            <div class="btn-group dropdown dropdown-hover">
-                                <button type="button" class="btn btn" onclick="AddContent(`smooth( );
+							  <h4 class="list-group-item-heading">帧率</h4>
+							  <p class="list-group-item-text text-muted">frameRate()</p>
+						  </button>
+						  <div class="btn-group dropdown dropdown-hover">
+							  <button type="button" class="btn btn" onclick="AddContent(`smooth( );
 `);
 Adds('smooth(3);   //边缘平滑,默认为3,可改为2,4,8 ');">
-                                    <h4 class="list-group-item-heading">抗锯齿</h4>
-                                    <p class="list-group-item-text text-muted">smooth()</p>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#" style="text-align:center" onclick="AddContent(`noSmooth();
+								  <h4 class="list-group-item-heading">抗锯齿</h4>
+								  <p class="list-group-item-text text-muted">smooth()</p>
+							  </button>
+							  <ul class="dropdown-menu">
+								  <li>
+									  <a href="#" style="text-align:center" onclick="AddContent(`noSmooth();
 `);
 Adds('noSmooth();   //不用抗锯齿 ');">
-                                            <h4 class="list-group-item-heading">隐藏抗锯齿</h4>
-                                            <p class="list-group-item-text text-muted">noSmooth()</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <button type="button" class="btn btn" onclick="AddContent(`settings();
+										  <h4 class="list-group-item-heading">隐藏抗锯齿</h4>
+										  <p class="list-group-item-text text-muted">noSmooth()</p>
+									  </a>
+								  </li>
+							  </ul>
+						  </div>
+						  <button type="button" class="btn btn" onclick="AddContent(`settings();
 `);
 Adds('settings( ;   //通过变量设置窗口大小 ');">
-                                <h4 class="list-group-item-heading">设置</h4>
-                                <p class="list-group-item-text text-muted">settings()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`exit();
+							  <h4 class="list-group-item-heading">设置</h4>
+							  <p class="list-group-item-text text-muted">settings()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`exit();
 `);
 Adds('exit();   //退出软件 ');">
-                                <h4 class="list-group-item-heading">关闭</h4>
-                                <p class="list-group-item-text text-muted">exit()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`displayDensity();
+							  <h4 class="list-group-item-heading">关闭</h4>
+							  <p class="list-group-item-text text-muted">exit()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`displayDensity();
 `);
 Adds('displayDensity();   //返回1,说明支持高密度dpi ');">
-                                <h4 class="list-group-item-heading">密度</h4>
-                                <p class="list-group-item-text text-muted">displayDensity()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`surface.setTitle(' ');
+							  <h4 class="list-group-item-heading">密度</h4>
+							  <p class="list-group-item-text text-muted">displayDensity()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`surface.setTitle(' ');
 `);
 Adds('surface.setTitle(窗口名称)   //设置顶部标题名称 ');">
-                                <h4 class="list-group-item-heading">标题</h4>
-                                <p class="list-group-item-text text-muted">setTitle()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`surface.setResizable(true);
+							  <h4 class="list-group-item-heading">标题</h4>
+							  <p class="list-group-item-text text-muted">setTitle()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`surface.setResizable(true);
 `);
 Adds('surface.setResizable(真/假);   //通过鼠标修改窗口大小 ');">
-                                <h4 class="list-group-item-heading">窗口响应</h4>
-                                <p class="list-group-item-text text-muted">setResizable()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`surface.setLocation( ,  );
+							  <h4 class="list-group-item-heading">窗口响应</h4>
+							  <p class="list-group-item-text text-muted">setResizable()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`surface.setLocation( ,  );
 `);
 Adds('surface.setLocation( x坐标, y坐标);   //设置在桌面的最初位置 ');">
-                                <h4 class="list-group-item-heading">桌面初位置</h4>
-                                <p class="list-group-item-text text-muted">setLocation()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`thread(' ');
+							  <h4 class="list-group-item-heading">桌面初位置</h4>
+							  <p class="list-group-item-text text-muted">setLocation()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`thread(' ');
 `);
 Adds('thread(新线程名称);   //新建线程 ');">
-                                <h4 class="list-group-item-heading">线程</h4>
-                                <p class="list-group-item-text text-muted">thread()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`redraw();
+							  <h4 class="list-group-item-heading">线程</h4>
+							  <p class="list-group-item-text text-muted">thread()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`redraw();
 `);
 Adds('redraw();   //仅在诸如mousePressed（）之类的事件中调用redraw（）才有意义');">
-                                <h4 class="list-group-item-heading">重绘</h4>
-                                <p class="list-group-item-text text-muted">redraw()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`delay();
+							  <h4 class="list-group-item-heading">重绘</h4>
+							  <p class="list-group-item-text text-muted">redraw()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`delay();
 `);
 Adds('delay();   //延迟xxx毫秒后再运行');">
-                                <h4 class="list-group-item-heading">延迟</h4>
-                                <p class="list-group-item-text text-muted">delay()</p>
-                            </button>
-                            <button type="button" class="btn btn" onclick="AddContent(`pixelDensity(1);
+							  <h4 class="list-group-item-heading">延迟</h4>
+							  <p class="list-group-item-text text-muted">delay()</p>
+						  </button>
+						  <button type="button" class="btn btn" onclick="AddContent(`pixelDensity(1);
 `);
 Adds('pixelDensity();   //像素密度默认为1，可以增加密度');">
-                                <h4 class="list-group-item-heading">延迟</h4>
-                                <p class="list-group-item-text text-muted">pixelDensity()</p>
-                            </button>
-                        </div>
+							  <h4 class="list-group-item-heading">延迟</h4>
+							  <p class="list-group-item-text text-muted">pixelDensity()</p>
+						  </button>
+					  </div>
+                            </div>
+							
+							
+							
+
                     </div>
 
                     <!-- 建模 -->
                     <div class="tab-pane" id="tabContent3">
                         <div class="row">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn active" >
-                                    <h4 class="list-group-item-heading">二维</h4>
-                                    <p class="list-group-item-text text-muted">2D</p>
-                                </button>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn" onclick="AddContent(`point( , );
+							<div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
+							<div class="btn-group">
+								<button type="button" class="btn btn active" >
+									<h4 class="list-group-item-heading">二维</h4>
+									<p class="list-group-item-text text-muted">2D</p>
+								</button>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn" onclick="AddContent(`point( , );
 `);
 Adds('point( x坐标, y坐标); ');">
-                                    <h4 class="list-group-item-heading">标点</h4>
-                                    <p class="list-group-item-text text-muted">point()</p>
-                                </button>
-                                <button type="button" class="btn btn" onclick="AddContent(`line( ,  ,  ,  );
+									<h4 class="list-group-item-heading">标点</h4>
+									<p class="list-group-item-text text-muted">point()</p>
+								</button>
+								<button type="button" class="btn btn" onclick="AddContent(`line( ,  ,  ,  );
 `);
 Adds('line( x1坐标, y1坐标 , x2坐标 , y2坐标 ); ');">
-                                    <h4 class="list-group-item-heading">直线</h4>
-                                    <p class="list-group-item-text text-muted">line()</p>
-                                </button>
-                                <button type="button" class="btn btn" onclick="AddContent(`triangle( , , , , , );
+									<h4 class="list-group-item-heading">直线</h4>
+									<p class="list-group-item-text text-muted">line()</p>
+								</button>
+								<button type="button" class="btn btn" onclick="AddContent(`triangle( , , , , , );
 `);
 Adds('triangle(x1,y1坐标，x2,y2坐标，x3,y3坐标); ');">
-                                    <h4 class="list-group-item-heading">三角</h4>
-                                    <p class="list-group-item-text text-muted">triangle()</p>
-                                </button>
-                                <button type="button" class="btn btn" onclick="AddContent(`square( , , );
+									<h4 class="list-group-item-heading">三角</h4>
+									<p class="list-group-item-text text-muted">triangle()</p>
+								</button>
+								<button type="button" class="btn btn" onclick="AddContent(`square( , , );
 `);
 Adds('square(x坐标, y坐标, 直径); ');">
-                                    <h4 class="list-group-item-heading">正方形</h4>
-                                    <p class="list-group-item-text text-muted"> square()</p>
-                                </button>
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`rect( , ,  , , );
+									<h4 class="list-group-item-heading">正方形</h4>
+									<p class="list-group-item-text text-muted"> square()</p>
+								</button>
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`rect( , ,  , , );
 `);
 Adds('rect(x坐标, y坐标, 宽, 高, 边角半径); //坐标默认在左上角 ');">
-                                        <h4 class="list-group-item-heading">矩形</h4>
-                                        <p class="list-group-item-text text-muted">rect()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`rectMode(CENTER); 
+										<h4 class="list-group-item-heading">矩形</h4>
+										<p class="list-group-item-text text-muted">rect()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`rectMode(CENTER); 
 `);
 Adds('rectMode(CENTER);   // 居中CENTER, 其他RADIUS，CORNER, CORNERS ');">
-                                                <h4 class="list-group-item-heading">矩形模式</h4>
-                                                <h6 class="list-group-item-text text-muted">rectMode()</h6>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button type="button" class="btn btn" onclick="AddContent(`quad( , ,  , ,  , , , );
+												<h4 class="list-group-item-heading">矩形模式</h4>
+												<h6 class="list-group-item-text text-muted">rectMode()</h6>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<button type="button" class="btn btn" onclick="AddContent(`quad( , ,  , ,  , , , );
 `);
 Adds('quad(x1,y1坐标，x2,y2坐标，x3,y3坐标， x4,y4坐标);  ');">
-                                    <h4 class="list-group-item-heading">棱形</h4>
-                                    <p class="list-group-item-text text-muted">quad()</p>
-                                </button>
-                                <button type="button" class="btn btn" onclick="AddContent(`circle( , , );
+									<h4 class="list-group-item-heading">棱形</h4>
+									<p class="list-group-item-text text-muted">quad()</p>
+								</button>
+								<button type="button" class="btn btn" onclick="AddContent(`circle( , , );
 `);
 Adds('circle(x,y坐标， 直径 ); ');">
-                                    <h4 class="list-group-item-heading">圆形</h4>
-                                    <p class="list-group-item-text text-muted">circle()</p>
-                                </button>
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`ellipse( , ,  , );
+									<h4 class="list-group-item-heading">圆形</h4>
+									<p class="list-group-item-text text-muted">circle()</p>
+								</button>
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`ellipse( , ,  , );
 `);
 Adds('ellipse(x,y坐标, x直径,y直径 );   //坐标默认在圆中心 ');">
-                                        <h4 class="list-group-item-heading">椭圆</h4>
-                                        <p class="list-group-item-text text-muted">ellipse()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`ellipseMode(CENTER);
+										<h4 class="list-group-item-heading">椭圆</h4>
+										<p class="list-group-item-text text-muted">ellipse()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`ellipseMode(CENTER);
 `);
 Adds('ellipseMode(CENTER);   // 居中CENTER, 其他RADIUS，CORNER, CORNERS ');">
-                                                <h4 class="list-group-item-heading">椭圆模式</h4>
-                                                <h6 class="list-group-item-text text-muted">ellipseMode()</h6>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button type="button" class="btn btn" onclick="AddContent(`arc( , ,  , ,  , , );
+												<h4 class="list-group-item-heading">椭圆模式</h4>
+												<h6 class="list-group-item-text text-muted">ellipseMode()</h6>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<button type="button" class="btn btn" onclick="AddContent(`arc( , ,  , ,  , , );
 `);
 Adds('arc(x，y坐标， w,h宽高，起始弧度，结束弧度，OPEN/CHORD/PIE);   //圆周长=TAU=2*PI=2*3.14=6.28弧度 ');">
-                                    <h4 class="list-group-item-heading">弧线</h4>
-                                    <p class="list-group-item-text text-muted">arc()</p>
-                                </button>
-                            </div>
-                            <div class="btn-group">
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`PShape s;
+									<h4 class="list-group-item-heading">弧线</h4>
+									<p class="list-group-item-text text-muted">arc()</p>
+								</button>
+							</div>
+							<div class="btn-group">
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`PShape s;
 `);
 Adds('PShape s;   //声明形状 ');">
-                                        <h4 class="list-group-item-heading">形状</h4>
-                                        <p class="list-group-item-text text-muted">PShape</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`s = createShape(RECT,  ,  ,  ,  );
+										<h4 class="list-group-item-heading">形状</h4>
+										<p class="list-group-item-text text-muted">PShape</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`s = createShape(RECT,  ,  ,  ,  );
 `);
 Adds('s = createShape(RECT, x，y坐标，宽，高);   //创建形状类型（POINT, LINE, TRIANGLE, QUAD, RECT, ELLIPSE, ARC, BOX, SPHERE）');">
-                                                <h4 class="list-group-item-heading">创建形状</h4>
-                                                <p class="list-group-item-text text-muted">createShape()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`s = loadShape('矢量图.svg');
+												<h4 class="list-group-item-heading">创建形状</h4>
+												<p class="list-group-item-text text-muted">createShape()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`s = loadShape('矢量图.svg');
 `);
 Adds('s = loadShape( 矢量图.svg 和 模型图.obj);   //加载形状 ');">
-                                                <h4 class="list-group-item-heading">加载形状</h4>
-                                                <p class="list-group-item-text text-muted">loadShape()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`shape(s,  ,  ,  ,  );
+												<h4 class="list-group-item-heading">加载形状</h4>
+												<p class="list-group-item-text text-muted">loadShape()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`shape(s,  ,  ,  ,  );
 `);
 Adds('shape(s, x，y坐标，宽，高);   //显示形状 ');">
-                                                <h4 class="list-group-item-heading">显示形状</h4>
-                                                <p class="list-group-item-text text-muted">shape()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`shapeMode(CENTER);
+												<h4 class="list-group-item-heading">显示形状</h4>
+												<p class="list-group-item-text text-muted">shape()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`shapeMode(CENTER);
 
 `);
 Adds('shapeMode(CENTER);   //形状模式：居中：CENTER，其他：CORNER, CORNERS ');">
-                                                <h4 class="list-group-item-heading">形状模式</h4>
-                                                <p class="list-group-item-text text-muted">shapeMode()</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="btn-group">
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`curve( , , , , , , , );
+												<h4 class="list-group-item-heading">形状模式</h4>
+												<p class="list-group-item-text text-muted">shapeMode()</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn-group">
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`curve( , , , , , , , );
 `);
 Adds('curve(xy控制 ,x,y坐标，x1,y1坐标，x1,y1控制);');">
-                                        <h4 class="list-group-item-heading">曲线</h4>
-                                        <p class="list-group-item-text text-muted">curve()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveDetail(20);
+										<h4 class="list-group-item-heading">曲线</h4>
+										<p class="list-group-item-text text-muted">curve()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveDetail(20);
 `);
 Adds('curveDetail(20) //默认值为20。此功能仅在使用P3D渲染器时有用');">
-                                                <h4 class="list-group-item-heading">曲线分辨率</h4>
-                                                <p class="list-group-item-text text-muted">curveDetail()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curvePoint( ， ， ， ，);
+												<h4 class="list-group-item-heading">曲线分辨率</h4>
+												<p class="list-group-item-text text-muted">curveDetail()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curvePoint( ， ， ， ，);
 `);
 Adds('curvePoint(控制点1，第1个点，第二个点，控制点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">曲线控制点</h4>
-                                                <p class="list-group-item-text text-muted">curvePoint()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveTangent();
+												<h4 class="list-group-item-heading">曲线控制点</h4>
+												<p class="list-group-item-text text-muted">curvePoint()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveTangent();
 `);
 Adds('curveTangent(控制点1，第1个点，第二个点，控制点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">曲线切点</h4>
-                                                <p class="list-group-item-text text-muted">curveTangent()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveTightness(0);
+												<h4 class="list-group-item-heading">曲线切点</h4>
+												<p class="list-group-item-text text-muted">curveTangent()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveTightness(0);
 `);
 Adds('curveTightness(); //默认值0 ');">
-                                                <h4 class="list-group-item-heading">曲线密度</h4>
-                                                <p class="list-group-item-text text-muted">curveTightness()</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`bezier( , , , , , , , );
+												<h4 class="list-group-item-heading">曲线密度</h4>
+												<p class="list-group-item-text text-muted">curveTightness()</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`bezier( , , , , , , , );
 `);
 Adds('bezier(x，y坐标，x，y控制，x1,y1控制，x1,y1坐标);');">
-                                        <h4 class="list-group-item-heading">贝赛尔曲线</h4>
-                                        <p class="list-group-item-text text-muted">bezier()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierDetail(20);
+										<h4 class="list-group-item-heading">贝赛尔曲线</h4>
+										<p class="list-group-item-text text-muted">bezier()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierDetail(20);
 `);
 Adds('bezierDetail(20) //默认值为20。此功能仅在使用P3D渲染器时有用');">
-                                                <h4 class="list-group-item-heading">贝赛尔曲线分辨率</h4>
-                                                <p class="list-group-item-text text-muted">bezierDetail()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierPoint( ， ， ， ，);
+												<h4 class="list-group-item-heading">贝赛尔曲线分辨率</h4>
+												<p class="list-group-item-text text-muted">bezierDetail()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierPoint( ， ， ， ，);
 `);
 Adds('bezierPoint(第1个点，控制点1，控制点2，第2个点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">贝赛尔曲线控制点</h4>
-                                                <p class="list-group-item-text text-muted">bezierPoint()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierTangent();
+												<h4 class="list-group-item-heading">贝赛尔曲线控制点</h4>
+												<p class="list-group-item-text text-muted">bezierPoint()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierTangent();
 `);
 Adds('bezierTangent(第1个点，控制点1，控制点2，第2个点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">贝赛尔曲线切点</h4>
-                                                <p class="list-group-item-text text-muted">bezierTangent()</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn" onclick="AddContent(`
+												<h4 class="list-group-item-heading">贝赛尔曲线切点</h4>
+												<p class="list-group-item-text text-muted">bezierTangent()</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn" onclick="AddContent(`
 beginshape(TRIANGLES);   
-    
+	
 endshape(CLOSE);    //可不写CLOSE
 `);
 Adds('beginShape()  //点POINTS, 线LINES, 三角TRIANGLES, 三角TRIANGLE_FAN, 三角TRIANGLE_STRIP, 矩形QUADS, 矩形QUAD_STRIP');">
-                                    <h4 class="list-group-item-heading">画形状</h4>
-                                    <p class="list-group-item-text text-muted">beginshape()</p>
-                                </button>
-                                <button type="button" class="btn btn" onclick="AddContent(`
+									<h4 class="list-group-item-heading">画形状</h4>
+									<p class="list-group-item-text text-muted">beginshape()</p>
+								</button>
+								<button type="button" class="btn btn" onclick="AddContent(`
 beginshape(TRIANGLES);       
-    
-    beginContour();    
-        
-    endContour();
+	
+	beginContour();    
+		
+	endContour();
 endshape(CLOSE);    
 `);
 Adds('beginContour()  //开始扣形状 ');">
-                                    <h4 class="list-group-item-heading">扣形状</h4>
-                                    <p class="list-group-item-text text-muted">beginContour()</p>
-                                </button>
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`vertex( ,  ,  , );
+									<h4 class="list-group-item-heading">扣形状</h4>
+									<p class="list-group-item-text text-muted">beginContour()</p>
+								</button>
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`vertex( ,  ,  , );
 `);
 Adds('vertex( x坐标, y坐标, 纹理映射x坐标，纹理映射y坐标) ');">
-                                        <h4 class="list-group-item-heading">顶点</h4>
-                                        <p class="list-group-item-text text-muted">vertex()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveVertex( , );  
+										<h4 class="list-group-item-heading">顶点</h4>
+										<p class="list-group-item-text text-muted">vertex()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveVertex( , );  
 `);
 Adds('curveVertex(x坐标, y坐标)');">
-                                                <h4 class="list-group-item-heading">曲线顶点</h4>
-                                                <p class="list-group-item-text text-muted">curveVertex()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierVertex( , , , , , );  
+												<h4 class="list-group-item-heading">曲线顶点</h4>
+												<p class="list-group-item-text text-muted">curveVertex()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierVertex( , , , , , );  
 `);
 Adds('bezierVertex(控制点1 , 控制点2, x2,y2坐标)');">
-                                                <h4 class="list-group-item-heading">贝塞尔曲线顶点</h4>
-                                                <p class="list-group-item-text text-muted">bezierVertex()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`quadraticVerte( , , , );  
+												<h4 class="list-group-item-heading">贝塞尔曲线顶点</h4>
+												<p class="list-group-item-text text-muted">bezierVertex()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`quadraticVerte( , , , );  
 `);
 Adds('quadraticVerte(控制点1 , 控制点2, 锚点x坐标，锚点y坐标)');">
-                                                <h4 class="list-group-item-heading">二次顶点</h4>
-                                                <p class="list-group-item-text text-muted">quadraticVerte()</p>
-                                            </a>
-                                        </li>
-                                       
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn active">
-                                    <h4 class="list-group-item-heading">三维</h4>
-                                    <p class="list-group-item-text text-muted">3D</p>
-                                </button>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn" onclick="AddContent(`point( ,  ,  );
+												<h4 class="list-group-item-heading">二次顶点</h4>
+												<p class="list-group-item-text text-muted">quadraticVerte()</p>
+											</a>
+										</li>
+									   
+									</ul>
+								</div>
+							
+						</div>
+						<div class="row">
+							<div class="btn-group">
+								<button type="button" class="btn btn active">
+									<h4 class="list-group-item-heading">三维</h4>
+									<p class="list-group-item-text text-muted">3D</p>
+								</button>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn" onclick="AddContent(`point( ,  ,  );
 `);
 Adds('point(x坐标, y坐标, z坐标);  ');">
-                                    <h4 class="list-group-item-heading">点</h4>
-                                    <p class="list-group-item-text text-muted">point()</p>
-                                </button>
-                                <button type="button" class="btn btn" onclick="AddContent(`line( , , , , , );
+									<h4 class="list-group-item-heading">点</h4>
+									<p class="list-group-item-text text-muted">point()</p>
+								</button>
+								<button type="button" class="btn btn" onclick="AddContent(`line( , , , , , );
 `);
 Adds('line(x1,y1,z1坐标, x2,y2,z2坐标);  ');">
-                                    <h4 class="list-group-item-heading">线</h4>
-                                    <p class="list-group-item-text text-muted">line()</p>
-                                </button>
-                                <button type="button" class="btn btn" onclick="AddContent(`box( , , );
+									<h4 class="list-group-item-heading">线</h4>
+									<p class="list-group-item-text text-muted">line()</p>
+								</button>
+								<button type="button" class="btn btn" onclick="AddContent(`box( , , );
 `);
 Adds('box(左右宽，上下高，前后深);  ');">
-                                    <h4 class="list-group-item-heading">立方体</h4>
-                                    <p class="list-group-item-text text-muted">box()</p>
-                                </button>
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`sphere( );
+									<h4 class="list-group-item-heading">立方体</h4>
+									<p class="list-group-item-text text-muted">box()</p>
+								</button>
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`sphere( );
 `);
 Adds('sphere( 半径); ');">
-                                        <h4 class="list-group-item-heading">球体</h4>
-                                        <p class="list-group-item-text text-muted">sphere()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`sphereDetail( , );
+										<h4 class="list-group-item-heading">球体</h4>
+										<p class="list-group-item-text text-muted">sphere()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`sphereDetail( , );
 `);
 Adds('sphereDetail(x轴片段数，y轴片段数 );   //默认30个顶点');">
-                                                <h4 class="list-group-item-heading">球体顶点</h4>
-                                                <p class="list-group-item-text text-muted">sphereDetail()</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="btn-group">
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`curve( , , , , , , , );
+												<h4 class="list-group-item-heading">球体顶点</h4>
+												<p class="list-group-item-text text-muted">sphereDetail()</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn-group">
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`curve( , , , , , , , );
 `);
 Adds('curve(xy,z控制 ,x,y,z坐标，x1,y1,z1坐标，x1,y1,z1控制);');">
-                                        <h4 class="list-group-item-heading">曲线</h4>
-                                        <p class="list-group-item-text text-muted">curve()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveDetail(20);
+										<h4 class="list-group-item-heading">曲线</h4>
+										<p class="list-group-item-text text-muted">curve()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveDetail(20);
 `);
 Adds('curveDetail(20) //默认值为20。此功能仅在使用P3D渲染器时有用');">
-                                                <h4 class="list-group-item-heading">曲线分辨率</h4>
-                                                <p class="list-group-item-text text-muted">curveDetail()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curvePoint( ， ， ， ，);
+												<h4 class="list-group-item-heading">曲线分辨率</h4>
+												<p class="list-group-item-text text-muted">curveDetail()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curvePoint( ， ， ， ，);
 `);
 Adds('curvePoint(控制点1，第1个点，第2个点，控制2点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">曲线控制点</h4>
-                                                <p class="list-group-item-text text-muted">curvePoint()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveTangent();
+												<h4 class="list-group-item-heading">曲线控制点</h4>
+												<p class="list-group-item-text text-muted">curvePoint()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveTangent();
 `);
 Adds('curveTangent(控制点1，第1个点，第2个点，控制2点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">曲线切点</h4>
-                                                <p class="list-group-item-text text-muted">curveTangent()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveTightness(0);
+												<h4 class="list-group-item-heading">曲线切点</h4>
+												<p class="list-group-item-text text-muted">curveTangent()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveTightness(0);
 `);
 Adds('curveTightness(); //默认值0 ');">
-                                                <h4 class="list-group-item-heading">曲线密度</h4>
-                                                <p class="list-group-item-text text-muted">curveTightness()</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`bezier( , , , , , , , , , , );
+												<h4 class="list-group-item-heading">曲线密度</h4>
+												<p class="list-group-item-text text-muted">curveTightness()</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`bezier( , , , , , , , , , , );
 `);
 Adds('bezier(x,y,z坐标，x,Y,z控制，x1,y1,z1控制，x1,y1,z1坐标);');">
-                                        <h4 class="list-group-item-heading">贝赛尔曲线</h4>
-                                        <p class="list-group-item-text text-muted">bezier()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierDetail(20);
+										<h4 class="list-group-item-heading">贝赛尔曲线</h4>
+										<p class="list-group-item-text text-muted">bezier()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierDetail(20);
 `);
 Adds('bezierDetail(20) //默认值为20。此功能仅在使用P3D渲染器时有用');">
-                                                <h4 class="list-group-item-heading">贝赛尔曲线分辨率</h4>
-                                                <p class="list-group-item-text text-muted">bezierDetail()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierPoint( ， ， ， ，);
+												<h4 class="list-group-item-heading">贝赛尔曲线分辨率</h4>
+												<p class="list-group-item-text text-muted">bezierDetail()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierPoint( ， ， ， ，);
 `);
 Adds('bezierPoint(第1个点，控制点1，控制点2，第2个点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">贝赛尔曲线控制点</h4>
-                                                <p class="list-group-item-text text-muted">bezierPoint()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierTangent();
+												<h4 class="list-group-item-heading">贝赛尔曲线控制点</h4>
+												<p class="list-group-item-text text-muted">bezierPoint()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierTangent();
 `);
 Adds('bezierTangent(第1个点，控制点1，控制点2，第2个点，范围0~1) ');">
-                                                <h4 class="list-group-item-heading">贝赛尔曲线切点</h4>
-                                                <p class="list-group-item-text text-muted">bezierTangent()</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="btn-group">
-                                <div class="btn-group dropdown dropdown-hover">
-                                    <button type="button" class="btn btn" onclick="AddContent(`vertex( ,  , , , );
+												<h4 class="list-group-item-heading">贝赛尔曲线切点</h4>
+												<p class="list-group-item-text text-muted">bezierTangent()</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="btn-group">
+								<div class="btn-group dropdown dropdown-hover">
+									<button type="button" class="btn btn" onclick="AddContent(`vertex( ,  , , , );
 `);
 Adds('vertex( x坐标, y坐标,z坐标, 纹理映射x坐标，纹理映射y坐标) ');">
-                                        <h4 class="list-group-item-heading">顶点</h4>
-                                        <p class="list-group-item-text text-muted">vertex()</p>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`curveVertex( ,  , );  
+										<h4 class="list-group-item-heading">顶点</h4>
+										<p class="list-group-item-text text-muted">vertex()</p>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`curveVertex( ,  , );  
 `);
 Adds('curveVertex(x坐标, y坐标, z坐标)');">
-                                                <h4 class="list-group-item-heading">曲线顶点</h4>
-                                                <p class="list-group-item-text text-muted">curveVertex()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`bezierVertex( , , , , , , , , );  
+												<h4 class="list-group-item-heading">曲线顶点</h4>
+												<p class="list-group-item-text text-muted">curveVertex()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`bezierVertex( , , , , , , , , );  
 `);
 Adds('bezierVertex(控制点1 , 控制点2, x2,y2,z2坐标)');">
-                                                <h4 class="list-group-item-heading">贝塞尔曲线顶点</h4>
-                                                <p class="list-group-item-text text-muted">bezierVertex()</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" style="text-align:center" onclick="AddContent(`quadraticVerte( , , , , , );  
+												<h4 class="list-group-item-heading">贝塞尔曲线顶点</h4>
+												<p class="list-group-item-text text-muted">bezierVertex()</p>
+											</a>
+										</li>
+										<li>
+											<a href="#" style="text-align:center" onclick="AddContent(`quadraticVerte( , , , , , );  
 `);
 Adds('quadraticVerte(控制点1,控制点2,控制点3, 锚点x坐标，锚点y坐标,锚点z坐标)');">
-                                                <h4 class="list-group-item-heading">二次顶点</h4>
-                                                <p class="list-group-item-text text-muted">quadraticVerte()</p>
-                                            </a>
-                                        </li>
-                                       
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+												<h4 class="list-group-item-heading">二次顶点</h4>
+												<p class="list-group-item-text text-muted">quadraticVerte()</p>
+											</a>
+										</li>
+									   
+									</ul>
+								</div>
+							</div>
+							</div>
+                            
+                        </div></div>
                     </div>
 
                     <!-- 着色 -->
                     <div class="tab-pane" id="tabContent4">
                         <div class="btn-group">
+							<div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
                             <div class="btn-group dropdown dropdown-hover">
+								
                                 <button type="button" class="btn btn" onclick="AddContent(`background( , , , );
 `);
 Adds('background(红色0~255，绿色0~255，蓝色0~255,透明度0~255);  ');">
@@ -976,11 +1034,14 @@ Adds('colorMode(HSB, 100，100，100，100);   //采用HSB颜色模式，颜色�
                                 <p class="list-group-item-text text-muted">colorMode(HSB)</p>
                             </button>
                         </div>
+						</div>
                     </div>
 
                     <!-- 功能 -->
                     <div class="tab-pane" id="tabContent5">
+					<div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
                         <div class="row">
+							
                             <div class="btn-group">
                                 <button type="button" class="btn btn active">
                                     <h4 class="list-group-item-heading">符号</h4>
@@ -1626,11 +1687,12 @@ Adds('sqrt() //数字变小2倍 ');">
                                                 <p class="list-group-item-text text-muted">sqrt()</p>
                                 </button>
                             </div>
-                        </div>
+                        </div></div>
                     </div>
 
                     <!-- 动画 -->
                     <div class="tab-pane" id="tabContent6">
+						<div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
                         <div class="row">
                             <div class="btn-group">
                                 <button type="button" class="btn btn active">
@@ -1738,9 +1800,11 @@ Adds('rotate(TAU /360 *s) //默认绕着原点旋转，参数为弧度 ， TAU/3
                             </div>
                         </div>
                     </div>
+					</div>
 
                     <!-- 交互 -->
                     <div class="tab-pane" id="tabContent7">
+						<div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
                         <div class="btn-group">
                             <button type="button" class="btn btn" onclick="AddContent(`mouseX    
 `);
@@ -1891,11 +1955,12 @@ Adds('keyTyped();   //每次按一个键时调用一次，但忽略操作键（�
                                 <h4 class="list-group-item-heading">更多</h4>
                                 <p class="list-group-item-text text-muted"><i class="icon icon-list-ul"></i></p>
                             </button>
-                        </div>
+                        </div></div>
                     </div>
 
                     <!-- 输出 -->
                     <div class="tab-pane" id="tabContent8">
+						<div class="scrollbar-hover" style="max-height: 100px; overflow: scroll;">
                         <div class="btn-group">
                             <button type="button" class="btn btn" onclick="AddContent(`save('####.png');   
 `);
@@ -1928,7 +1993,7 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> </div>
         </div>
     </div>
         </div>
@@ -1940,45 +2005,41 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
 
                     <div class="col-xs-12">
                         <!-- 编辑器 -->
-                        <div class="alert alert-success-inverse">编辑内容</div>
-
+                        <!-- <div class="alert-success-inverse">编辑内容</div> -->
+						<!-- </br> -->
                         <div class="btn-group">
                             <button type="button" class="btn btn" onclick="run(0)">
                                 <h4 class="list-group-item-heading">运行</h4>
-                                <p class="list-group-item-text text-muted"><i class="icon icon-play"></i></p>
+                                <!-- <p class="list-group-item-text text-muted"><i class="icon icon-play"></i></p> -->
                             </button>
                             <button type="button" class="btn btn" onclick="stop(0)">
                                     <h4 class="list-group-item-heading">停止</h4>
-                                    <p class="list-group-item-text text-muted"><i class="icon icon-off"></i>
-                                    </p>
+                                    <!-- <p class="list-group-item-text text-muted"><i class="icon icon-off"></i> -->
+                                    <!-- </p> -->
                             </button>
                             <button type="button" class="btn btn" onclick="copy()">
                                     <h4 class="list-group-item-heading">复制</h4>
-                                    <p class="list-group-item-text text-muted"><i class="icon icon-copy"></i></p>
+                                    <!-- <p class="list-group-item-text text-muted"><i class="icon icon-copy"></i></p> -->
                             </button>
                             <button type="button" class="btn btn" id="clear" style="text-align:center" onclick="run(0)">
                                     <h4 class="list-group-item-heading">清空</h4>
-                                    <p class="list-group-item-text text-muted"><i class="icon icon-trash"></i></p>
+                                    <!-- <p class="list-group-item-text text-muted"><i class="icon icon-trash"></i></p> -->
                             </button>
                             <button type="button" class="btn btn" data-toggle="modal" data-target="#myModal"
                                     onclick="p52h5()">
                                     <h4 class="list-group-item-heading">转p5.js</h4>
-                                    <p class="list-group-item-text text-muted"><i
-                                            class="icon icon-spin icon-refresh"></i></p>
+                                    <!-- <p class="list-group-item-text text-muted"><i -->
+                                            <!-- class="icon icon-spin icon-refresh"></i></p> -->
                             </button>
                         </div>
                         
                         <div id="app">
                         </br>
-                            <p id="message" class="text-primary"><span class="label label-success">使用方法 o(*￣︶￣*)o
-                                </span></p>
+                            <!-- <p id="message" class="text-primary"><span class="label label-success">使用方法 o(*￣︶￣*)o
+                                </span></p> -->
                         </div>
-                        <textarea class="form-control" id="t1" name="t1" style="width:100%" rows="18" cols="50"
-                            placeholder="温馨提示：
-1. 编辑区域：在此框内编辑代码
-2. 补全代码：同时按两键 shift 和 :
-3. 扩大区域：右下角拖拽伸长
-">
+                        <textarea class="form-control" id="t1" name="t1" style="width:100%" rows="18" cols="30"
+                            placeholder="在此框内编辑代码">
                 </textarea>
 
                         <!-- processing 转 p5.js-->
@@ -2028,7 +2089,17 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
                    
 
                     <div class="col-xs-12">
-                        <div class="alert alert-danger-inverse">显示结果</div>
+                        <!-- <div class="alert-danger-inverse">显示结果</div> -->
+						<div class="btn-group">
+						    <!-- <button type="button" class="btn btn" data-toggle="collapse" data-target="#collapseExample">
+						        <h4 class="list-group-item-heading">编辑</h4>
+						        <p class="list-group-item-text text-muted">ON/OFF
+						    </button> -->
+						    <div class="switch" data-toggle="collapse" data-target="#collapseExample">
+						        <input type="checkbox">
+						        <label>只看效果</label>
+						      </div>
+						</div>
                         <div>
                             <canvas id="canvas0" width="100px" height="100px"></canvas>
                         </div>
@@ -2050,10 +2121,7 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
                 <div class="page-header" style="text-align:center">
                     <a> p5cn@vip.qq.com</a> |
                     <a> qq群(422856731)</a> |
-                    <a target="blank" href="https://www.yuque.com/processing.hub"> 语雀</a> |
-                    <a target="blank" href="https://space.bilibili.com/9004724/channel/index"> 哔哩哔哩</a> |
-                    <a target="blank" href="https://github.com/search?l=Processing&q=processing&type=Repositories">
-                        github</a>
+                    <a target="blank" href="https://www.yuque.com/processing.hub"> 语雀</a> 
                     </br> Copyright © 2018 - 2020 p5.中国 All Rights Reserved. </div>
             </div>
         </div>
@@ -2062,10 +2130,11 @@ Adds('save( 图片名.tga); //保存为tga格式 ');">
 </body>
 <script src="https://s0.pstatp.com/cdn/expire-1-M/jquery/3.4.0/jquery.js"></script>
 <script src="https://s0.pstatp.com/cdn/expire-1-M/zui/1.9.0/js/zui.js"></script>
-<script src="https://s0.pstatp.com/cdn/expire-1-M/at.js/1.5.4/js/jquery.atwho.min.js"
+<!-- <script src="js/mzui.min.js"></script> -->
+<!-- <script src="https://s0.pstatp.com/cdn/expire-1-M/at.js/1.5.4/js/jquery.atwho.min.js"
     type="application/javascript"></script>
 <script src="https://s2.pstatp.com/cdn/expire-1-M/Caret.js/0.3.1/jquery.caret.min.js"
-    type="application/javascript"></script>
+    type="application/javascript"></script> -->
 <script src="p5web.js"></script>
 <script>
     var ifm = document.getElementById("myiframe");
