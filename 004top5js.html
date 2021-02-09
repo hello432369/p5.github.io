@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="processing在线编辑器">
+    <title>processing在线编辑器</title>
+    <link href="https://s1.pstatp.com/cdn/expire-1-M/zui/1.9.0/css/zui.css" rel="stylesheet">
+    <link href="https://s1.pstatp.com/cdn/expire-1-M/at.js/1.5.4/css/jquery.atwho.min.css" type="text/css" rel="stylesheet" />
+    <script src="https://s1.pstatp.com/cdn/expire-1-M/processing.js/1.6.6/processing.min.js" type="application/javascript"></script>
+
+    <style>
+        iframe {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body onload="savecontent()" style="background-color: rgb(234,234,234)">
+
+    <div class="container-fluid">
+ 
+        <div class="row">
+            
+            <div class="col-xs-6">
+                <div class="alert alert-primary-inverse">编辑区域</div>
+                <nav class="navbar navbar-default" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="text-align:center" data-toggle="modal" data-target="#myModal" onclick="p52h5()">
+                            <h4 class="list-group-item-heading">转p5.js</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-spin icon-refresh"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" id="clear" style="text-align:center" onclick="run(0)">
+                            <h4 class="list-group-item-heading">清空</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-trash"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" style="text-align:center" onclick="run(0)">
+                            <h4 class="list-group-item-heading">运行</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-play"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" style="text-align:center" onclick="stop(0)">
+                            <h4 class="list-group-item-heading">停止</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-off"></i></p>
+                            </a>
+                        </li>
+                        <li><a href="#" style="text-align:center" onclick="copy()">
+                            <h4 class="list-group-item-heading">复制</h4>
+                            <p class="list-group-item-text text-muted"><i class="icon icon-copy"></i></p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+
+                <textarea id="t1" name="t1" style="width:100%"  rows="24" cols="50" placeholder="温馨提示：
+1.  在本区域内编辑processing代码
+2. 【shift + :】 两个键同时按下出现补全代码
+3.  拖拽右下角，伸长编辑区域
+">
+                </textarea>
+
+                <!-- processing 转 p5.js-->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><i class="icon icon-times"></i></button>
+                                <h4 class="modal-title">processing转换p5js完成！</h4>
+                            </div>
+
+                            <div class="modal-body">
+                                <nav class="navbar navbar-default" role="navigation">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="#" style="text-align:center" onclick="copyp5js()">
+                                            <h4 class="list-group-item-heading">复制</h4>
+                                            <p class="list-group-item-text text-muted"><i class="icon icon-copy"></i></p>
+                                            </a>
+                                        </li>
+                                        <li><a href="#" id="clear" style="text-align:center" onclick="javascript:window.open('https://www.yuque.com/processing.hub/store/pqi486')">
+                                            <h4 class="list-group-item-heading">详情</h4>
+                                            <p class="list-group-item-text text-muted"><i class="icon icon-book"></i></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <textarea id="t2" style="width:100%" rows="15" cols="15"
+                                    placeholder="这里有转换代码"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="alert alert-danger-inverse">显示结果</div>
+                <div>
+                    <canvas id="canvas0" width="100px" height="100px"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</body>
+<script src="https://s0.pstatp.com/cdn/expire-1-M/jquery/3.4.0/jquery.js"></script>
+    <script src="https://s0.pstatp.com/cdn/expire-1-M/zui/1.9.0/js/zui.js"></script>
+    <script src="https://s0.pstatp.com/cdn/expire-1-M/at.js/1.5.4/js/jquery.atwho.min.js" type="application/javascript"></script>
+    <script src="https://s2.pstatp.com/cdn/expire-1-M/Caret.js/0.3.1/jquery.caret.min.js" type="application/javascript"></script>
+    <script src="p5web.js"></script>
+</html>
