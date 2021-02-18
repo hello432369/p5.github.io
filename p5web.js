@@ -1,12 +1,12 @@
-//鑷姩淇濆瓨涓庡厜鏍囩粨鍚�-----------------------------------------------------start
+//全局变量-----------------------------------------------------start
 var editor = document.getElementById("t1");
 
-// 绂诲紑鏈〉涔嬪墠淇濆瓨鏁版嵁-----------------------------------------------------start
+//窗口关闭后，内容设置为最后编写内容-----------------------------------------------------start
 window.onbeforeunload = function () {
     localStorage.setItem('editor-text', editor.value);
 };
 
-//鍏夋爣锛氳幏鍙栧厜鏍囦綅缃�-----------------------------------------------------start
+//窗口打开后，内容获取为最后编写内容-----------------------------------------------------start
 var lastInput = null;
 window.onload = function () {
     editor.value = localStorage.getItem('editor-text');
@@ -32,10 +32,12 @@ document.getElementById("clear").onclick = function () {
 
 //复制p代码-----------------------------------------------------start
 function copy() {
-    var text = document.getElementById("t1");
-    text.select();
+    editor.select();
     document.execCommand("copy");
-    alert("复制成功");
+
+    new $.zui.Messager('复制成功', {
+        icon: 'bell' // 定义消息图标
+    }).show();
 }
 
 //通过按钮添加代码-----------------------------------------------------start
@@ -61,7 +63,7 @@ function Adds(str) {
 
 //p转p5.js-----------------------------------------------------start
 function p52h5() {
-    var s = document.getElementById("t1").value;
+    var s = editor.value;
     s = s.replace(/\b(void|size|float|int|boolean|char|String|PImage|PFont|PShape|double|long|Array|array|pushMatrix|popMatrix|pushStyle|popStyle|println|mousePressed)\b/g, function ($0, $1) {
         return {
             "void": "function",
@@ -88,9 +90,6 @@ function p52h5() {
             "println": "print",
 
             "mousePressed": "mouseIsPressed",
-
-            
-
         }[$1];
 
     });
@@ -107,7 +106,10 @@ function copyp5js() {
     var text = document.getElementById("t2");
     text.select();
     document.execCommand("copy");
-    alert("复制成功");
+
+    new $.zui.Messager('复制成功', {
+        icon: 'bell' // 定义消息图标
+    }).show();
 }
 
 //运行与停止-----------------------------------------------------start
