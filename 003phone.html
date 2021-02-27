@@ -68,16 +68,17 @@ void  setup() {
 
 void draw() {
   background(255);
-  player(width/2 ,height/2 ,0 ,0.99);
+  player(width/2, height/2, 0, 0, 0.99);
 }
 
-void player(float x,float y, float r,float s) {
-    pushMatrix();
-    translate(x,y);
-    rotate(radians(r));
-    scale(s);
-
-    popMatrix();
+void player(float x, float y,float z, float r, float s) {
+  pushMatrix();
+  translate(x, y, z);
+  rotate(radians(r));
+  scale(s);
+  
+  sphere(30);
+  popMatrix();
 }
 `)">
 										<!-- <i class="icon-flag"></i> -->
