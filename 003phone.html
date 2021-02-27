@@ -68,15 +68,14 @@ void  setup() {
 
 void draw() {
   background(255);
-  player();
+  player(width/2 ,height/2 ,0 ,0.99);
 }
 
-void player() {
-
+void player(float x,float y, float r,float s) {
     pushMatrix();
-		translate(width/2, height/2);
-		rotate(radians(0));
-		scale(1);
+    translate(x,y);
+    rotate(radians(r));
+    scale(s);
 
     popMatrix();
 }
