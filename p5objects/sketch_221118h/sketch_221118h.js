@@ -1,4 +1,4 @@
-let intext,insize,incolor,inclear;
+let intext,insize,incolor,inclear,inlink;
 function ui()
 {
   intext = createInput("好");
@@ -9,12 +9,16 @@ function ui()
   
   incolor = createColorPicker('#ffffff');
   incolor.position(0,60);
+  
+  inlink = createA('https://emojixd.com/group/smileys-emotion', 'emoji符号','_blank');
+  inlink.position(0,90);
 }
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(0);
   ui();
+  noStroke();
 }
 
 function draw() {
@@ -22,7 +26,7 @@ function draw() {
   if(mouseIsPressed)
   {
     push();
-    translate(mouseX,mouseY)
+    translate(mouseX,mouseY);
     fill(incolor.color());
     textSize(insize.value());
     text(intext.value(),0,0);
