@@ -25,7 +25,7 @@ let tx;        //输入框
 let txc;       //内容颜色
 
 function setup() {
-  createCanvas(780, 780);
+  createCanvas(windowWidth,windowHeight);
   background(255);
   
   tx = createInput("大家好");
@@ -74,6 +74,10 @@ function keyTyped() {
 function keyPressed() {
   if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
 }
+function windowResized()
+  {
+    resizeCanvas(windowWidth,windowHeight);
+  }
 </script>
 
 </html>
