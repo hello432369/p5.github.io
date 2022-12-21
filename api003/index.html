@@ -13,7 +13,7 @@
     
     
       
-        <title>乐园 - 432数据实验艺术</title>
+        <title>存储 - 432数据实验艺术</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              乐园
+              存储
             
           </span>
         </div>
@@ -167,13 +167,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../api001/" class="md-tabs__link">
+      <a href="../api001/" class="md-tabs__link md-tabs__link--active">
         创作
       </a>
     </li>
@@ -183,12 +185,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../games/" class="md-tabs__link">
       乐园
     </a>
   </li>
@@ -265,12 +265,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -319,11 +321,62 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../api003/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          存储
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         存储
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    单一存储
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    多个存储
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    类型转换
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -486,48 +539,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          乐园
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../games/" class="md-nav__link">
         乐园
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    乐园
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -573,7 +589,21 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    乐园
+    单一存储
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    多个存储
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    类型转换
   </a>
   
 </li>
@@ -593,22 +623,38 @@
                   
 
 
-  <h1>乐园</h1>
+  <h1>存储</h1>
 
 <div class="admonition note">
 <p class="admonition-title">序言</p>
-<ol>
-<li><a href="https://emojixd.com/group/smileys-emotion" target="target">emoji</a></li>
-<li><a href="https://soundeffect-lab.info/" target="target">音效</a></li>
-</ol>
+<p>数据是临时存储在内存当中,创建变量意味着在内存中申请一个空间,用于存放我们的数据,一般是通过变量去参与计算.</p>
+<p>内存中的数据随着软件的关闭而丢失,想要长久保存数据,就需要保存为文件,文件本质上是一个特殊的数据库.</p>
 </div>
-<hr />
-<h2 id="_1">乐园</h2>
-<ol>
-<li><a href="https://p5.xn--fiqs8s/p5objects/sketch_221118h.html" target="target">符文涂鸦</a></li>
-<li><a href="https://p5.xn--fiqs8s/p5objects/sketch_221125h.html" target="target">符文涂鸦2</a></li>
-<li><a href="https://p5.xn--fiqs8s/007gametest.html" target="target">触礁沉船</a></li>
-</ol>
+<h2 id="_1">单一存储</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">let</span><span class="w">     </span><span class="c1">//可创建所有数据类型:数字,字符,布尔,数组,向量,对象,类</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">const</span><span class="w">   </span><span class="c1">//常数类型</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">class</span><span class="w">   </span><span class="c1">//类(存放相同类型的数据集合)</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">object</span><span class="w">  </span><span class="c1">//对象</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_2">多个存储</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span><span class="w">              </span><span class="c1">//一维数组</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">]];</span><span class="w">           </span><span class="c1">//二维数组</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">let</span><span class="w"> </span><span class="nx">myArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">]],</span><span class="w"> </span><span class="p">[[</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">]]];;</span><span class="w">        </span><span class="c1">//三维数组</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">myList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createList</span><span class="p">();</span><span class="w">      </span><span class="c1">//列表</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">myDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createDict</span><span class="p">();</span><span class="w">      </span><span class="c1">//字典</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kd">let</span><span class="w"> </span><span class="nx">myvector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createVector</span><span class="p">();</span><span class="w">      </span><span class="c1">//向量</span><span class="w"></span>
+</code></pre></div>
+<h2 id="_3">类型转换</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">float</span><span class="p">()</span><span class="w">     </span><span class="c1">//转小数</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kr">int</span><span class="p">()</span><span class="w">       </span><span class="c1">//转整数</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">str</span><span class="p">()</span><span class="w">       </span><span class="c1">//转字符串</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kr">boolean</span><span class="p">()</span><span class="w">   </span><span class="c1">//转布尔</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kr">byte</span><span class="p">()</span><span class="w">      </span><span class="c1">//转比特</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kr">char</span><span class="p">()</span><span class="w">      </span><span class="c1">//转字符</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nx">unchar</span><span class="p">()</span><span class="w">    </span><span class="c1">//字符转数字</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nx">hex</span><span class="p">()</span><span class="w">       </span><span class="c1">//转十六进制</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nx">unhex</span><span class="p">()</span><span class="w">     </span><span class="c1">//十六进制转数字</span><span class="w"></span>
+</code></pre></div>
 
 
 
@@ -634,7 +680,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚" >
       
         
-        <a href="../api006/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 输出" rel="prev">
+        <a href="../api002/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 设置" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -643,20 +689,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              输出
+              设置
             </div>
           </div>
         </a>
       
       
         
-        <a href="../other/" class="md-footer__link md-footer__link--next" aria-label="下一页: 话题" rel="next">
+        <a href="../api004/" class="md-footer__link md-footer__link--next" aria-label="下一页: 输入" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              话题
+              输入
             </div>
           </div>
           <div class="md-footer__button md-icon">
