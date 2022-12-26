@@ -41,6 +41,8 @@
       
     
     
+      <link rel="stylesheet" href="../css/main.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -202,6 +204,18 @@
   <li class="md-tabs__item">
     <a href="../other/" class="md-tabs__link">
       话题
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../algorithm/" class="md-tabs__link">
+      算法
     </a>
   </li>
 
@@ -556,6 +570,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -623,13 +652,13 @@
 </code></pre></div>
 <details class="note">
 <summary>不同数据类型的UI</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">createSlider</span><span class="p">()</span><span class="w">          </span><span class="c1">//创建滑块, 数字</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">createButton</span><span class="p">()</span><span class="w">          </span><span class="c1">//创建按钮, 布尔</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">createCheckbox</span><span class="p">()</span><span class="w">        </span><span class="c1">//创建复选框,布尔</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">createSelect</span><span class="p">()</span><span class="w">          </span><span class="c1">//创建拉列表,布尔</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">createRadio</span><span class="p">()</span><span class="w">           </span><span class="c1">//创建单选按钮,布尔</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nx">createColorPicker</span><span class="p">()</span><span class="w">         </span><span class="c1">//创建颜色选择器,颜色</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nx">createFileInput</span><span class="p">()</span><span class="w">       </span><span class="c1">//创建文件输入框,文件</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">createSlider</span><span class="p">()</span><span class="w">          </span><span class="c1">//创建滑块, 数字    </span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">createButton</span><span class="p">()</span><span class="w">          </span><span class="c1">//创建按钮, 布尔    </span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">createCheckbox</span><span class="p">()</span><span class="w">        </span><span class="c1">//创建复选框,布尔   </span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">createSelect</span><span class="p">()</span><span class="w">          </span><span class="c1">//创建拉列表,布尔   </span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">createRadio</span><span class="p">()</span><span class="w">           </span><span class="c1">//创建单选按钮,布尔 </span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nx">createColorPicker</span><span class="p">()</span><span class="w">         </span><span class="c1">//创建颜色选择器,颜色   </span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nx">createFileInput</span><span class="p">()</span><span class="w">       </span><span class="c1">//创建文件输入框,文件   </span><span class="w"></span>
 </code></pre></div>
 </details>
 <h2 id="_2">其他</h2>
@@ -735,6 +764,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2018-2022  p5.中国, 本站 框架层mkdocs-material, 内容层mkdocs-jupyter, 动画层p5.js.
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -756,6 +789,12 @@
     
     
       <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+        <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/p5.js/1.4.1/p5.min.js"></script>
+      
+        <script src="https://p5.xn--fiqs8s/js/scenemanager.js"></script>
+      
+        <script src="../js/main.js"></script>
       
     
   </body>

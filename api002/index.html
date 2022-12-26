@@ -41,6 +41,8 @@
       
     
     
+      <link rel="stylesheet" href="../css/main.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -197,6 +199,18 @@
   <li class="md-tabs__item">
     <a href="../other/" class="md-tabs__link">
       话题
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../algorithm/" class="md-tabs__link">
+      算法
     </a>
   </li>
 
@@ -515,6 +529,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -563,57 +592,62 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>循环60次/秒</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
+动画:<a href="https://erraticgenerator.com/blog/p5js-animate-with-deltatime/" target="_blank">详细说明</a>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">frameCount</span><span class="w">  </span><span class="o">:</span><span class="nx">帧计数</span><span class="p">(</span><span class="nx">默认60帧</span><span class="o">/</span><span class="nx">秒</span><span class="p">),</span><span class="nx">草图运行的帧速率取决于设备以及草图的复杂性</span><span class="p">,</span><span class="nx">掉帧后变成ppt一样卡</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nx">deltaTime</span><span class="o">:</span><span class="w">  </span><span class="nx">增量时间</span><span class="p">(</span><span class="nx">毫秒</span><span class="p">),</span><span class="nx">表示渲染上一帧和当前帧之间所花费的时间</span><span class="err">。</span><span class="nx">从时间角度考虑速度</span><span class="err">。</span><span class="w"></span>
+</code></pre></div></p>
 <details class="note">
 <summary>其他</summary>
 <p>其他设置
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">remove</span><span class="p">()</span><span class="w">     </span><span class="c1">//移除所有元素, 适用于游戏中的切换场景等</span><span class="w"></span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">p5</span><span class="p">.</span><span class="nx">disableFriendlyErrors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">   </span><span class="c1">//关闭提示,有助于提高性能</span><span class="w"></span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nx">noLoop</span><span class="p">()</span><span class="w">     </span><span class="c1">//暂停循环,适用于游戏暂停</span><span class="w"></span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nx">loop</span><span class="p">()</span><span class="w">       </span><span class="c1">//继续循环,适用于游戏继续进行</span><span class="w"></span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nx">isLooping</span><span class="p">()</span><span class="w">  </span><span class="c1">//检测是否在继续进行</span><span class="w"></span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nx">push</span><span class="p">()</span><span class="w">       </span><span class="c1">//存储,适用于组合多个图形同时移动,也可以用来制作中心点</span><span class="w"></span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nx">pop</span><span class="p">()</span><span class="w">        </span><span class="c1">//恢复</span><span class="w"></span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nx">redraw</span><span class="p">()</span><span class="w">     </span><span class="c1">//暂停循环时,允许绘画,  适合ppt类似的一帧一帧播放</span><span class="w"></span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nx">p5</span><span class="p">()</span><span class="w">         </span><span class="c1">//实例模式</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">remove</span><span class="p">()</span><span class="w">     </span><span class="c1">//移除所有元素, 适用于游戏中的切换场景等</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nx">p5</span><span class="p">.</span><span class="nx">disableFriendlyErrors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">   </span><span class="c1">//关闭提示,有助于提高性能</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nx">noLoop</span><span class="p">()</span><span class="w">     </span><span class="c1">//暂停循环,适用于游戏暂停</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nx">loop</span><span class="p">()</span><span class="w">       </span><span class="c1">//继续循环,适用于游戏继续进行</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nx">isLooping</span><span class="p">()</span><span class="w">  </span><span class="c1">//检测是否在继续进行</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nx">push</span><span class="p">()</span><span class="w">       </span><span class="c1">//存储,适用于组合多个图形同时移动,也可以用来制作中心点</span><span class="w"></span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nx">pop</span><span class="p">()</span><span class="w">        </span><span class="c1">//恢复</span><span class="w"></span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nx">redraw</span><span class="p">()</span><span class="w">     </span><span class="c1">//暂停循环时,允许绘画,  适合ppt类似的一帧一帧播放</span><span class="w"></span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nx">p5</span><span class="p">()</span><span class="w">         </span><span class="c1">//实例模式</span><span class="w"></span>
 </code></pre></div></p>
 <p>Environment 环境</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">frameCount</span><span class="w">  </span><span class="nx">帧计数</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nx">deltaTime</span><span class="w">   </span><span class="nx">增量时间</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nx">width</span><span class="w">   </span><span class="nx">获取宽度</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nx">height</span><span class="w">  </span><span class="nx">获取高度</span><span class="w"></span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nx">cursor</span><span class="p">()</span><span class="w">    </span><span class="nx">显示鼠标图标</span><span class="w"></span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nx">noCursor</span><span class="p">()</span><span class="w">  </span><span class="nx">隐藏鼠标图标</span><span class="w"></span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nx">frameRate</span><span class="p">()</span><span class="w"> </span><span class="nx">帧率</span><span class="p">(</span><span class="nx">默认60帧</span><span class="o">/</span><span class="nx">秒</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nx">fullscreen</span><span class="p">()</span><span class="w">    </span><span class="nx">全屏模式</span><span class="w"></span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nx">pixelDensity</span><span class="p">()</span><span class="w">  </span><span class="nx">像素密度</span><span class="w"></span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nx">displayDensity</span><span class="p">()</span><span class="w">    </span><span class="nx">显示密度</span><span class="w"></span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nx">displayWidth</span><span class="w">    </span><span class="nx">显示宽度</span><span class="w"></span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nx">displayHeight</span><span class="w">   </span><span class="nx">显示高度</span><span class="w"></span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nx">windowWidth</span><span class="w"> </span><span class="nx">窗口宽度</span><span class="w"></span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nx">windowHeight</span><span class="w">    </span><span class="nx">窗口高度</span><span class="w"></span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nx">windowResized</span><span class="p">()</span><span class="w"> </span><span class="nx">窗口重置</span><span class="w"></span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nx">getURL</span><span class="p">()</span><span class="w">    </span><span class="nx">获取链接</span><span class="w"></span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nx">getURLPath</span><span class="p">()</span><span class="w">    </span><span class="nx">获取链接路径</span><span class="w"></span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nx">getURLParams</span><span class="p">()</span><span class="w">  </span><span class="nx">获取链接参数</span><span class="w"></span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="nx">describe</span><span class="p">()</span><span class="w">  </span><span class="nx">描述</span><span class="w"></span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="nx">describeElement</span><span class="p">()</span><span class="w">   </span><span class="nx">描述元素</span><span class="w"></span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="nx">focused</span><span class="w"> </span><span class="nx">聚焦</span><span class="w"></span>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="nx">textOutput</span><span class="p">()</span><span class="w">    </span><span class="nx">文本输出</span><span class="w"></span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nx">gridOutput</span><span class="p">()</span><span class="w">    </span><span class="nx">网格输出</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">frameCount</span><span class="w">  </span><span class="nx">帧计数</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">deltaTime</span><span class="w">   </span><span class="nx">增量时间</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">width</span><span class="w">   </span><span class="nx">获取宽度</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nx">height</span><span class="w">  </span><span class="nx">获取高度</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nx">cursor</span><span class="p">()</span><span class="w">    </span><span class="nx">显示鼠标图标</span><span class="w"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nx">noCursor</span><span class="p">()</span><span class="w">  </span><span class="nx">隐藏鼠标图标</span><span class="w"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nx">frameRate</span><span class="p">()</span><span class="w"> </span><span class="nx">帧率</span><span class="p">(</span><span class="nx">默认60帧</span><span class="o">/</span><span class="nx">秒</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nx">fullscreen</span><span class="p">()</span><span class="w">    </span><span class="nx">全屏模式</span><span class="w"></span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nx">pixelDensity</span><span class="p">()</span><span class="w">  </span><span class="nx">像素密度</span><span class="w"></span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nx">displayDensity</span><span class="p">()</span><span class="w">    </span><span class="nx">显示密度</span><span class="w"></span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nx">displayWidth</span><span class="w">    </span><span class="nx">显示宽度</span><span class="w"></span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nx">displayHeight</span><span class="w">   </span><span class="nx">显示高度</span><span class="w"></span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="nx">windowWidth</span><span class="w"> </span><span class="nx">窗口宽度</span><span class="w"></span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nx">windowHeight</span><span class="w">    </span><span class="nx">窗口高度</span><span class="w"></span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="nx">windowResized</span><span class="p">()</span><span class="w"> </span><span class="nx">窗口重置</span><span class="w"></span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nx">getURL</span><span class="p">()</span><span class="w">    </span><span class="nx">获取链接</span><span class="w"></span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nx">getURLPath</span><span class="p">()</span><span class="w">    </span><span class="nx">获取链接路径</span><span class="w"></span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="nx">getURLParams</span><span class="p">()</span><span class="w">  </span><span class="nx">获取链接参数</span><span class="w"></span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="nx">describe</span><span class="p">()</span><span class="w">  </span><span class="nx">描述</span><span class="w"></span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="nx">describeElement</span><span class="p">()</span><span class="w">   </span><span class="nx">描述元素</span><span class="w"></span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="nx">focused</span><span class="w"> </span><span class="nx">聚焦</span><span class="w"></span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="nx">textOutput</span><span class="p">()</span><span class="w">    </span><span class="nx">文本输出</span><span class="w"></span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="nx">gridOutput</span><span class="p">()</span><span class="w">    </span><span class="nx">网格输出</span><span class="w"></span>
 </code></pre></div>
 <p>Rendering   渲染</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">blendMode</span><span class="p">()</span><span class="w"> </span><span class="nx">混合模式</span><span class="w"></span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">drawingContext</span><span class="w">  </span><span class="nx">绘制阴影</span><span class="w"></span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nx">p5</span><span class="p">.</span><span class="nx">Graphics</span><span class="w"> </span><span class="nx">画板</span><span class="w"></span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nx">createCanvas</span><span class="p">()</span><span class="w">  </span><span class="nx">创建画布</span><span class="w"></span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nx">createGraphics</span><span class="p">()</span><span class="w">    </span><span class="nx">创建画板</span><span class="w"></span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nx">resizeCanvas</span><span class="p">()</span><span class="w">  </span><span class="nx">重置画布</span><span class="w"></span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nx">noCanvas</span><span class="p">()</span><span class="w">  </span><span class="nx">关闭画布</span><span class="w"></span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nx">setAttributes</span><span class="p">()</span><span class="w"> </span><span class="nx">设置属性</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">blendMode</span><span class="p">()</span><span class="w"> </span><span class="nx">混合模式</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">drawingContext</span><span class="w">  </span><span class="nx">绘制阴影</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nx">p5</span><span class="p">.</span><span class="nx">Graphics</span><span class="w"> </span><span class="nx">画板</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nx">createCanvas</span><span class="p">()</span><span class="w">  </span><span class="nx">创建画布</span><span class="w"></span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nx">createGraphics</span><span class="p">()</span><span class="w">    </span><span class="nx">创建画板</span><span class="w"></span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nx">resizeCanvas</span><span class="p">()</span><span class="w">  </span><span class="nx">重置画布</span><span class="w"></span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nx">noCanvas</span><span class="p">()</span><span class="w">  </span><span class="nx">关闭画布</span><span class="w"></span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nx">setAttributes</span><span class="p">()</span><span class="w"> </span><span class="nx">设置属性</span><span class="w"></span>
 </code></pre></div>
 </details>
 
@@ -677,6 +711,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2018-2022  p5.中国, 本站 框架层mkdocs-material, 内容层mkdocs-jupyter, 动画层p5.js.
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -698,6 +736,12 @@
     
     
       <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+        <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/p5.js/1.4.1/p5.min.js"></script>
+      
+        <script src="https://p5.xn--fiqs8s/js/scenemanager.js"></script>
+      
+        <script src="../js/main.js"></script>
       
     
   </body>
