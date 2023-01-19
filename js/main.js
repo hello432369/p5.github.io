@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   var d = dist(x, y, mouseX, mouseY);  //计算与鼠标距离
   textSize(d / 3);  //字体大小
-  fill(233);
+  fill(240);
   var angle = atan2(mouseY - y, mouseX - x);
 
   //------------首尾断开
