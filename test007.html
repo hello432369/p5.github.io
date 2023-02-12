@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <main></main>
+
+    <div id="readme"></div>
+
+    <h2>index.js</h2>
+    <div id="source-javascript"></div>
+
+    <h2>index.html</h2>
+    <div id="source-html"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/p5.party@latest/dist/p5.party.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <link rel="stylesheet" href="/examples.css" />
+    <script src="/examples.js" type="module"></script>
+  </body>
+<script>
+let shared;
+
+function preload() {
+  // connect to the party server
+  partyConnect("wss://deepstream-server-1.herokuapp.com", "hello_cdn", "main");
+
+  // begin loading shared object
+  // setup() won't be called until the shared object is loaded
+  shared = partyLoadShared("shared", { x: 0, y: 0 });
+}
+
+function setup() {
+  createCanvas(400, 400);
+  noStroke();
+  partyToggleInfo(true);
+}
+
+function mousePressed() {
+  // write shared data
+  shared.x = mouseX;
+  shared.y = mouseY;
+}
+
+function draw() {
+  background("#ffcccc");
+  fill("#000066");
+
+  // read shared data
+  ellipse(shared.x, shared.y, 100, 100);
+}
+</script>
+</html
