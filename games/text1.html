@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/p5.js/1.4.1/p5.min.js"
+        type="application/javascript"></script>
+    <style>
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<script>
+  let intext,insize,incolor,inclear,inlink;
+  function ui()
+  {
+    intext = createInput("好");
+    intext.position(0,0);
+
+    insize = createSlider(1, 120, 15);
+    insize.position(0,30);
+
+    incolor = createColorPicker('#ffffff');
+    incolor.position(0,60);
+  }
+
+  function setup() {
+    createCanvas(windowWidth,windowHeight);
+    background(0);
+    ui();
+    noStroke();
+  }
+
+  function draw() {
+
+    if(mouseIsPressed)
+    {
+      push();
+      translate(mouseX,mouseY);
+      fill(incolor.color());
+      textSize(insize.value());
+      text(intext.value(),0,0);
+      pop();
+    }
+  }
+
+  function windowResized()
+  {
+    resizeCanvas(windowWidth,windowHeight);
+  }
+</script>
+
+</html>

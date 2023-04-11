@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/p5.js/1.4.1/p5.min.js"
+        type="application/javascript"></script>
+    <style>
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<script>
+  var x=0, y=0;  //字符坐标
+var t=0;       //字符索引下标
+let tx;        //输入框
+let txc;       //内容颜色
+
+function setup() {
+  createCanvas(windowWidth,windowHeight);
+  background(255);
+  
+  tx = createInput("大家好");
+  tx.position(0,0);
+  
+  txc = createColorPicker('#000000');
+  txc.position(0,30);
+}
+
+function draw() {
+  var d = dist(x,y, mouseX,mouseY);  //计算与鼠标距离
+  textSize(d/3);  //字体大小
+  fill(txc.color());
+  var angle = atan2(mouseY-y, mouseX-x);
+  
+  //------------首尾断开
+  t %= tx.value().length; //如果索引下标为最后一个,归零
+  x = x + cos(angle) * textWidth(tx.value()[t]);  //圆滑运动
+  y = y + sin(angle) * textWidth(tx.value()[t]);  //圆滑运动
+  //------------首尾断开
+  
+  if (mouseIsPressed) {
+    if ( textWidth(tx.value()[t]) < d) {  //如果字符宽度小于鼠标距离
+      
+      push();
+        translate(x, y); //默认左上角为起点
+        rotate(angle);//旋转
+        text(tx.value()[t], 0, 0);  //绘制索引字符
+      pop();
+
+      t++;  //索引字符的下标递增
+      
+      //---------------首尾相连
+      // t %= tx.value().length; //如果索引下标为最后一个,归零
+      // x = x + cos(angle) * textWidth(tx.value()[t]);  //圆滑运动
+      // y = y + sin(angle) * textWidth(tx.value()[t]);  //圆滑运动
+      //---------------首尾相连
+    }
+  }
+}
+
+function keyTyped() {
+  if (key == 's' || key == 'S') save("helloworld.png");
+}
+
+function keyPressed() {
+  if (keyCode == DELETE || keyCode == BACKSPACE) background(255);
+}
+function windowResized()
+  {
+    resizeCanvas(windowWidth,windowHeight);
+  }
+</script>
+
+</html>
