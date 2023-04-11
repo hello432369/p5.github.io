@@ -1,517 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
 
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
-    
-    
-      
-        <title>432数据实验艺术</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.472b142f.min.css">
-      
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.08040f6c.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#000000">
-        
-      
-      
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5js | processing 数据生成艺术交流</title>
+    <style>
+        html,
+        body,
+        div,
+        iframe {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            border: none;
+        }
 
-    
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="css/main.css">
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+        iframe {
+            display: block;
+            width: 100%;
+        }
 
-    
-    
-    
-  </head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
-  
-    
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#_1" class="md-skip">
-          跳转至
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
 
-  
+        .center div {
+            text-align: center;
+        }
 
-<header class="md-header md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="432数据实验艺术" class="md-header__button md-logo" aria-label="432数据实验艺术" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+        .center h1 {
+            margin-bottom: 20px;
+        }
 
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            432数据实验艺术
-          </span>
+        .center button {
+            font-size: 24px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div>
+            <h1>生成艺术学习网站</h1>
+            <button onclick="window.location.href='https://boardmix.cn/app/share/CAE.CPipgAwgASoQGjV7Zv0tJixsNFqZFkgiFTAGQAE/VAAZ5O'">传送门</button>
         </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              😊
-            
-          </span>
-        </div>
-      </div>
     </div>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="查找">
-        
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            正在初始化搜索引擎
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-    
-  </nav>
-  
-    
-      
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-    
-  
+</body>
 
-
-  <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
-      😊
-    </a>
-  </li>
-
-      
-    </ul>
-  </div>
-</nav>
-    
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="432数据实验艺术" class="md-nav__button md-logo" aria-label="432数据实验艺术" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
-    432数据实验艺术
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          😊
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        😊
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    序言
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    学习
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    程序
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    算法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    学习
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    创作
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    资源
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    其他
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    序言
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    学习
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    程序
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    算法
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    学习
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    创作
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    资源
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    其他
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-  <h1>😊</h1>
-
-<h2 id="_1">序言</h2>
-<p>生成艺术（Generative Art）是指使用计算机按照指定的顺序生成内容. 与现在流行的文字转图片AI不同, 生成艺术是动态的,通过数学公式,物理公式模拟现实环境, 生成艺术更为抽象,基本无法用文字描述,也无法用文字转图片AI创作.</p>
-<p>生成艺术属于游戏交互设计的一部分,而游戏交互设计需要的知识包罗万象, 不仅包含八大艺术(即文学、音乐、舞蹈、雕塑、绘画、建筑、戏剧、电影). 还包含<strong>人文学科</strong>,<strong>自然学科</strong>,<strong>社会学科</strong>等所有学科!!! 想要做一款好游戏等同于<strong>创造新文明</strong>!!!</p>
-<ul>
-<li>👉 github(国外加速) <a href="https://p5.xn--fiqs8s/">https://p5.中国</a></li>
-<li>👉 gitgee(国内加速) <a href="https://p5cn.gitee.io/p5.github.io/">https://p5cn.gitee.io/p5.github.io/</a></li>
-<li>👉 微信公众号(国内加速) :数据实验艺术</li>
-<li>👉 旧文章 <a href="https://www.yuque.com/processing.hub">processing.hub</a></li>
-<li>👉 探讨 <a href="https://pd.qq.com/s/ljgbuv">qq频道</a></li>
-</ul>
-<h2 id="_2">学习</h2>
-<p>P5js: <br />
-1.  👉 官网 <a href="https://p5js.org/zh-Hans/">https://p5js.org</a>  <br />
-2.  👉 工具 <a href="https://p5js.net/">https://p5js.net</a> (其他: <a href="https://processing.org/download">p5模式</a>, <a href="https://code.visualstudio.com/">vscode</a>, <a href="https://coding.qq.com/p5-lab/">腾讯扣叮</a>, <a href="https://toolness.github.io/p5.js-widget/#quick-start">网页插入</a>) <br />
-3.  👉 教程 <a href="https://p5js.org/zh-Hans/learn/">https://p5js.org/zh-Hans/learn/</a></p>
-<p>processing:   <br />
-1.  👉 官网 <a href="https://processing.org/">https://processing.org</a>  <br />
-2.  👉 工具 <a href="https://processing.org/download">https://processing.org/download</a> (其他:<a href="https://p5.xn--fiqs8s/002pcpad.html">平板</a>,<a href="https://p5.xn--fiqs8s/003phone.html">手机</a>)  <br />
-3.  👉 教程 <a href="https://processing.org/tutorials/">https://processing.org/tutorials/</a> (其他: <a href="https://www.yuque.com/processing.hub">语雀文章</a>)</p>
-<h2 id="_3">程序</h2>
-<blockquote>
-<p>硬件与软件一一对应,大致可分为四类</p>
-</blockquote>
-<p>硬件: <br />
-1. 输入设备 :键盘,鼠标,麦克风,摄像头,扫描仪,传感器. <br />
-2. 存储设备 :内存,硬盘,u盘. <br />
-3. 处理设备 : CPU,GPU.<br />
-4. 输出设备 :显示器, 打印机.  </p>
-<p>软件: <br />
-1. 输入功能 :获取硬件输入的数据<br />
-2. 存储功能 :将获取的数据存储到电脑内存中<br />
-3. 处理功能 :CPU对数据进行运算, 控制 <br />
-4. 输出功能 :将处理后的数据展示在屏幕   </p>
-<h2 id="_4">算法</h2>
-<p>如果word(处理字符串),ppt(处理图形),excel(处理数据)看作是美图秀秀,那么编程相当于photoshop   <br />
-对于萌新来说,不管用什么方法,能够实现达到目标效果即可,因为项目比较小. <br />
-对于专业来说,要考虑时间复杂度(提高效率)和空间复杂度(降低成本),因为项目比较庞大.  </p>
-<p>奥赛算法:c++ <br />
-1. 学:  <a href="https://oi-wiki.org/">文字:oiwiki </a> | <a href="https://www.noi.cn/xw/2020-05-13/715542.shtml">视频oi</a><br />
-2. 习:  <a href="https://www.luogu.com.cn/">洛谷</a></p>
-<p>工作算法:python <br />
-1. 学:  <a href="https://labuladong.gitee.io/algo/">LABULADONG的算法</a><br />
-2. 习:  <a href="https://leetcode.cn/problemset/all/">leetcode</a></p>
-<p>算法是"内功", 一通百通</p>
-<h2 id="_5">学习</h2>
-<p><a href="https://xk3gvpbkxh.feishu.cn/wiki/wikcneEdTokXBBnwpqSTJxzRb9e">飞书文档:P5学习</a></p>
-<h2 id="_6">创作</h2>
-<p><a href="https://xk3gvpbkxh.feishu.cn/wiki/wikcn6HgQEpfd7NusKPiJZ4oYyb?from=from_copylink">飞书文档:创作</a></p>
-<h2 id="_7">资源</h2>
-<p><a href="https://xk3gvpbkxh.feishu.cn/wiki/wikcnhk5wRSmfDleVXT2lU5A5cM">飞书文档:p5生成艺术</a></p>
-<h2 id="_8">其他</h2>
-<p><a href="https://xk3gvpbkxh.feishu.cn/wiki/wikcnZceSrITHWWoLWG4ixTZUFf">飞书文档:常用网站</a></p>
-
-
-
-  
-
-
-
-                
-              </article>
-            </div>
-          
-          
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      Copyright &copy; 2018-2023  p5.中国
-    </div>
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
-</div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-    
-    
-      <script src="assets/javascripts/bundle.d6c3db9e.min.js"></script>
-      
-        <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/p5.js/1.4.1/p5.min.js"></script>
-      
-        <script src="js/main.js"></script>
-      
-    
-  </body>
 </html>
+
+
