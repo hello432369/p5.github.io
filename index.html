@@ -5,59 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>p5js | processing 数据生成艺术交流</title>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/p5.js/1.4.1/p5.min.js"
+        type="application/javascript"></script>
+    <title>生成艺术 generative art | processing | p5js</title>
     <style>
-        html,
-        body,
-        div,
-        iframe {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            border: none;
-        }
-
-        iframe {
-            display: block;
-            width: 100%;
-        }
-
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        .center div {
-            text-align: center;
-        }
-
-        .center h1 {
-            margin-bottom: 20px;
-        }
-
-        .center button {
-            font-size: 24px;
-            padding: 10px 20px;
-            border-radius: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
     </style>
 </head>
 
 <body>
-    <div class="center">
-        <div>
-            <h1>生成艺术学习网站</h1>
-            <button onclick="window.location.href='https://boardmix.cn/app/share/CAE.CPipgAwgASoQGjV7Zv0tJixsNFqZFkgiFTAGQAE/VAAZ5O'">传送门</button>
-        </div>
-    </div>
+
 </body>
+<script>
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight);
+
+        noStroke();
+        textSize(30);
+        textAlign(CENTER);
+    }
+
+    function draw() {
+        background(233);
+
+        fill(199);
+        rect(width / 2 *0.6, height / 2*0.5, 150, 60,15);
+        fill(0);
+        ellipse(width / 2 *0.75, height / 2*0.8,60, 60);
+
+
+        fill(199);
+        rect(width / 2 *1.15, height / 2*0.5, 150, 60,15);
+        fill(0);
+        ellipse(width / 2 *1.2, height / 2*0.8,60, 60);
+
+        fill(0);
+        text("欢迎来到生成艺术世界~!", mouseX, mouseY);
+    }
+
+    function mouseClicked() {
+        window.location.href = "https://docs.qq.com/aio/DYmtycGpPSlJYUU9n"; // 将此处替换为您要跳转的网站
+    }
+
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+    }
+</script>
 
 </html>
-
-
