@@ -79,15 +79,11 @@
             clear();
 
             fill(255, 0, 0);
-            text("按空格键(随机切换) / 鼠标点击(复制内容)", width / 2, 50);
+            text("点击鼠标 (复制 + 切换)", width / 2, 50);
 
             fill(0, 0, 255);
             text_all = time + " , " + space + " , " + player + " , " + eye + " , " + art + " , " + nice;
             text(text_all, width / 2, height / 2);
-        }
-
-        function keyPressed() {
-            dataupdate();
         }
 
         function mousePressed() {
@@ -95,6 +91,17 @@
 
             fill(0, 255, 0);
             text("复制成功", width / 2, 100);
+            
+            dataupdate();
+        }
+
+        function touchStarted() {
+            navigator.clipboard.writeText(text_all);
+
+            fill(0, 255, 0);
+            text("复制成功", width / 2, 100);
+
+            dataupdate();
         }
 
         function windowResized() {
