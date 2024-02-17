@@ -73,35 +73,26 @@
             textAlign(CENTER, CENTER);
 
             dataupdate();
+
+            let btn1 = createButton('复制').position(width / 2 - 50, 50);
+            btn1.mousePressed(function () {
+                navigator.clipboard.writeText(text_all);
+
+                background(0, 255, 0, 60);
+            })
+
+            let btn2 = createButton('随机').position(width / 2 + 50, 50);
+            btn2.mousePressed(function () {
+                dataupdate();
+            })
         }
 
         function draw() {
             clear();
 
-            fill(255, 0, 0);
-            text("点击鼠标 (复制 + 切换)", width / 2, 50);
-
             fill(0, 0, 255);
             text_all = time + " , " + space + " , " + player + " , " + eye + " , " + art + " , " + nice;
             text(text_all, width / 2, height / 2);
-        }
-
-        function mousePressed() {
-            navigator.clipboard.writeText(text_all);
-
-            fill(0, 255, 0);
-            text("复制成功", width / 2, 100);
-            
-            dataupdate();
-        }
-
-        function touchStarted() {
-            navigator.clipboard.writeText(text_all);
-
-            fill(0, 255, 0);
-            text("复制成功", width / 2, 100);
-
-            dataupdate();
         }
 
         function windowResized() {
