@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <meta charset="gbk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://s0.pstatp.com/cdn/expire-1-M/p5.js/1.2.0/p5.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5.capture@1.4.1/dist/p5.capture.umd.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5.gui@0.7.1/dist/p5.gui.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script> -->
+    <style>
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let time, space, player, doing, npc, eye, art, nice, sets, rand;
+        let text_all;
+
+        function preload() {
+            loadedTable = loadTable('mid.csv', 'csv', 'header');
+        }
+
+        function dataupdate() {
+            rand = int(random(0, 2));
+            if (rand == 0) time = loadedTable.getString(int(random(0, 85)), 0);
+            else time = loadedTable.getString(int(random(0, 203)), 1);
+
+            space = loadedTable.getString(int(random(0, 117)), 2);
+
+            rand = int(random(0, 3));
+            if (rand == 0) player = loadedTable.getString(int(random(0, 156)), 3);
+            else if (rand == 1) player = loadedTable.getString(int(random(0, 70)), 4);
+            else player = loadedTable.getString(int(random(0, 116)), 5);
+
+            doing = "";
+            npc = "";
+            eye = loadedTable.getString(int(random(0, 68)), 6);
+
+            rand = int(random(0, 10));
+            if (rand == 0) art = loadedTable.getString(int(random(0, 406)), 7);
+            else if (rand == 1) art = loadedTable.getString(int(random(0, 559)), 8);
+            else if (rand == 2) art = loadedTable.getString(int(random(0, 296)), 9);
+            else if (rand == 3) art = loadedTable.getString(int(random(0, 100)), 10);
+            else if (rand == 4) art = loadedTable.getString(int(random(0, 37)), 11);
+            else if (rand == 5) art = loadedTable.getString(int(random(0, 22)), 12);
+            else if (rand == 6) art = loadedTable.getString(int(random(0, 178)), 13);
+            else if (rand == 7) art = loadedTable.getString(int(random(0, 150)), 14);
+            else art = loadedTable.getString(int(random(0, 210)), 15);
+
+            rand = int(random(0, 6));
+            if (rand == 0) nice = loadedTable.getString(int(random(0, 64)), 16);
+            else if (rand == 1) nice = loadedTable.getString(int(random(0, 213)), 17);
+            else if (rand == 2) nice = loadedTable.getString(int(random(0, 119)), 18);
+            else if (rand == 3) nice = loadedTable.getString(int(random(0, 73)), 19);
+            else nice = loadedTable.getString(int(random(0, 79)), 20);
+
+            sets = "";
+        }
+
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+
+            frameRate(6);
+            textSize(18);
+            textAlign(CENTER, CENTER);
+
+            dataupdate();
+        }
+
+        function draw() {
+            clear();
+
+            fill(255, 0, 0);
+            text("按空格键(随机切换) / 鼠标点击(复制内容)", width / 2, 50);
+
+            fill(0, 0, 255);
+            text_all = time + " , " + space + " , " + player + " , " + eye + " , " + art + " , " + nice;
+            text(text_all, width / 2, height / 2);
+        }
+
+        function keyPressed() {
+            dataupdate();
+        }
+
+        function mousePressed() {
+            navigator.clipboard.writeText(text_all);
+
+            fill(0, 255, 0);
+            text("复制成功", width / 2, 100);
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+    </script>
+</body>
+
+</html>
